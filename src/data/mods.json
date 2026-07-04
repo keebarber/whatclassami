@@ -1,0 +1,322 @@
+[
+  {
+    "id": "tires-200tw",
+    "label": "Performance tires (UTQG 200+ treadwear)",
+    "group": "tires-wheels",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.76 (cheat sheet)",
+    "note": "Must be 200 treadwear or higher and fit per Street wheel rules.",
+    "verified": true
+  },
+  {
+    "id": "wheels-plus-minus-1",
+    "label": "Aftermarket wheels (stock width, ±1\" diameter)",
+    "group": "tires-wheels",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.78 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "wheels-any-diameter-wide",
+    "label": "Wider wheels / any diameter (width per class)",
+    "group": "tires-wheels",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.88 (cheat sheet)",
+    "note": "Max width depends on ST class.",
+    "verified": true
+  },
+  {
+    "id": "tires-wide-200tw",
+    "label": "Wider 200TW tires than stock allows (width per class)",
+    "group": "tires-wheels",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.88 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "tires-rcomp",
+    "label": "R-comp / DOT tires below 200TW (e.g. Hoosier A7)",
+    "group": "tires-wheels",
+    "minCategory": "streetPrepared",
+    "ruleRef": "SP cat., Solo Rules p.104 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "wheels-any-size",
+    "label": "Wheels — any size, any width",
+    "group": "tires-wheels",
+    "minCategory": "streetPrepared",
+    "ruleRef": "SP cat., Solo Rules p.104 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "shocks",
+    "label": "Aftermarket shocks/struts (stock spring rates & mounting)",
+    "group": "suspension",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.78 (cheat sheet)",
+    "note": "Street shock allowances are more restricted than ST/SP (e.g. remote-reservoir limits) — verify details.",
+    "verified": true
+  },
+  {
+    "id": "swaybar-single",
+    "label": "Aftermarket anti-roll bar — ONE end only (front OR rear)",
+    "group": "suspension",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.80 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "alignment",
+    "label": "Alignment within factory adjustment range",
+    "group": "suspension",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.81 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "coilovers-springs",
+    "label": "Coilovers / lowering springs",
+    "group": "suspension",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.89 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "swaybars-both",
+    "label": "Anti-roll bars on BOTH ends",
+    "group": "suspension",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.89 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "camber-kit",
+    "label": "Camber bolts / camber plates",
+    "group": "suspension",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.91 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "bushings",
+    "label": "Suspension/steering bushings (non-OE)",
+    "group": "suspension",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.90 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "strut-bar",
+    "label": "Strut bar / tie bar (2-point bolt-on)",
+    "group": "suspension",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.87 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "air-filter",
+    "label": "Drop-in air filter element",
+    "group": "engine-drivetrain",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.82 (cheat sheet)",
+    "note": "Filter element only — no 'cold air' intake kits in Street.",
+    "verified": true
+  },
+  {
+    "id": "catback",
+    "label": "Cat-back or axle-back exhaust",
+    "group": "engine-drivetrain",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.82 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "battery",
+    "label": "Battery replacement (with hold-down)",
+    "group": "interior-electrical",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.81 (cheat sheet)",
+    "note": "Relocation behind seats is a Street Touring allowance (p.92).",
+    "verified": true
+  },
+  {
+    "id": "cold-air-intake",
+    "label": "Cold air intake (to throttle body / turbo inlet)",
+    "group": "engine-drivetrain",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.93 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "ecu-tune",
+    "label": "ECU reflash / tune",
+    "group": "engine-drivetrain",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.94 (cheat sheet)",
+    "note": "Reprogrammed PCM/ECU OR changed fuel pressure regulator.",
+    "verified": true
+  },
+  {
+    "id": "headers",
+    "label": "Exhaust headers / high-flow cats",
+    "group": "engine-drivetrain",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.93 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "lsd-single",
+    "label": "Limited-slip differential (one)",
+    "group": "engine-drivetrain",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.95 (cheat sheet)",
+    "note": "NOT allowed in STS — this can change which ST class fits.",
+    "verified": true
+  },
+  {
+    "id": "engine-mounts",
+    "label": "Engine / transmission mounts",
+    "group": "engine-drivetrain",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.95 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "radiator",
+    "label": "Radiator / fan upgrade",
+    "group": "engine-drivetrain",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.95 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "clutch-flywheel",
+    "label": "Clutch / lightweight flywheel",
+    "group": "engine-drivetrain",
+    "minCategory": "streetPrepared",
+    "ruleRef": "SP cat., Solo Rules p.113 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "standalone-ecu-fuel",
+    "label": "Standalone ECU / fuel system / ignition replacement",
+    "group": "engine-drivetrain",
+    "minCategory": "streetPrepared",
+    "ruleRef": "SP cat., Solo Rules p.110 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "emissions-delete",
+    "label": "Emissions equipment removed (cat delete, etc.)",
+    "group": "engine-drivetrain",
+    "minCategory": "streetPrepared",
+    "ruleRef": "SP cat., Solo Rules p.111 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "engine-swap",
+    "label": "Engine or drivetrain swap",
+    "group": "engine-drivetrain",
+    "minCategory": "streetModified",
+    "ruleRef": "SM cat., Solo Rules p.118 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "forced-induction-add",
+    "label": "Added turbo/supercharger (not factory)",
+    "group": "engine-drivetrain",
+    "minCategory": "streetModified",
+    "ruleRef": "SM cat. engine allowances, Solo Rules §16",
+    "note": "Treated as an engine modification beyond SP scope; verify exact SM/SSM placement.",
+    "verified": false
+  },
+  {
+    "id": "brake-pads",
+    "label": "Brake pads / shoes",
+    "group": "brakes",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.80 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "big-brake-kit",
+    "label": "Big brake kit / brake lines",
+    "group": "brakes",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.88 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "brake-ducts",
+    "label": "Brake cooling ducts",
+    "group": "brakes",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.89 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "front-seats",
+    "label": "Aftermarket front seat(s)",
+    "group": "interior-electrical",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.86 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "steering-wheel",
+    "label": "Aftermarket steering wheel",
+    "group": "interior-electrical",
+    "minCategory": "streetTouring",
+    "ruleRef": "ST cat., Solo Rules p.86 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "driver-harness",
+    "label": "Driver seat belt / harness",
+    "group": "interior-electrical",
+    "minCategory": "street",
+    "ruleRef": "Street cat., Solo Rules p.76 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "rear-seat-delete",
+    "label": "Rear seats removed",
+    "group": "interior-electrical",
+    "minCategory": "streetModified",
+    "ruleRef": "SM cat., Solo Rules p.120 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "radio-delete",
+    "label": "Radio/stereo removed",
+    "group": "interior-electrical",
+    "minCategory": "streetPrepared",
+    "ruleRef": "SP cat., Solo Rules p.103 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "small-splitter-spoiler",
+    "label": "Small spoiler / splitter",
+    "group": "body-aero",
+    "minCategory": "streetPrepared",
+    "ruleRef": "SP cat., Solo Rules p.102 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "wing",
+    "label": "Aero wing",
+    "group": "body-aero",
+    "minCategory": "streetModified",
+    "ruleRef": "SM cat., Solo Rules p.120 (cheat sheet)",
+    "verified": true
+  },
+  {
+    "id": "fender-mods",
+    "label": "Fenders modified/replaced for tire clearance",
+    "group": "body-aero",
+    "minCategory": "streetPrepared",
+    "ruleRef": "SP cat., Solo Rules p.100 (cheat sheet)",
+    "verified": true
+  }
+]

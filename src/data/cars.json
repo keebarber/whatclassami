@@ -1,0 +1,183 @@
+[
+  {
+    "id": "mazda-miata-na-nb",
+    "make": "Mazda",
+    "model": "MX-5 Miata (NA/NB)",
+    "yearStart": 1990,
+    "yearEnd": 2005,
+    "classes": { "street": "ES", "streetTouring": "STS", "streetPrepared": "CSP" },
+    "verified": false,
+    "notes": "Torsen vs open diff matters for ST classing — verify trim details."
+  },
+  {
+    "id": "mazda-miata-nc",
+    "make": "Mazda",
+    "model": "MX-5 Miata (NC)",
+    "yearStart": 2006,
+    "yearEnd": 2015,
+    "classes": { "street": "CS", "streetTouring": "STR" },
+    "verified": false
+  },
+  {
+    "id": "mazda-miata-nd",
+    "make": "Mazda",
+    "model": "MX-5 Miata (ND)",
+    "yearStart": 2016,
+    "yearEnd": 2026,
+    "classes": { "street": "CS", "streetTouring": "STR" },
+    "verified": false
+  },
+  {
+    "id": "subaru-brz-toyota-86-gen1",
+    "make": "Subaru/Scion/Toyota",
+    "model": "BRZ / FR-S / 86 (gen 1)",
+    "yearStart": 2013,
+    "yearEnd": 2020,
+    "classes": { "street": "DS", "streetTouring": "STX" },
+    "verified": false
+  },
+  {
+    "id": "toyota-gr86-subaru-brz-gen2",
+    "make": "Toyota/Subaru",
+    "model": "GR86 / BRZ (gen 2)",
+    "yearStart": 2022,
+    "yearEnd": 2026,
+    "classes": { "street": "DS", "streetTouring": "STX" },
+    "verified": false
+  },
+  {
+    "id": "honda-s2000",
+    "make": "Honda",
+    "model": "S2000",
+    "yearStart": 2000,
+    "yearEnd": 2009,
+    "classes": { "street": "BS", "streetTouring": "STR" },
+    "verified": false
+  },
+  {
+    "id": "honda-civic-si-10th",
+    "make": "Honda",
+    "model": "Civic Si (10th gen)",
+    "yearStart": 2017,
+    "yearEnd": 2021,
+    "classes": { "street": "HS", "streetTouring": "STH" },
+    "verified": false
+  },
+  {
+    "id": "honda-civic-type-r-fk8",
+    "make": "Honda",
+    "model": "Civic Type R (FK8)",
+    "yearStart": 2017,
+    "yearEnd": 2021,
+    "classes": { "street": "DS", "streetTouring": "STH" },
+    "verified": false
+  },
+  {
+    "id": "vw-gti-mk7",
+    "make": "Volkswagen",
+    "model": "Golf GTI (Mk7)",
+    "yearStart": 2015,
+    "yearEnd": 2021,
+    "classes": { "street": "GS", "streetTouring": "STH" },
+    "verified": false
+  },
+  {
+    "id": "subaru-wrx-va",
+    "make": "Subaru",
+    "model": "WRX (VA)",
+    "yearStart": 2015,
+    "yearEnd": 2021,
+    "classes": { "street": "DS", "streetTouring": "STH" },
+    "verified": false
+  },
+  {
+    "id": "ford-mustang-gt-s550",
+    "make": "Ford",
+    "model": "Mustang GT (S550)",
+    "yearStart": 2015,
+    "yearEnd": 2023,
+    "classes": { "street": "FS" },
+    "verified": false
+  },
+  {
+    "id": "chevy-camaro-ss-gen6",
+    "make": "Chevrolet",
+    "model": "Camaro SS (gen 6)",
+    "yearStart": 2016,
+    "yearEnd": 2024,
+    "classes": { "street": "FS" },
+    "verified": false
+  },
+  {
+    "id": "chevy-corvette-c5",
+    "make": "Chevrolet",
+    "model": "Corvette (C5)",
+    "yearStart": 1997,
+    "yearEnd": 2004,
+    "classes": { "street": "AS" },
+    "verified": false
+  },
+  {
+    "id": "chevy-corvette-c5-z06",
+    "make": "Chevrolet",
+    "model": "Corvette Z06 (C5)",
+    "yearStart": 2001,
+    "yearEnd": 2004,
+    "classes": { "street": "SS" },
+    "verified": false
+  },
+  {
+    "id": "nissan-350z",
+    "make": "Nissan",
+    "model": "350Z",
+    "yearStart": 2003,
+    "yearEnd": 2009,
+    "classes": { "street": "BS" },
+    "verified": false
+  },
+  {
+    "id": "bmw-m3-e46",
+    "make": "BMW",
+    "model": "M3 (E46)",
+    "yearStart": 2001,
+    "yearEnd": 2006,
+    "classes": { "street": "BS", "streetTouring": "STU" },
+    "verified": false
+  },
+  {
+    "id": "hyundai-elantra-n",
+    "make": "Hyundai",
+    "model": "Elantra N",
+    "yearStart": 2022,
+    "yearEnd": 2026,
+    "classes": { "street": "DS", "streetTouring": "STH" },
+    "verified": false
+  },
+  {
+    "id": "toyota-gr-corolla",
+    "make": "Toyota",
+    "model": "GR Corolla",
+    "yearStart": 2023,
+    "yearEnd": 2026,
+    "classes": { "street": "DS" },
+    "verified": false
+  },
+  {
+    "id": "mini-cooper-s-r53",
+    "make": "MINI",
+    "model": "Cooper S (R53)",
+    "yearStart": 2002,
+    "yearEnd": 2006,
+    "classes": { "street": "GS", "streetTouring": "STX" },
+    "verified": false
+  },
+  {
+    "id": "mazda-mazdaspeed3",
+    "make": "Mazda",
+    "model": "Mazdaspeed3",
+    "yearStart": 2007,
+    "yearEnd": 2013,
+    "classes": { "street": "GS", "streetTouring": "STH" },
+    "verified": false
+  }
+]

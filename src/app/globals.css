@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/*
+ * Autocross theme: asphalt greys, cone orange, chalk-line white.
+ * Legality verdicts: green = Street-legal, red = class bump.
+ */
+@theme {
+  --color-asphalt-950: #0d0e11;
+  --color-asphalt-900: #16171c;
+  --color-asphalt-800: #1e2026;
+  --color-asphalt-700: #2a2d35;
+  --color-asphalt-600: #3b3f4a;
+  --color-asphalt-500: #565b68;
+
+  --color-chalk: #f4f4ef;
+  --color-chalk-dim: #a9abb4;
+
+  --color-cone-600: #d9560f;
+  --color-cone-500: #ff6b1a;
+  --color-cone-400: #ff8542;
+  --color-cone-100: #ffe3d1;
+
+  --color-legal-500: #34d399;
+  --color-legal-900: #0b3a2a;
+  --color-bump-500: #f87171;
+  --color-bump-900: #45151a;
+
+  --font-display: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  background-color: var(--color-asphalt-950);
+  color: var(--color-chalk);
+  color-scheme: dark;
+}
+
+/* Checkered-flag strip — use on thin divider elements */
+.checkered {
+  --sq: 10px;
+  background-image: repeating-conic-gradient(
+    var(--color-chalk) 0% 25%,
+    var(--color-asphalt-950) 0% 50%
+  );
+  background-size: calc(var(--sq) * 2) calc(var(--sq) * 2);
+}
+
+/* Subtle asphalt texture for hero sections */
+.asphalt-texture {
+  background-image: radial-gradient(
+      circle at 20% 30%,
+      rgb(255 255 255 / 0.02) 0,
+      transparent 40%
+    ),
+    radial-gradient(circle at 80% 70%, rgb(255 107 26 / 0.06) 0, transparent 45%),
+    linear-gradient(var(--color-asphalt-900), var(--color-asphalt-950));
+}

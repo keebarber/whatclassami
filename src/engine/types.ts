@@ -1,0 +1,105 @@
+/**
+ * Core types for the SCCA Solo classification engine.
+ *
+ * Category ladder (simplified for v1): a mod's `minCategory` is the least
+ * prepared category in which it is broadly allowed. The final category for a
+ * build is the max of all its mods' minimums. Category-specific exceptions
+ * (e.g. no LSD in STS) are modeled as per-mod notes/exceptions until the
+ * engine grows class-level rules.
+ */
+
+export const CATEGORIES = [
+  "street",
+  "streetTouring",
+  "streetPrepared",
+  "streetModified",
+  "prepared",
+  "modified",
+] as const;
+
+export type Category = (typeof CATEGORIES)[number];
+
+export const CATEGORY_LABELS: Record<Category, string> = {
+  street: "Street",
+  streetTouring: "Street Touring",
+  streetPrepared: "Street Prepared",
+  streetModified: "Street Modified",
+  prepared: "Prepared",
+  modified: "Modified",
+};
+
+export const CATEGORY_ORDER: Record<Category, number> = {
+  street: 0,
+  streetTouring: 1,
+  streetPrepared: 2,
+  streetModified: 3,
+  prepared: 4,
+  modified: 5,
+};
+
+/** Class letters per category for a given car, e.g. { street: "CS", streetTouring: "STR" }. */
+export type CarClassMap = Partial<Record<Category, string>>;
+
+export interface Car {
+  id: string;
+  make: string;
+  model: string;
+  trim?: string;
+  yearStart: number;
+  yearEnd: number;
+  classes: CarClassMap;
+  /** True once checked against the current rulebook's Appendix A. */
+  verified: boolean;
+  notes?: string;
+}
+
+export type ModGroup =
+  | "tires-wheels"
+  | "suspension"
+  | "engine-drivetrain"
+  | "brakes"
+  | "body-aero"
+  | "interior-electrical";
+
+export const MOD_GROUP_LABELS: Record<ModGroup, string> = {
+  "tires-wheels": "Tires & Wheels",
+  suspension: "Suspension",
+  "engine-drivetrain": "Engine & Drivetrain",
+  brakes: "Brakes",
+  "body-aero": "Body & Aero",
+  "interior-electrical": "Interior & Electrical",
+};
+
+export interface Mod {
+  id: string;
+  /** Plain-language label, e.g. "Coilovers / lowering springs". */
+  label: string;
+  group: ModGroup;
+  /** Least prepared category where this is broadly allowed. */
+  minCategory: Category;
+  /** Citation into the Solo Rules / official cheat sheet. */
+  ruleRef: string;
+  /** Caveats, e.g. "No LSD allowed in STS". */
+  note?: string;
+  verified: boolean;
+}
+
+export interface ItemVerdict {
+  mod: Mod;
+  /** "legal" = allowed in Street; "bump" = requires a more prepared category. */
+  status: "legal" | "bump";
+  requiredCategory: Category;
+  /** True when this mod is (one of) the reason(s) for the final category. */
+  binding: boolean;
+}
+
+export interface ClassificationResult {
+  car: Car;
+  /** Class if the car were bone stock (Street category). */
+  baseClass: string | null;
+  finalCategory: Category;
+  /** Class letters in the final category, null if unknown for this car. */
+  finalClass: string | null;
+  items: ItemVerdict[];
+  warnings: string[];
+}
