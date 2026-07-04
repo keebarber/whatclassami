@@ -1,0 +1,96 @@
+# Data Architecture — how classing data is stored and used
+
+*Answers: what is the data, where does it live, how does a classification get decided, and what role does the rulebook PDF actually play.*
+
+## The short answer
+
+**The PDF is never consulted at runtime and is not part of the decision chain.** It is the authoring-time source of truth: every fact in the app was read out of it by a human (with parser assistance), recorded as structured JSON with a citation and a `verified` flag, and it's that JSON the engine reasons over. At runtime the app is a pure function: `(car, mods) → classification with reasons`. No PDF, no lookup chain that "falls back to the rulebook," no LLM in the decision path.
+
+```
+AUTHORING TIME (per rules release)          RUNTIME (every request)
+┌─────────────────────────────┐             ┌──────────────────────────────┐
+│ 2026 Solo Rules PDF          │             │ user picks car + mods         │
+│  └─ pdftotext (tools/)       │             │  (or LLM assist maps free     │
+│  └─ column-aware read        │             │   text → dataset ids ONLY)    │
+│  └─ HUMAN verifies each row  │             │            │                  │
+│         │                    │             │            ▼                  │
+│         ▼                    │             │ engine (pure TS, tested)      │
+│ src/data/*.json              │──ship──────▶│  over src/data/*.json         │
+│  each row: citation +        │             │            │                  │
+│  verified flag, Zod-checked  │             │            ▼                  │
+│  in CI                       │             │ class + reasons + alternatives│
+└─────────────────────────────┘             └──────────────────────────────┘
+```
+
+## What the data is
+
+Three datasets, all schema-validated (Zod, `src/engine/schema.ts`) on every test run and CI build:
+
+**1. `src/data/cars.json` — vehicle listings.** One row per car/generation as Appendix A slices it (which is by listing, not by marketing generation — e.g. "MX-5 Miata (ND1/ND2 chassis; including RF) (2016-25)"). Each row:
+
+| Field | Purpose |
+|---|---|
+| `classes` | Class letters per category where the car is **explicitly listed** (e.g. `{ street: "DS", streetTouring: "DST" }`). Absence means *not listed*, which is meaningful — it triggers catch-all/escalation logic. |
+| `attributes` | Physical facts for catch-all evaluation: `displacementCc`, `forcedInduction`, `seats`, `bodyStyle`, `sportsCarBased`. Only needed where a car may live off a catch-all. |
+| `streetExclusion` | Present iff the car is on the §3.1 stability exclusion list; the reason text is shown to the user. |
+| `verified` | `true` only after a human has checked the row against the current rulebook. The UI warns on unverified rows; `npm run data:check` reports coverage. |
+| `notes` | The actual Appendix A wording relied on, quoted — the audit trail for every class assignment. |
+
+**2. `src/data/mods.json` — the modification catalog.** Each mod carries `minCategory` (the least-prepared category that broadly allows it), a `ruleRef` citation (§14.10.K etc.), an optional caveat note (e.g. LSD restrictions by ST class), and its own `verified` flag.
+
+**3. `src/engine/catchalls.ts` — the catch-all table.** Appendix A's displacement/aspiration catch-alls as structured predicates (category, class, cc bounds, aspiration, seat minimum, body styles, sports-car exclusion), with the rulebook wording quoted verbatim so the UI can show *why* a catch-all matched. Body styles the wording doesn't literally cover (wagons, SUVs) are modeled as *conditional* matches that surface the ambiguity rather than silently passing or failing.
+
+Why JSON files and not a database: the whole dataset is a few hundred KB of facts that change on a yearly cadence, every change needs human review and a git diff is the review tool, and the site can then ship fully static (fast, free hosting, works offline at an event). If coverage grows to thousands of rows, the same schemas migrate cleanly into SQLite — the engine only sees parsed objects either way.
+
+## How a classification is decided
+
+`classify(car, mods)` in `src/engine/classify.ts` — deterministic, same input → same output:
+
+```
+1. MOD CEILING     modCategory = max(mod.minCategory for each selected mod)
+                   Each mod gets its verdict here: green (Street-legal) or
+                   red (requires modCategory), with citation.
+
+2. RESOLVE at modCategory:
+   a. explicit listing in cars.json?          → class, via "listed"
+   b. else catch-all match on attributes?     → class, via "catchall"
+                                                + Regional-only warning
+                                                + §3.1 rollover warning
+                                                + body-style ambiguity if conditional
+3. ESCALATE        If neither: walk up categories (ST → SP → SM → P → M),
+                   resolving each the same way — cars run where they are
+                   listed (Appendix A). First hit wins; reason recorded.
+
+4. NOC             Nothing resolved → say so explicitly, link the SEB
+                   letters process. Never guess.
+
+5. ALTERNATIVES    If the primary came via catch-all, every explicit listing
+                   elsewhere is presented as a reasoned alternative
+                   (unambiguous at tech, National-eligible, headroom).
+```
+
+The output is not just a class: it's `{ finalClass, via, reasons[], alternatives[], items[], warnings[] }` — the case for the answer, the ambiguities and why they exist, and when you'd choose the alternative. That structure is the product's core differentiator (see COMPETITIVE_ANALYSIS.md §4) and reflects a standing design principle: **where the rules require interpretation, show the interpretation.**
+
+The Forester demo exercises every branch: §3.1 exclusion (no Street class) → not ST-listed → EST via the <3.1L N/A catch-all (conditional: wagon) → FSP explicit listing surfaced as the National-eligible alternative.
+
+### Where the LLM sits (and doesn't)
+
+`/api/assist` maps free-text descriptions onto dataset ids — car candidates and mod ids only, clamped against the catalogs server-side. Its output lands in the same pickers a manual user fills in. It never assigns a class, never sees the rulebook, and the app is fully functional without it.
+
+## Where the PDF fits: authoring, verification, updates
+
+`reference/2026_Solo_Rulebook.pdf` (gitignored — SCCA copyright) is consulted at exactly three moments:
+
+1. **Authoring a row.** `pdftotext -layout` + the column-aware read (`tools/parse_appendix.py` automates the first pass; the two-column Appendix A layout jumbles at class boundaries, so a human confirms against the actual page — alphabetical make order within a class is the checksum). The row is committed with the quoted wording in `notes` and `verified: true`.
+2. **Answering a dispute.** Every row cites its listing, so any "that's wrong" report resolves by opening the PDF at the cited spot — and got-it-wrong fixes become test cases.
+3. **Yearly (and mid-year) updates.** New rulebook → re-extract → diff against current data → human reviews the delta → bump, with the previous year's data retained (rules-year versioning is on the roadmap; SCCA also issues mid-year changes via FasTrack, which should be checked monthly once the site is live).
+
+Nothing ships that a human hasn't verified; nothing is asserted without a citation; anything unverified says so in the UI.
+
+## Known gaps (roadmap order)
+
+1. **Coverage** — ~40 cars of a multi-thousand-listing Appendix A. Strategy: verified batches of enthusiast-common cars first, per-car SEO pages generated only from verified rows, community error reports prefilled with the share URL.
+2. **Class-level constraints** — tire width by ST class, per-class LSD rules as hard checks (currently notes), §3.1 rollover chart as data.
+3. **Rules-year versioning** — `data/2026/`, `data/2027/`… with a year switcher and build diffing.
+4. **FasTrack ingestion** — monthly change monitoring once live.
+5. **Remaining categories** — SP/SM allowance detail, CAM/XS, EV, Club Spec.

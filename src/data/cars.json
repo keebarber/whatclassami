@@ -209,6 +209,176 @@
     "notes": "Street: excluded (stability list, §3.1). ST: not explicitly listed (only the turbo Forester XT = GST), but the 2.5L N/A qualifies for the EST catch-all (<3.1L N/A, 4-seat min) — Regional only, wagon wording caveat, must meet §3.1 rollover chart. SP: 'Forester (non-turbo)' explicitly listed in FSP — the National-eligible home."
   },
   {
+    "id": "mazda-rx8",
+    "make": "Mazda",
+    "model": "RX-8",
+    "yearStart": 2004,
+    "yearEnd": 2011,
+    "classes": { "street": "CS", "streetTouring": "DST" },
+    "verified": true,
+    "notes": "Street: 'RX-8' under Mazda in C Street. ST: 'RX-8' in DST."
+  },
+  {
+    "id": "nissan-370z",
+    "make": "Nissan",
+    "model": "370Z (non-NISMO)",
+    "yearStart": 2009,
+    "yearEnd": 2020,
+    "classes": { "street": "FS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: '370Z (non-NISMO) (2009-20)' = FS; NISMO = CS. ST: '370Z (non-NISMO)' = BST ('370Z NISMO (2009-20)' also BST)."
+  },
+  {
+    "id": "bmw-m3-e36",
+    "make": "BMW",
+    "model": "M3 (E36)",
+    "yearStart": 1995,
+    "yearEnd": 1999,
+    "classes": { "street": "DS", "streetTouring": "CST" },
+    "verified": true,
+    "notes": "Street: 'M3 (E36 chassis) (1995-99)' = DS. ST: 'M3 (E36, non-LTW) (1995-99)' = CST; the LTW is not covered."
+  },
+  {
+    "id": "bmw-m3-e9x",
+    "make": "BMW",
+    "model": "M3 (E90/E92/E93)",
+    "yearStart": 2008,
+    "yearEnd": 2013,
+    "classes": { "street": "FS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'M3 (E46 & E90/E92/E93 chassis) (2000-13)' = FS. ST: 'M3 (2008-13)' = BST."
+  },
+  {
+    "id": "mitsubishi-lancer-evo",
+    "make": "Mitsubishi",
+    "model": "Lancer Evolution",
+    "yearStart": 2003,
+    "yearEnd": 2015,
+    "classes": { "street": "DS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Lancer Evolution (2003-15)' = DS. ST: 'Lancer Evolution' = BST."
+  },
+  {
+    "id": "ford-focus-rs",
+    "make": "Ford",
+    "model": "Focus RS",
+    "yearStart": 2016,
+    "yearEnd": 2017,
+    "classes": { "street": "DS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Focus RS (2016-17)' = DS; 'Focus RS (2018)' = BS. ST: 'Focus RS (2016-18)' = BST."
+  },
+  {
+    "id": "honda-civic-si-11th",
+    "make": "Honda",
+    "model": "Civic Si (11th gen)",
+    "yearStart": 2022,
+    "yearEnd": 2026,
+    "classes": { "street": "GS", "streetTouring": "GST" },
+    "verified": true,
+    "notes": "Street: 'Civic Si (2022-26)' = GS. ST: 'Civic Si (2017-26)' = GST."
+  },
+  {
+    "id": "hyundai-veloster-n",
+    "make": "Hyundai",
+    "model": "Veloster N",
+    "yearStart": 2019,
+    "yearEnd": 2022,
+    "classes": { "street": "GS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Veloster N (including Performance Package) (2019-22)' = GS. ST: 'Veloster N (2019-22)' = BST."
+  },
+  {
+    "id": "hyundai-kona-n",
+    "make": "Hyundai",
+    "model": "Kona N",
+    "yearStart": 2022,
+    "yearEnd": 2023,
+    "classes": { "street": "GS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Kona N (2022-23)' = GS. ST: 'Kona N (2022-24)' = BST."
+  },
+  {
+    "id": "toyota-supra-mkv-6cyl",
+    "make": "Toyota",
+    "model": "GR Supra (MkV, 6-cyl)",
+    "yearStart": 2020,
+    "yearEnd": 2026,
+    "classes": { "street": "BS", "streetTouring": "SST" },
+    "verified": true,
+    "notes": "Street: 'Supra (6 cyl, non MkV Final Edition) (2020-26)' = BS. ST: 'Supra, 6cyl (2020-26)' = SST. 4-cyl: CS street / SST."
+  },
+  {
+    "id": "subaru-wrx-sti",
+    "make": "Subaru",
+    "model": "WRX STI",
+    "yearStart": 2004,
+    "yearEnd": 2018,
+    "classes": { "street": "DS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'WRX STI (including Special Edition) (2004-18)' = DS; 'STI (excl. S209) (2019-21)' also DS; Type RA (2018) = BS. ST: 'Impreza WRX STI' = BST."
+  },
+  {
+    "id": "porsche-boxster-986",
+    "make": "Porsche",
+    "model": "Boxster (986)",
+    "yearStart": 1997,
+    "yearEnd": 2004,
+    "classes": { "street": "CS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Boxster (986, all) (1997-2004)' = CS. ST: 'Boxster (986 & 987.1; base model) (1997-08)' and 'Boxster S (986) (2000-04)' = BST."
+  },
+  {
+    "id": "vw-golf-r-mk7",
+    "make": "Volkswagen",
+    "model": "Golf R (Mk7)",
+    "yearStart": 2015,
+    "yearEnd": 2019,
+    "classes": { "street": "DS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Golf R (2015-19)' = DS. ST: 'Golf R (Mk7) (2015-19)' = BST; Mk8 (2022-24) also BST."
+  },
+  {
+    "id": "acura-integra-type-r-dc2",
+    "make": "Acura",
+    "model": "Integra Type R (DC2)",
+    "yearStart": 1997,
+    "yearEnd": 2001,
+    "classes": { "street": "DS", "streetTouring": "DST" },
+    "verified": true,
+    "notes": "Street: 'Integra Type R' under Acura in D Street. ST: 'Integra (incl. Type R) (1994-2001)' = DST."
+  },
+  {
+    "id": "chevy-cobalt-ss-turbo",
+    "make": "Chevrolet",
+    "model": "Cobalt SS (2.0L Turbo)",
+    "yearStart": 2008,
+    "yearEnd": 2010,
+    "classes": { "street": "GS", "streetTouring": "GST" },
+    "verified": true,
+    "notes": "Street: 'Cobalt SS (2.0L Turbo) (2008-10)' = GS. ST: 'Cobalt (2.0T)' = GST."
+  },
+  {
+    "id": "dodge-srt4",
+    "make": "Dodge",
+    "model": "SRT-4 (Neon chassis)",
+    "yearStart": 2003,
+    "yearEnd": 2005,
+    "classes": { "street": "GS", "streetTouring": "GST" },
+    "verified": true,
+    "notes": "Street: 'SRT-4 (Neon chassis)' = GS. ST: 'SRT-4 (2003-05)' = GST."
+  },
+  {
+    "id": "mazdaspeed-miata",
+    "make": "Mazda",
+    "model": "Mazdaspeed MX-5 Miata",
+    "yearStart": 2004,
+    "yearEnd": 2005,
+    "classes": { "street": "ES", "streetTouring": "AST" },
+    "verified": true,
+    "notes": "Street: 'Mazdaspeed Miata (2004-05)' = ES. ST: 'Mazdaspeed Miata (2004-05)' = AST."
+  },
+  {
     "id": "mazda-mazdaspeed3",
     "make": "Mazda",
     "model": "Mazdaspeed3",
