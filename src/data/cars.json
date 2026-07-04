@@ -197,9 +197,16 @@
     "yearStart": 1998,
     "yearEnd": 2002,
     "classes": { "streetPrepared": "FSP" },
+    "attributes": {
+      "displacementCc": 2457,
+      "forcedInduction": false,
+      "seats": 5,
+      "bodyStyle": "wagon",
+      "sportsCarBased": false
+    },
     "streetExclusion": "'Subaru Forester' is on the Street category stability exclusion list (§3.1, Appendix A).",
     "verified": true,
-    "notes": "Street: excluded (stability list, §3.1). ST: not listed — only the turbo Forester XT appears (GST); ST catch-alls cover sedans/coupes only. SP: 'Forester (non-turbo)' is explicitly listed in FSP, so it runs FSP at any mod level within SP allowances."
+    "notes": "Street: excluded (stability list, §3.1). ST: not explicitly listed (only the turbo Forester XT = GST), but the 2.5L N/A qualifies for the EST catch-all (<3.1L N/A, 4-seat min) — Regional only, wagon wording caveat, must meet §3.1 rollover chart. SP: 'Forester (non-turbo)' explicitly listed in FSP — the National-eligible home."
   },
   {
     "id": "mazda-mazdaspeed3",

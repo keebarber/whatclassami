@@ -3,6 +3,23 @@ import { CATEGORIES } from "./types";
 
 const CategorySchema = z.enum(CATEGORIES);
 
+const AttributesSchema = z.object({
+  displacementCc: z.number().int().positive().lte(9000),
+  forcedInduction: z.boolean(),
+  seats: z.number().int().gte(1).lte(9),
+  bodyStyle: z.enum([
+    "sedan",
+    "coupe",
+    "hatchback",
+    "wagon",
+    "suv",
+    "convertible",
+    "truck",
+    "sports",
+  ]),
+  sportsCarBased: z.boolean(),
+});
+
 export const CarSchema = z
   .object({
     id: z.string().regex(/^[a-z0-9-]+$/, "kebab-case ids only"),
@@ -12,6 +29,7 @@ export const CarSchema = z
     yearStart: z.number().int().gte(1945).lte(2100),
     yearEnd: z.number().int().gte(1945).lte(2100),
     classes: z.record(CategorySchema, z.string().min(1)),
+    attributes: AttributesSchema.optional(),
     streetExclusion: z.string().min(1).optional(),
     verified: z.boolean(),
     notes: z.string().optional(),

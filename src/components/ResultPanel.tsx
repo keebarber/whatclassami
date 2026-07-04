@@ -55,10 +55,15 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
           </>
         )}
       </div>
+      {result.via === "catchall" && (
+        <span className="mt-2 inline-block rounded bg-asphalt-700 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-cone-400">
+          via catch-all · Regional classing
+        </span>
+      )}
       <p className="mt-2 text-sm text-chalk-dim">
         {bumped
           ? escalated
-            ? `This car runs in ${CATEGORY_LABELS[result.finalCategory]}, where it's listed in Appendix A.`
+            ? `This car runs in ${CATEGORY_LABELS[result.finalCategory]}, where it resolves in Appendix A.`
             : `Modifications move this car from ${CATEGORY_LABELS.street} toward ${CATEGORY_LABELS[result.finalCategory]}.`
           : "Everything selected is allowed in Street. Run it."}
       </p>

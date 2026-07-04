@@ -40,6 +40,26 @@ export const CATEGORY_ORDER: Record<Category, number> = {
 /** Class letters per category for a given car, e.g. { street: "CS", streetTouring: "STR" }. */
 export type CarClassMap = Partial<Record<Category, string>>;
 
+export type BodyStyle =
+  | "sedan"
+  | "coupe"
+  | "hatchback"
+  | "wagon"
+  | "suv"
+  | "convertible"
+  | "truck"
+  | "sports";
+
+/** Physical attributes used to evaluate Appendix A catch-all listings. */
+export interface CarAttributes {
+  displacementCc: number;
+  forcedInduction: boolean;
+  seats: number;
+  bodyStyle: BodyStyle;
+  /** Catch-alls exclude "sports-car-based" vehicles. */
+  sportsCarBased: boolean;
+}
+
 export interface Car {
   id: string;
   make: string;
@@ -48,6 +68,8 @@ export interface Car {
   yearStart: number;
   yearEnd: number;
   classes: CarClassMap;
+  /** Needed for catch-all evaluation; omit if the car is explicitly listed everywhere it runs. */
+  attributes?: CarAttributes;
   /**
    * Present when the car is on the Street category exclusion list (§3.1
    * stability). Such cars have no Street class and run in the first more-
@@ -106,6 +128,8 @@ export interface ClassificationResult {
   finalCategory: Category;
   /** Class letters in the final category, null if unknown for this car. */
   finalClass: string | null;
+  /** How the final class was resolved. */
+  via: "listed" | "catchall" | null;
   items: ItemVerdict[];
   warnings: string[];
 }

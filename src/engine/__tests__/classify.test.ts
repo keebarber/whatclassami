@@ -154,6 +154,74 @@ describe("classify", () => {
     expect(r.items.filter((i) => i.binding)).toHaveLength(0);
   });
 
+  it("classes an unlisted small-displacement N/A car via the EST catch-all", () => {
+    // Forester-like: 2.5L N/A wagon, street-excluded, listed only in SP.
+    const wagon: Car = {
+      ...testCar,
+      id: "test-tall-wagon",
+      classes: { streetPrepared: "TSP" },
+      streetExclusion: "On the §3.1 stability exclusion list.",
+      attributes: {
+        displacementCc: 2457,
+        forcedInduction: false,
+        seats: 5,
+        bodyStyle: "wagon",
+        sportsCarBased: false,
+      },
+    };
+    const r = classify(wagon, [stMod]);
+    expect(r.finalCategory).toBe("streetTouring");
+    expect(r.finalClass).toBe("EST");
+    expect(r.via).toBe("catchall");
+    expect(r.warnings.some((w) => w.includes("Regional only"))).toBe(true);
+    expect(r.warnings.some((w) => w.includes("wagons varies by Region"))).toBe(true);
+    expect(r.warnings.some((w) => w.includes("§3.1 rollover"))).toBe(true);
+    expect(
+      r.warnings.some((w) => w.includes("explicitly listed in Street Prepared as TSP")),
+    ).toBe(true);
+  });
+
+  it("routes forced-induction cars to the GST/BST catch-alls by displacement", () => {
+    const base: Car = {
+      ...testCar,
+      id: "test-turbo-sedan",
+      classes: {},
+      streetExclusion: "test",
+      attributes: {
+        displacementCc: 1998,
+        forcedInduction: true,
+        seats: 5,
+        bodyStyle: "sedan",
+        sportsCarBased: false,
+      },
+    };
+    expect(classify(base, [stMod]).finalClass).toBe("GST"); // <2.5L FI
+    const bigTurbo: Car = {
+      ...base,
+      attributes: { ...base.attributes!, displacementCc: 2900 },
+    };
+    expect(classify(bigTurbo, [stMod]).finalClass).toBe("BST"); // 2.5–3.1L FI
+  });
+
+  it("catch-alls exclude sports-car-based vehicles", () => {
+    const kitCar: Car = {
+      ...testCar,
+      id: "test-sports",
+      classes: { streetPrepared: "TSP" },
+      streetExclusion: "test",
+      attributes: {
+        displacementCc: 1999,
+        forcedInduction: false,
+        seats: 4,
+        bodyStyle: "coupe",
+        sportsCarBased: true,
+      },
+    };
+    const r = classify(kitCar, [stMod]);
+    expect(r.finalClass).toBe("TSP"); // skips ST catch-alls, escalates to SP
+    expect(r.via).toBe("listed");
+  });
+
   it("classification is deterministic regardless of mod order", () => {
     const a = classify(testCar, [spMod, stMod, streetMod]);
     const b = classify(testCar, [streetMod, stMod, spMod]);
