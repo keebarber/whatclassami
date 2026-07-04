@@ -68,7 +68,7 @@ export function AssistBox({
           value={text}
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && submit()}
-          placeholder='e.g. "2019 ND Miata with coilovers, a tune, and 225 RE-71RS"'
+          placeholder='e.g. "2001 Forester L on coilovers with headers and 225 RT660s"'
           className="flex-1 rounded-lg border border-asphalt-600 bg-asphalt-800 px-3 py-2.5 text-sm placeholder:text-asphalt-500 focus:border-cone-500 focus:outline-none"
         />
         <button

@@ -12,14 +12,16 @@ export const CarSchema = z
     yearStart: z.number().int().gte(1945).lte(2100),
     yearEnd: z.number().int().gte(1945).lte(2100),
     classes: z.record(CategorySchema, z.string().min(1)),
+    streetExclusion: z.string().min(1).optional(),
     verified: z.boolean(),
     notes: z.string().optional(),
   })
   .refine((c) => c.yearEnd >= c.yearStart, {
     message: "yearEnd must be >= yearStart",
   })
-  .refine((c) => c.classes.street !== undefined, {
-    message: "every car needs at least a Street class (or explicit NOC handling)",
+  .refine((c) => c.classes.street !== undefined || c.streetExclusion !== undefined, {
+    message:
+      "every car needs a Street class, or a streetExclusion explaining why it has none",
   });
 
 export const ModSchema = z.object({

@@ -29,9 +29,14 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
   }
 
   const bumped = result.finalCategory !== "street";
-  const base = result.baseClass ?? "NOC";
+  const base =
+    result.baseClass ?? (result.car.streetExclusion ? "Excluded" : "NOC");
   const final =
     result.finalClass ?? (bumped ? `${CATEGORY_LABELS[result.finalCategory]} — class TBD` : base);
+  // Escalated = the car landed in a category no mod strictly requires
+  // (it's classed there in Appendix A, e.g. non-turbo Forester → FSP).
+  const escalated =
+    bumped && result.items.every((i) => i.requiredCategory !== result.finalCategory);
 
   async function copyShareUrl() {
     await navigator.clipboard.writeText(window.location.href);
@@ -52,7 +57,9 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
       </div>
       <p className="mt-2 text-sm text-chalk-dim">
         {bumped
-          ? `Modifications move this car from ${CATEGORY_LABELS.street} to ${CATEGORY_LABELS[result.finalCategory]}.`
+          ? escalated
+            ? `This car runs in ${CATEGORY_LABELS[result.finalCategory]}, where it's listed in Appendix A.`
+            : `Modifications move this car from ${CATEGORY_LABELS.street} toward ${CATEGORY_LABELS[result.finalCategory]}.`
           : "Everything selected is allowed in Street. Run it."}
       </p>
 

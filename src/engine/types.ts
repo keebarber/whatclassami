@@ -48,6 +48,12 @@ export interface Car {
   yearStart: number;
   yearEnd: number;
   classes: CarClassMap;
+  /**
+   * Present when the car is on the Street category exclusion list (§3.1
+   * stability). Such cars have no Street class and run in the first more-
+   * prepared category where they are listed (e.g. Forester → FSP).
+   */
+  streetExclusion?: string;
   /** True once checked against the current rulebook's Appendix A. */
   verified: boolean;
   notes?: string;

@@ -123,6 +123,37 @@ describe("classify", () => {
     expect(r.warnings.some((w) => w.includes("modification"))).toBe(true);
   });
 
+  it("escalates to the next listed category when the car isn't classed for its mods", () => {
+    // Car listed ONLY in Street Prepared (like a non-turbo Forester → FSP)
+    const spOnlyCar: Car = {
+      ...testCar,
+      id: "test-wagon",
+      classes: { streetPrepared: "TSP" },
+      streetExclusion: "On the §3.1 stability exclusion list.",
+    };
+    const r = classify(spOnlyCar, [stMod]); // ST-level mod
+    expect(r.baseClass).toBeNull();
+    expect(r.finalCategory).toBe("streetPrepared");
+    expect(r.finalClass).toBe("TSP");
+    expect(r.warnings.some((w) => w.includes("escalates to Street Prepared"))).toBe(true);
+    expect(r.warnings.some((w) => w.includes("Excluded from the Street category"))).toBe(
+      true,
+    );
+  });
+
+  it("a stock street-excluded car runs where it is listed", () => {
+    const spOnlyCar: Car = {
+      ...testCar,
+      id: "test-wagon",
+      classes: { streetPrepared: "TSP" },
+      streetExclusion: "On the §3.1 stability exclusion list.",
+    };
+    const r = classify(spOnlyCar, []);
+    expect(r.finalCategory).toBe("streetPrepared");
+    expect(r.finalClass).toBe("TSP");
+    expect(r.items.filter((i) => i.binding)).toHaveLength(0);
+  });
+
   it("classification is deterministic regardless of mod order", () => {
     const a = classify(testCar, [spMod, stMod, streetMod]);
     const b = classify(testCar, [streetMod, stMod, spMod]);
@@ -141,5 +172,16 @@ describe("summarize", () => {
     expect(s).toContain("XS");
     expect(s).toContain("STT");
     expect(s).toContain("1 mod");
+  });
+
+  it("describes an escalated stock car by its listing", () => {
+    const spOnlyCar: Car = {
+      ...testCar,
+      classes: { streetPrepared: "TSP" },
+      streetExclusion: "stability list",
+    };
+    const s = summarize(classify(spOnlyCar, []));
+    expect(s).toContain("Excluded from Street");
+    expect(s).toContain("TSP");
   });
 });

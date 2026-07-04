@@ -19,6 +19,27 @@ import { AssistBox } from "./AssistBox";
 const CARS: Car[] = CarsFileSchema.parse(carsJson);
 const MODS: Mod[] = ModsFileSchema.parse(modsJson);
 
+/**
+ * Demo build: Keenan's 2001 Forester L — coilovers, strut brace, CAI,
+ * headers + full exhaust, rear sway bar, camber bolts, 17x7.5" +45 wheels,
+ * 225/45R17 RT660s. Shown on first visit (no ?b= in the URL); exercises the
+ * Street-exclusion + FSP escalation path.
+ */
+const DEMO_BUILD = {
+  carId: "subaru-forester-sf",
+  modIds: [
+    "coilovers-springs",
+    "strut-bar",
+    "cold-air-intake",
+    "headers",
+    "catback",
+    "swaybar-single",
+    "camber-kit",
+    "wheels-any-diameter-wide",
+    "tires-wide-200tw",
+  ],
+};
+
 const GROUP_ORDER: ModGroup[] = [
   "tires-wheels",
   "suspension",
@@ -34,15 +55,16 @@ export function Classifier() {
   const [query, setQuery] = useState("");
   const [hydrated, setHydrated] = useState(false);
 
-  // Restore build from ?b= on first load
+  // Restore build from ?b= on first load; otherwise show the demo build
   useEffect(() => {
     const encoded = new URLSearchParams(window.location.search).get("b");
-    if (encoded) {
-      const build = decodeBuild(encoded);
-      if (build) {
-        if (build.carId && CARS.some((c) => c.id === build.carId)) setCarId(build.carId);
-        setModIds(build.modIds.filter((id) => MODS.some((m) => m.id === id)));
-      }
+    const build = encoded ? decodeBuild(encoded) : null;
+    if (build) {
+      if (build.carId && CARS.some((c) => c.id === build.carId)) setCarId(build.carId);
+      setModIds(build.modIds.filter((id) => MODS.some((m) => m.id === id)));
+    } else if (!encoded) {
+      setCarId(DEMO_BUILD.carId);
+      setModIds(DEMO_BUILD.modIds);
     }
     setHydrated(true);
   }, []);

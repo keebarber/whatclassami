@@ -190,6 +190,18 @@
     "notes": "Street: 'Cooper Hardtop & Convertible (S, JCW) (2002-13)' = GS. ST: 'Cooper S & JCW (incl. dealer-installed 2005-06) (2001-06)' = DST; 2007-24 Cooper S = BST."
   },
   {
+    "id": "subaru-forester-sf",
+    "make": "Subaru",
+    "model": "Forester (SF, non-turbo)",
+    "trim": "incl. L, 2.5L N/A",
+    "yearStart": 1998,
+    "yearEnd": 2002,
+    "classes": { "streetPrepared": "FSP" },
+    "streetExclusion": "'Subaru Forester' is on the Street category stability exclusion list (§3.1, Appendix A).",
+    "verified": true,
+    "notes": "Street: excluded (stability list, §3.1). ST: not listed — only the turbo Forester XT appears (GST); ST catch-alls cover sedans/coupes only. SP: 'Forester (non-turbo)' is explicitly listed in FSP, so it runs FSP at any mod level within SP allowances."
+  },
+  {
     "id": "mazda-mazdaspeed3",
     "make": "Mazda",
     "model": "Mazdaspeed3",
