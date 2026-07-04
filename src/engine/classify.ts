@@ -1,5 +1,6 @@
 import { matchCatchall } from "./catchalls";
 import {
+  AlternativeClassing,
   Car,
   CATEGORIES,
   CATEGORY_LABELS,
@@ -14,6 +15,7 @@ interface Resolution {
   category: Category;
   klass: string;
   via: "listed" | "catchall";
+  reasons: string[];
   warnings: string[];
 }
 
@@ -24,7 +26,17 @@ interface Resolution {
  */
 function resolveInCategory(car: Car, category: Category): Resolution | null {
   const listed = car.classes[category];
-  if (listed) return { category, klass: listed, via: "listed", warnings: [] };
+  if (listed) {
+    return {
+      category,
+      klass: listed,
+      via: "listed",
+      reasons: [
+        `Explicitly listed in Appendix A under ${CATEGORY_LABELS[category]} — unambiguous at tech and National-eligible.`,
+      ],
+      warnings: [],
+    };
+  }
 
   // The Street "all eligible unclassified" catch-all never applies to cars
   // on the §3.1 exclusion list.
@@ -33,18 +45,22 @@ function resolveInCategory(car: Car, category: Category): Resolution | null {
   const match = matchCatchall(car, category);
   if (!match) return null;
 
+  const a = car.attributes!;
+  const reasons = [
+    `Fits the ${match.spec.klass} catch-all — "${match.spec.label}": this car is ${a.displacementCc}cc, ${a.forcedInduction ? "forced-induction" : "normally aspirated"}, ${a.seats} seats${match.spec.excludeSportsCarBased ? ", not sports-car-based" : ""}. (${match.spec.ruleRef})`,
+  ];
   const warnings = [
-    `Classed via the ${CATEGORY_LABELS[category]} catch-all — "${match.spec.label}" (${match.spec.ruleRef}). Catch-all/NOC classings are Regional only: not eligible for National Tours or the Solo National Championships.`,
+    `Catch-all/NOC classings are Regional only — not eligible for National Tours or the Solo National Championships (Appendix A introduction).`,
   ];
   if (match.conditionalBody) {
     warnings.push(
-      `The catch-all wording covers "Sedans & Coupes" — treatment of ${car.attributes?.bodyStyle}s varies by Region; confirm with your Region or submit to the SEB (letters.scca.com).`,
+      `Ambiguity: the catch-all wording says "Sedans & Coupes" and never mentions ${a.bodyStyle}s. Nothing in the category rules excludes them, SCCA's own ST championship history includes wagons, and the likely explanation is rarity rather than intent — but the literal wording leaves room for a Region to disagree. Confirm locally or ask the SEB (letters.scca.com).`,
     );
   }
   warnings.push(
-    "Catch-all entries must meet the §3.1 rollover guidelines (vehicle height vs. average track width).",
+    "Catch-all entries must meet the §3.1 rollover guidelines (vehicle height vs. average track width chart).",
   );
-  return { category, klass: match.spec.klass, via: "catchall", warnings };
+  return { category, klass: match.spec.klass, via: "catchall", reasons, warnings };
 }
 
 /**
@@ -92,8 +108,8 @@ export function classify(car: Car, mods: Mod[]): ClassificationResult {
       const r = resolveInCategory(car, cat);
       if (r) {
         resolution = r;
-        warnings.push(
-          `This car isn't classed in ${CATEGORY_LABELS[modCategory]} — it escalates to ${CATEGORY_LABELS[cat]} (${r.klass}), where it resolves. Verify each modification against ${CATEGORY_LABELS[cat]} allowances.`,
+        r.reasons.unshift(
+          `Not classed in ${CATEGORY_LABELS[modCategory]} — the car runs in the next more-prepared category where it resolves. Verify each modification against ${CATEGORY_LABELS[cat]} allowances.`,
         );
         break;
       }
@@ -103,23 +119,33 @@ export function classify(car: Car, mods: Mod[]): ClassificationResult {
   let finalCategory: Category = modCategory;
   let finalClass: string | null = null;
   let via: ClassificationResult["via"] = null;
+  let reasons: string[] = [];
+  const alternatives: AlternativeClassing[] = [];
+
   if (resolution) {
     finalCategory = resolution.category;
     finalClass = resolution.klass;
     via = resolution.via;
+    reasons = resolution.reasons;
     warnings.push(...resolution.warnings);
 
-    // If a catch-all decided it, surface any explicit listing elsewhere —
-    // that listing is the National-eligible home.
+    // When a catch-all decided it, present explicit listings elsewhere as
+    // alternatives, with the case for choosing them.
     if (resolution.via === "catchall") {
       for (const cat of CATEGORIES) {
         const cls = car.classes[cat];
-        if (cls) {
-          warnings.push(
-            `Also explicitly listed in ${CATEGORY_LABELS[cat]} as ${cls} — the National-eligible option for this car.`,
-          );
-          break;
-        }
+        if (!cls || cat === finalCategory) continue;
+        alternatives.push({
+          category: cat,
+          klass: cls,
+          reasons: [
+            `Explicit Appendix A listing — no catch-all interpretation needed, so no argument at tech.`,
+            `National-eligible: choose ${cls} for National Tours or the Solo National Championships (catch-all classings are Regional only).`,
+            CATEGORY_ORDER[cat] > CATEGORY_ORDER[finalCategory]
+              ? `Also the landing spot if your build grows beyond ${CATEGORY_LABELS[finalCategory]} allowances.`
+              : `Note: a ${CATEGORY_LABELS[finalCategory]}-prepped car may concede development headroom to purpose-built ${cls} cars.`,
+          ],
+        });
       }
     }
   } else if (finalCategory !== "street") {
@@ -140,7 +166,17 @@ export function classify(car: Car, mods: Mod[]): ClassificationResult {
     );
   }
 
-  return { car, baseClass, finalCategory, finalClass, via, items, warnings };
+  return {
+    car,
+    baseClass,
+    finalCategory,
+    finalClass,
+    via,
+    reasons,
+    alternatives,
+    items,
+    warnings,
+  };
 }
 
 /** Human-readable one-liner, e.g. "DS → DST (2 mods responsible)". */

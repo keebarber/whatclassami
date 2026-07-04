@@ -68,6 +68,46 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
           : "Everything selected is allowed in Street. Run it."}
       </p>
 
+      {result.reasons.length > 0 && (
+        <div className="mt-3 rounded-lg bg-asphalt-800 p-3">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-chalk-dim">
+            Why {final}
+          </h3>
+          <ul className="mt-1.5 space-y-1">
+            {result.reasons.map((r) => (
+              <li key={r} className="text-xs leading-relaxed text-chalk">
+                {r}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {result.alternatives.length > 0 && (
+        <div className="mt-3 rounded-lg border border-asphalt-600 bg-asphalt-800 p-3">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-chalk-dim">
+            Defensible alternative{result.alternatives.length > 1 ? "s" : ""}
+          </h3>
+          {result.alternatives.map((alt) => (
+            <div key={alt.klass} className="mt-2">
+              <span className="rounded bg-asphalt-700 px-2 py-0.5 text-sm font-extrabold text-chalk">
+                {alt.klass}
+              </span>
+              <span className="ml-2 text-xs text-chalk-dim">
+                {CATEGORY_LABELS[alt.category]}
+              </span>
+              <ul className="mt-1.5 space-y-1">
+                {alt.reasons.map((r) => (
+                  <li key={r} className="text-xs leading-relaxed text-chalk-dim">
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+
       {result.items.length > 0 && (
         <ul className="mt-4 space-y-1.5">
           {result.items.map(({ mod, status, requiredCategory, binding }) => (

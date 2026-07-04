@@ -135,7 +135,7 @@ describe("classify", () => {
     expect(r.baseClass).toBeNull();
     expect(r.finalCategory).toBe("streetPrepared");
     expect(r.finalClass).toBe("TSP");
-    expect(r.warnings.some((w) => w.includes("escalates to Street Prepared"))).toBe(true);
+    expect(r.reasons.some((w) => w.includes("Not classed in Street Touring"))).toBe(true);
     expect(r.warnings.some((w) => w.includes("Excluded from the Street category"))).toBe(
       true,
     );
@@ -173,12 +173,17 @@ describe("classify", () => {
     expect(r.finalCategory).toBe("streetTouring");
     expect(r.finalClass).toBe("EST");
     expect(r.via).toBe("catchall");
+    expect(r.reasons.some((w) => w.includes("2457cc"))).toBe(true);
     expect(r.warnings.some((w) => w.includes("Regional only"))).toBe(true);
-    expect(r.warnings.some((w) => w.includes("wagons varies by Region"))).toBe(true);
+    expect(r.warnings.some((w) => w.includes("never mentions wagons"))).toBe(true);
     expect(r.warnings.some((w) => w.includes("§3.1 rollover"))).toBe(true);
-    expect(
-      r.warnings.some((w) => w.includes("explicitly listed in Street Prepared as TSP")),
-    ).toBe(true);
+    // FSP surfaces as a reasoned alternative, not just a warning.
+    expect(r.alternatives).toHaveLength(1);
+    expect(r.alternatives[0].category).toBe("streetPrepared");
+    expect(r.alternatives[0].klass).toBe("TSP");
+    expect(r.alternatives[0].reasons.some((w) => w.includes("National-eligible"))).toBe(
+      true,
+    );
   });
 
   it("routes forced-induction cars to the GST/BST catch-alls by displacement", () => {

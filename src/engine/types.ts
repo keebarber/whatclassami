@@ -121,6 +121,13 @@ export interface ItemVerdict {
   binding: boolean;
 }
 
+/** A defensible classing other than the primary, with the case for choosing it. */
+export interface AlternativeClassing {
+  category: Category;
+  klass: string;
+  reasons: string[];
+}
+
 export interface ClassificationResult {
   car: Car;
   /** Class if the car were bone stock (Street category). */
@@ -130,6 +137,10 @@ export interface ClassificationResult {
   finalClass: string | null;
   /** How the final class was resolved. */
   via: "listed" | "catchall" | null;
+  /** The case for the primary classing. */
+  reasons: string[];
+  /** Other defensible classings and when to choose them. */
+  alternatives: AlternativeClassing[];
   items: ItemVerdict[];
   warnings: string[];
 }
