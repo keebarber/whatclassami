@@ -5,9 +5,9 @@
     "model": "MX-5 Miata (NA/NB)",
     "yearStart": 1990,
     "yearEnd": 2005,
-    "classes": { "street": "ES", "streetTouring": "STS", "streetPrepared": "CSP" },
-    "verified": false,
-    "notes": "Torsen vs open diff matters for ST classing — verify trim details."
+    "classes": { "street": "ES", "streetTouring": "CST" },
+    "verified": true,
+    "notes": "Street: 'Miata (non-Club Sport 2003) (1990-2005)' = ES; Mazdaspeed Miata (2004-05) also ES. ST: non-turbo '94-'05 = CST; '90-'97 non-Torsen cars listed in EST (no aftermarket LSD in EST per §14.10.K); Mazdaspeed = AST."
   },
   {
     "id": "mazda-miata-nc",
@@ -15,17 +15,19 @@
     "model": "MX-5 Miata (NC)",
     "yearStart": 2006,
     "yearEnd": 2015,
-    "classes": { "street": "CS", "streetTouring": "STR" },
-    "verified": false
+    "classes": { "street": "CS", "streetTouring": "CST" },
+    "verified": true,
+    "notes": "Street: 'MX-5 Miata (NC chassis; non-MS-R 2007) (2006-15)' = CS; the 2007 MS-R = BS. ST: 'MX-5 Miata (2006-15)' = CST."
   },
   {
     "id": "mazda-miata-nd",
     "make": "Mazda",
     "model": "MX-5 Miata (ND)",
     "yearStart": 2016,
-    "yearEnd": 2026,
-    "classes": { "street": "CS", "streetTouring": "STR" },
-    "verified": false
+    "yearEnd": 2025,
+    "classes": { "street": "CS", "streetTouring": "AST" },
+    "verified": true,
+    "notes": "Street: 'MX-5 Miata (ND1/ND2 chassis; including RF) (2016-25)' = CS. ST: 'MX-5 Miata (2016-26)' = AST."
   },
   {
     "id": "subaru-brz-toyota-86-gen1",
@@ -33,8 +35,9 @@
     "model": "BRZ / FR-S / 86 (gen 1)",
     "yearStart": 2013,
     "yearEnd": 2020,
-    "classes": { "street": "DS", "streetTouring": "STX" },
-    "verified": false
+    "classes": { "street": "DS", "streetTouring": "DST" },
+    "verified": true,
+    "notes": "Street: non-TRD cars = DS; FR-S with TRD suspension & 86 with TRD springs/bar/wheels = CS; BRZ tS 2018 = CS, tS 2020 = BS. ST: 'BRZ excl. tS (2013-21)', 'FR-S', '86 (2017-21)' = DST."
   },
   {
     "id": "toyota-gr86-subaru-brz-gen2",
@@ -42,26 +45,29 @@
     "model": "GR86 / BRZ (gen 2)",
     "yearStart": 2022,
     "yearEnd": 2026,
-    "classes": { "street": "DS", "streetTouring": "STX" },
-    "verified": false
+    "classes": { "street": "DS", "streetTouring": "CST" },
+    "verified": true,
+    "notes": "Street: 'GR86 (without TRD equipment, excl. 10th Anniv.)' & 'BRZ (2022-26) including tS' = DS; GR86 10th Anniversary (2023) = BS. ST: 'GR86 (2022-26)', 'BRZ (2022-26)' = CST."
   },
   {
     "id": "honda-s2000",
     "make": "Honda",
-    "model": "S2000",
+    "model": "S2000 (non-CR)",
     "yearStart": 2000,
     "yearEnd": 2009,
-    "classes": { "street": "BS", "streetTouring": "STR" },
-    "verified": false
+    "classes": { "street": "CS", "streetTouring": "CST" },
+    "verified": true,
+    "notes": "Street: 'S2000 (non-CR)' = CS. ST: CST. The CR is classed separately (AST in Street Touring)."
   },
   {
     "id": "honda-civic-si-10th",
     "make": "Honda",
     "model": "Civic Si (10th gen)",
     "yearStart": 2017,
-    "yearEnd": 2021,
-    "classes": { "street": "HS", "streetTouring": "STH" },
-    "verified": false
+    "yearEnd": 2020,
+    "classes": { "street": "GS", "streetTouring": "GST" },
+    "verified": true,
+    "notes": "Street: 'Civic Si (2017-20)' = GS (11th gen 2022-26 also GS). ST: 'Civic Si (2017-26)' = GST; 2002-15 Si = DST."
   },
   {
     "id": "honda-civic-type-r-fk8",
@@ -69,8 +75,9 @@
     "model": "Civic Type R (FK8)",
     "yearStart": 2017,
     "yearEnd": 2021,
-    "classes": { "street": "DS", "streetTouring": "STH" },
-    "verified": false
+    "classes": { "street": "DS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Civic Type R (2017-21 excl. Limited Edition)' = DS; 2021 Limited Edition = BS. ST: 'Civic Type R (2017-23)' = BST."
   },
   {
     "id": "vw-gti-mk7",
@@ -78,17 +85,19 @@
     "model": "Golf GTI (Mk7)",
     "yearStart": 2015,
     "yearEnd": 2021,
-    "classes": { "street": "GS", "streetTouring": "STH" },
-    "verified": false
+    "classes": { "street": "HS", "streetTouring": "GST" },
+    "verified": true,
+    "notes": "Street: 'Golf GTI (2006-21)' = HS; Mk8 (2022-26, incl. 380 Edition) = GS. ST: 'Golf & GTI (1.8T & 2.0T)' = GST."
   },
   {
     "id": "subaru-wrx-va",
     "make": "Subaru",
-    "model": "WRX (VA)",
+    "model": "WRX (VA, non-STI)",
     "yearStart": 2015,
     "yearEnd": 2021,
-    "classes": { "street": "DS", "streetTouring": "STH" },
-    "verified": false
+    "classes": { "street": "GS", "streetTouring": "GST" },
+    "verified": true,
+    "notes": "Street: 'WRX (non-STI, excl. TR, tS) (2002-26)' = GS. ST: 'WRX (non-STI) (2002-25)' = GST. WRX STI (2004-18) = DS street / BST."
   },
   {
     "id": "ford-mustang-gt-s550",
@@ -96,8 +105,9 @@
     "model": "Mustang GT (S550)",
     "yearStart": 2015,
     "yearEnd": 2023,
-    "classes": { "street": "FS" },
-    "verified": false
+    "classes": { "street": "FS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Mustang GT (incl. Performance Package Level 1 & 2) (2010-26)' = FS. ST: 'Mustang GT (excl. Shelby & Boss 302) (2005-23)' = BST."
   },
   {
     "id": "chevy-camaro-ss-gen6",
@@ -105,17 +115,19 @@
     "model": "Camaro SS (gen 6)",
     "yearStart": 2016,
     "yearEnd": 2024,
-    "classes": { "street": "FS" },
-    "verified": false
+    "classes": { "street": "FS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Camaro V6 & V8 (1LE, non-ZL1) (2016-24)' = FS. ST: 'Camaro (N/A)' = BST. ZL1 variants class higher."
   },
   {
     "id": "chevy-corvette-c5",
     "make": "Chevrolet",
-    "model": "Corvette (C5)",
+    "model": "Corvette (C5, non-Z06)",
     "yearStart": 1997,
     "yearEnd": 2004,
-    "classes": { "street": "AS" },
-    "verified": false
+    "classes": { "street": "BS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Corvette (C5, non-Z06) (1997-2004)' = BS. ST: BST."
   },
   {
     "id": "chevy-corvette-c5-z06",
@@ -123,17 +135,19 @@
     "model": "Corvette Z06 (C5)",
     "yearStart": 2001,
     "yearEnd": 2004,
-    "classes": { "street": "SS" },
-    "verified": false
+    "classes": { "street": "AS", "streetTouring": "SST" },
+    "verified": true,
+    "notes": "Street: 'Corvette Z06 (C5) (2001-04)' = AS. ST: SST."
   },
   {
     "id": "nissan-350z",
     "make": "Nissan",
-    "model": "350Z",
+    "model": "350Z (non-NISMO)",
     "yearStart": 2003,
     "yearEnd": 2009,
-    "classes": { "street": "BS" },
-    "verified": false
+    "classes": { "street": "FS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: '350Z (non-NISMO) (2003-09)' = FS; NISMO (2004-08) = CS. ST: '350Z (non-NISMO)' = BST."
   },
   {
     "id": "bmw-m3-e46",
@@ -141,8 +155,9 @@
     "model": "M3 (E46)",
     "yearStart": 2001,
     "yearEnd": 2006,
-    "classes": { "street": "BS", "streetTouring": "STU" },
-    "verified": false
+    "classes": { "street": "FS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'M3 (E46 & E90/E92/E93 chassis) (2000-13)' = FS. ST: 'M3 (E46) (2000-05)' = BST (Appendix A lists 2000-05)."
   },
   {
     "id": "hyundai-elantra-n",
@@ -150,8 +165,9 @@
     "model": "Elantra N",
     "yearStart": 2022,
     "yearEnd": 2026,
-    "classes": { "street": "DS", "streetTouring": "STH" },
-    "verified": false
+    "classes": { "street": "GS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'Elantra N (non-TCR) (2022-26)' = GS. ST: 'Elantra N (2022-26)' = BST."
   },
   {
     "id": "toyota-gr-corolla",
@@ -159,8 +175,9 @@
     "model": "GR Corolla",
     "yearStart": 2023,
     "yearEnd": 2026,
-    "classes": { "street": "DS" },
-    "verified": false
+    "classes": { "street": "BS", "streetTouring": "BST" },
+    "verified": true,
+    "notes": "Street: 'GR Corolla (excl. MORIZO, excl. Performance Shocks & Springs pkg) (2023-26)' = BS; MORIZO & Perf-pkg cars = AS. ST: 'GR Corolla (2023-2024)' = BST."
   },
   {
     "id": "mini-cooper-s-r53",
@@ -168,8 +185,9 @@
     "model": "Cooper S (R53)",
     "yearStart": 2002,
     "yearEnd": 2006,
-    "classes": { "street": "GS", "streetTouring": "STX" },
-    "verified": false
+    "classes": { "street": "GS", "streetTouring": "DST" },
+    "verified": true,
+    "notes": "Street: 'Cooper Hardtop & Convertible (S, JCW) (2002-13)' = GS. ST: 'Cooper S & JCW (incl. dealer-installed 2005-06) (2001-06)' = DST; 2007-24 Cooper S = BST."
   },
   {
     "id": "mazda-mazdaspeed3",
@@ -177,7 +195,8 @@
     "model": "Mazdaspeed3",
     "yearStart": 2007,
     "yearEnd": 2013,
-    "classes": { "street": "GS", "streetTouring": "STH" },
-    "verified": false
+    "classes": { "street": "HS", "streetTouring": "GST" },
+    "verified": true,
+    "notes": "Street: HS (listed under Mazda in H Street). ST: 'Mazdaspeed3' = GST."
   }
 ]

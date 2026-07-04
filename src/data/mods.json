@@ -170,8 +170,8 @@
     "label": "Limited-slip differential (one)",
     "group": "engine-drivetrain",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.95 (cheat sheet)",
-    "note": "NOT allowed in STS — this can change which ST class fits.",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.10.K",
+    "note": "Not allowed in EST except factory viscous units; AWD may replace one diff (SST–DST); GST 2WD only (§14.10.K).",
     "verified": true
   },
   {

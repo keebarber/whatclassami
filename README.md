@@ -30,13 +30,13 @@ reference/         Official SCCA source documents (see reference/README.md)
 ## Data accuracy policy
 
 - Every car and mod row carries a `verified` flag and a rule citation. **Nothing ships as verified until checked against the current rulebook** (`reference/2026_Solo_Rulebook.pdf` — see `reference/README.md` for download instructions).
-- The seed dataset is intentionally marked `verified: false` and the UI warns about it. Verification against Appendix A is the next milestone.
+- All 20 seed cars are verified against the 2026 rulebook (Appendix A), including the 2026 Street realignment and the restructured Street Touring classes (SST/AST/BST/CST/DST/EST/GST). Nine of the twenty originally seeded classes were wrong — the verification pass caught all of them.
 - Engine tests use synthetic fixtures so logic invariants are never coupled to possibly-wrong real-world data. `npm run data:check` gates schema integrity and reports verification coverage.
 - Unknown cars/categories produce explicit "check Appendix A / NOC" warnings — never guesses.
 
 ## Roadmap
 
-1. Verify seed data against the 2026 rulebook; expand car coverage (Appendix A ingest tooling in `tools/`, planned)
+1. Expand car coverage (Appendix A ingest tooling drafted in `tools/parse_appendix.py` — the two-column PDF layout still needs work; boundary regions must be human-verified)
 2. ST class-level constraints (tire width by class, no-LSD-in-STS as a hard rule)
 3. Remaining categories: SP/SM detail, CAM, XS, EV
 4. Static per-car SEO pages (`/car/2019-mazda-mx-5`)
