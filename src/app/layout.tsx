@@ -6,8 +6,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Autocross Quick Guide — What class is my car?",
-    template: `%s | ${SITE_NAME}`,
+    default: "WhatClassAmI — autocross classing guide (SCCA Solo)",
+    template: `%s | ${SITE_NAME} · autocross classing`,
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: "Autocross Quick Guide — What class is my car?",
+    title: "WhatClassAmI — autocross classing guide (SCCA Solo)",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
   },
   twitter: {
     card: "summary",
-    title: "Autocross Quick Guide — What class is my car?",
+    title: "WhatClassAmI — autocross classing guide (SCCA Solo)",
     description: SITE_DESCRIPTION,
   },
   robots: { index: true, follow: true },
@@ -51,8 +51,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
             <Link href="/" className="flex items-center gap-2.5">
               <ConeLogo />
-              <span className="text-lg font-extrabold tracking-tight">
-                Autocross <span className="text-cone-500">Quick Guide</span>
+              <span className="flex flex-col leading-tight">
+                <span className="text-lg font-extrabold tracking-tight">
+                  What<span className="text-cone-500">Class</span>AmI
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-chalk-dim">
+                  Autocross Classing Guide
+                </span>
               </span>
             </Link>
             <nav className="flex items-center gap-4 text-sm font-semibold sm:gap-5">

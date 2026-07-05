@@ -24,7 +24,7 @@
 
 ### Milestone 2: Ship it
 
-- [ ] Domain purchase + Vercel deploy (repo is ready; needs: domain choice, Vercel account). ~$11/yr.
+- [x] Domain purchased: **whatclassami.com** (2026-07-04); site branded to match. Remaining: Vercel deploy + DNS.
 - [ ] Wire "report an error" to a prefilled GitHub issue (needs: public repo decision).
 - [ ] `ANTHROPIC_API_KEY` in production + assist smoke test, rate limiting, prompt caching (needs: API key, ~cents/day at hobby scale).
 - [ ] Analytics (privacy-light) + error reporting.
