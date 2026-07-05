@@ -1,14 +1,36 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Autocross Quick Guide — What class is my car?",
-    template: "%s | Autocross Quick Guide",
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Find your SCCA Solo autocross class — and see exactly which modification bumped you. Deterministic results with rulebook citations. Unofficial tool.",
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "autocross class",
+    "SCCA Solo classing",
+    "what class is my car",
+    "street touring",
+    "street prepared",
+    "autocross classifier",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: "Autocross Quick Guide — What class is my car?",
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary",
+    title: "Autocross Quick Guide — What class is my car?",
+    description: SITE_DESCRIPTION,
+  },
+  robots: { index: true, follow: true },
 };
 
 function ConeLogo() {
@@ -33,9 +55,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 Autocross <span className="text-cone-500">Quick Guide</span>
               </span>
             </Link>
-            <nav className="flex items-center gap-5 text-sm font-semibold">
-              <Link href="/classify" className="text-chalk-dim transition hover:text-chalk">
-                Classify
+            <nav className="flex items-center gap-4 text-sm font-semibold sm:gap-5">
+              <Link href="/cars" className="text-chalk-dim transition hover:text-chalk">
+                Cars
+              </Link>
+              <Link href="/faq" className="text-chalk-dim transition hover:text-chalk">
+                FAQ
               </Link>
               <Link
                 href="/classify"
@@ -64,7 +89,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </a>
               . Classing questions can be submitted to the Solo Events Board.
             </p>
-            <p>Built for the paddock. Cones were harmed in the making of this data.</p>
+            <p>
+              Built for the paddock. Cones were harmed in the making of this data.{" "}
+              <Link href="/faq" className="text-cone-400 underline">
+                FAQ
+              </Link>{" "}
+              ·{" "}
+              <Link href="/contact" className="text-cone-400 underline">
+                Contact / report an error
+              </Link>{" "}
+              ·{" "}
+              <Link href="/cars" className="text-cone-400 underline">
+                Browse cars
+              </Link>
+            </p>
           </div>
         </footer>
       </body>
