@@ -26,7 +26,7 @@
 
 - [x] Domain purchased: **whatclassami.com** (2026-07-04); site branded to match. Remaining: Vercel deploy + DNS.
 - [ ] Wire "report an error" to a prefilled GitHub issue (needs: public repo decision).
-- [ ] `ANTHROPIC_API_KEY` in production + assist smoke test, rate limiting, prompt caching (needs: API key, ~cents/day at hobby scale).
+- [x] Assist guardrails *(done 2026-07-04)*: per-IP rate limits (6/5min, 40/day), per-instance daily cap (300), response dedupe cache, Anthropic prompt caching on the catalog block, 400-token output cap, 500-char input cap, no-retry + 12s timeout. Remaining: set `ANTHROPIC_API_KEY` in Vercel, set a spend limit in the Anthropic Console, and smoke-test in a preview deployment.
 - [ ] Analytics (privacy-light) + error reporting.
 - [ ] Portfolio card + link on SafetyLlama.dev.
 

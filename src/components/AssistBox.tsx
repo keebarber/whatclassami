@@ -36,7 +36,11 @@ export function AssistBox({
       });
       if (res.status === 503) {
         setDisabled(true);
-        setStatus("Assist isn't configured on this deployment — use the picker below.");
+        setStatus("Assist isn't available right now — the picker below always works.");
+        return;
+      }
+      if (res.status === 429) {
+        setStatus("Easy on the throttle — a few requests per five minutes. Try again shortly, or use the picker below.");
         return;
       }
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
