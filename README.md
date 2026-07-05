@@ -44,6 +44,12 @@ reference/         Official SCCA source documents (see reference/README.md)
 
 See [RECOMMENDATIONS.md](./RECOMMENDATIONS.md) and [COMPETITIVE_ANALYSIS.md](./COMPETITIVE_ANALYSIS.md) for the full plan.
 
+## License & data provenance
+
+Code and curated data are licensed under **AGPL-3.0** (see LICENSE): use it, learn from it, fork it — but if you run a derivative as a service, your source must be open too.
+
+Provenance notes: vehicle classings are facts derived from the SCCA® Solo® Rules; the rulebook itself is © SCCA and is **not** included in this repository (short cited excerpts appear in data notes under fair-use principles; the PDFs are gitignored). The AGPL covers this project's code, curation, tests, and prose — it grants no rights to SCCA's text or trademarks.
+
 ## Disclaimer
 
 Not affiliated with or endorsed by the Sports Car Club of America. Always verify classing against the current [SCCA Solo Rules](https://www.scca.com/pages/solo-cars-and-rules) before competing.
