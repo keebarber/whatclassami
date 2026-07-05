@@ -5,8 +5,10 @@ import carsJson from "@/data/cars.json";
 import listingsJson from "@/data/listings.json";
 import modsJson from "@/data/mods.json";
 import {
+  BuildSpec,
   Car,
   CarClassMap,
+  Drivetrain,
   Mod,
   ModGroup,
   MOD_GROUP_LABELS,
@@ -80,6 +82,8 @@ const DEMO_BUILD = {
     "wheels-any-diameter-wide",
     "tires-wide-200tw",
   ],
+  // 225/45R17 on 17x7.5" — exactly at the EST limits (§14.3/§14.4)
+  spec: { tireWidthMm: 225, wheelWidthIn: 7.5, drivetrain: "awd" as const },
 };
 
 const GROUP_ORDER: ModGroup[] = [
@@ -94,6 +98,7 @@ const GROUP_ORDER: ModGroup[] = [
 export function Classifier() {
   const [carId, setCarId] = useState<string | null>(null);
   const [modIds, setModIds] = useState<string[]>([]);
+  const [spec, setSpec] = useState<BuildSpec>({});
   const [query, setQuery] = useState("");
   const [hydrated, setHydrated] = useState(false);
 
@@ -104,9 +109,11 @@ export function Classifier() {
     if (build) {
       if (build.carId && resolveCar(build.carId)) setCarId(build.carId);
       setModIds(build.modIds.filter((id) => MODS.some((m) => m.id === id)));
+      if (build.spec) setSpec(build.spec);
     } else if (!encoded) {
       setCarId(DEMO_BUILD.carId);
       setModIds(DEMO_BUILD.modIds);
+      setSpec(DEMO_BUILD.spec);
     }
     setHydrated(true);
   }, []);
@@ -116,12 +123,12 @@ export function Classifier() {
     if (!hydrated) return;
     const url = new URL(window.location.href);
     if (carId || modIds.length > 0) {
-      url.searchParams.set("b", encodeBuild({ carId, modIds }));
+      url.searchParams.set("b", encodeBuild({ carId, modIds, spec }));
     } else {
       url.searchParams.delete("b");
     }
     window.history.replaceState(null, "", url.toString());
-  }, [carId, modIds, hydrated]);
+  }, [carId, modIds, spec, hydrated]);
 
   const car = useMemo(() => resolveCar(carId), [carId]);
 
@@ -146,7 +153,10 @@ export function Classifier() {
     [modIds],
   );
 
-  const result = useMemo(() => (car ? classify(car, selectedMods) : null), [car, selectedMods]);
+  const result = useMemo(
+    () => (car ? classify(car, selectedMods, spec) : null),
+    [car, selectedMods, spec],
+  );
 
   function toggleMod(id: string) {
     setModIds((prev) => (prev.includes(id) ? prev.filter((m) => m !== id) : [...prev, id]));
@@ -264,6 +274,83 @@ export function Classifier() {
           <h2 className="mb-2 text-xs font-bold uppercase tracking-widest text-cone-500">
             2 · Your modifications
           </h2>
+
+          {/* Sizes & drivetrain — drive the §14.3/§14.4/§14.10.K class-limit checks */}
+          <div className="mb-3 rounded-lg border border-asphalt-700 bg-asphalt-900 p-3">
+            <h3 className="text-xs font-bold text-chalk-dim">
+              Sizes & drivetrain <span className="font-normal">(for exact class limits)</span>
+            </h3>
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              <label className="text-xs text-chalk-dim">
+                Tire width (mm)
+                <input
+                  type="number"
+                  inputMode="numeric"
+                  min={125}
+                  max={455}
+                  step={5}
+                  value={spec.tireWidthMm ?? ""}
+                  onChange={(e) =>
+                    setSpec((s) => ({
+                      ...s,
+                      tireWidthMm: e.target.value ? Number(e.target.value) : undefined,
+                    }))
+                  }
+                  placeholder="225"
+                  className="mt-1 w-full rounded-md border border-asphalt-600 bg-asphalt-800 px-2 py-1.5 text-sm text-chalk placeholder:text-asphalt-500 focus:border-cone-500 focus:outline-none"
+                />
+              </label>
+              <label className="text-xs text-chalk-dim">
+                Wheel width (in)
+                <input
+                  type="number"
+                  inputMode="decimal"
+                  min={4}
+                  max={14}
+                  step={0.5}
+                  value={spec.wheelWidthIn ?? ""}
+                  onChange={(e) =>
+                    setSpec((s) => ({
+                      ...s,
+                      wheelWidthIn: e.target.value ? Number(e.target.value) : undefined,
+                    }))
+                  }
+                  placeholder="7.5"
+                  className="mt-1 w-full rounded-md border border-asphalt-600 bg-asphalt-800 px-2 py-1.5 text-sm text-chalk placeholder:text-asphalt-500 focus:border-cone-500 focus:outline-none"
+                />
+              </label>
+              <label className="text-xs text-chalk-dim">
+                Drivetrain
+                <select
+                  value={spec.drivetrain ?? ""}
+                  onChange={(e) =>
+                    setSpec((s) => ({
+                      ...s,
+                      drivetrain: (e.target.value || undefined) as Drivetrain | undefined,
+                    }))
+                  }
+                  className="mt-1 w-full rounded-md border border-asphalt-600 bg-asphalt-800 px-2 py-1.5 text-sm text-chalk focus:border-cone-500 focus:outline-none"
+                >
+                  <option value="">Not set</option>
+                  <option value="fwd">FWD</option>
+                  <option value="rwd">RWD</option>
+                  <option value="awd">AWD</option>
+                </select>
+              </label>
+              <label className="flex items-end gap-2 pb-1.5 text-xs text-chalk-dim">
+                <input
+                  type="checkbox"
+                  checked={spec.midEngine ?? false}
+                  onChange={(e) =>
+                    setSpec((s) => ({ ...s, midEngine: e.target.checked || undefined }))
+                  }
+                  className="h-4 w-4 accent-cone-500"
+                />
+                Mid-engine
+              </label>
+            </div>
+          </div>
+
           <div className="max-h-[480px] space-y-4 overflow-y-auto pr-1">
             {GROUP_ORDER.map((group) => (
               <div key={group}>

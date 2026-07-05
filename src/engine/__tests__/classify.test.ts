@@ -235,6 +235,66 @@ describe("classify", () => {
   });
 });
 
+describe("class-level ST constraints (§14.3 / §14.4 / §14.10.K)", () => {
+  const estCar: Car = {
+    ...testCar,
+    id: "test-est",
+    classes: { street: "XS", streetTouring: "EST", streetPrepared: "TSP" },
+  };
+  const bstCar: Car = {
+    ...testCar,
+    id: "test-bst",
+    classes: { street: "XS", streetTouring: "BST", streetPrepared: "TSP" },
+  };
+
+  it("flags tires over the class width limit and re-resolves in SP", () => {
+    const r = classify(estCar, [stMod], { tireWidthMm: 245 });
+    expect(r.finalCategory).toBe("streetPrepared");
+    expect(r.finalClass).toBe("TSP");
+    expect(r.items.some((i) => i.mod.ruleRef.includes("14.3"))).toBe(true);
+    expect(r.warnings.some((w) => w.includes("not Street Touring-legal"))).toBe(true);
+  });
+
+  it("passes tires and wheels at exactly the class limit", () => {
+    const r = classify(estCar, [stMod], { tireWidthMm: 225, wheelWidthIn: 7.5 });
+    expect(r.finalClass).toBe("EST");
+    expect(r.reasons.some((x) => x.includes("within the EST limit"))).toBe(true);
+  });
+
+  it("applies drivetrain-specific BST tire limits (AWD 295 vs RWD-N/A 315)", () => {
+    expect(
+      classify(bstCar, [stMod], { tireWidthMm: 305, drivetrain: "awd" }).finalClass,
+    ).toBe("TSP");
+    expect(
+      classify(bstCar, [stMod], { tireWidthMm: 305, drivetrain: "rwd" }).finalClass,
+    ).toBe("BST");
+  });
+
+  it("flags wheels over the class width limit", () => {
+    const r = classify(estCar, [stMod], { wheelWidthIn: 9 });
+    expect(r.finalClass).toBe("TSP");
+    expect(r.items.some((i) => i.mod.ruleRef.includes("14.4"))).toBe(true);
+  });
+
+  it("bans mechanical LSDs in EST (§14.10.K.1)", () => {
+    const lsd: Mod = { ...stMod, id: "lsd-single", label: "LSD" };
+    const r = classify(estCar, [lsd]);
+    expect(r.finalCategory).toBe("streetPrepared");
+    expect(r.finalClass).toBe("TSP");
+  });
+
+  it("stays permissive with a warning when drivetrain is unset and limits split", () => {
+    const dstCar: Car = {
+      ...estCar,
+      id: "test-dst",
+      classes: { street: "XS", streetTouring: "DST", streetPrepared: "TSP" },
+    };
+    const r = classify(dstCar, [stMod], { tireWidthMm: 255 }); // between AWD 245 and 2WD 265
+    expect(r.finalClass).toBe("DST");
+    expect(r.reasons.some((x) => x.includes("assumed most-permissive"))).toBe(true);
+  });
+});
+
 describe("summarize", () => {
   it("describes a stock result", () => {
     expect(summarize(classify(testCar, [streetMod]))).toContain("Street-legal");

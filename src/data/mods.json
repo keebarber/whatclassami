@@ -21,8 +21,8 @@
     "label": "Wider wheels / any diameter (width per class)",
     "group": "tires-wheels",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.88 (cheat sheet)",
-    "note": "Max width depends on ST class.",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.4",
+    "note": "Width limits enforced per class via the wheel-width input: EST/AWD-AST/CST 7.5\", DST AWD 8.0\", most 2WD 9.0\", BST 11.0\", SST unlimited.",
     "verified": true
   },
   {
@@ -30,8 +30,9 @@
     "label": "Wider 200TW tires than stock allows (width per class)",
     "group": "tires-wheels",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.88 (cheat sheet)",
-    "verified": true
+    "ruleRef": "ST cat., 2026 Solo Rules §14.3",
+    "verified": true,
+    "note": "Section-width limits enforced per class via the tire-width input: 225-315mm by class and drivetrain; SST unlimited."
   },
   {
     "id": "tires-rcomp",
@@ -54,7 +55,7 @@
     "label": "Aftermarket shocks/struts (stock spring rates & mounting)",
     "group": "suspension",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.78 (cheat sheet)",
+    "ruleRef": "Street cat., Solo Rules p.78 (cheat sheet); ST: §14.5 (any shocks, same count, no in-motion adjustment)",
     "note": "Street shock allowances are more restricted than ST/SP (e.g. remote-reservoir limits) — verify details.",
     "verified": true
   },
@@ -79,7 +80,7 @@
     "label": "Coilovers / lowering springs",
     "group": "suspension",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.89 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.8",
     "verified": true
   },
   {
@@ -87,7 +88,7 @@
     "label": "Anti-roll bars on BOTH ends",
     "group": "suspension",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.89 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.7",
     "verified": true
   },
   {
@@ -95,7 +96,7 @@
     "label": "Camber bolts / camber plates",
     "group": "suspension",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.91 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.8",
     "verified": true
   },
   {
@@ -103,7 +104,7 @@
     "label": "Suspension/steering bushings (non-OE)",
     "group": "suspension",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.90 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.8",
     "verified": true
   },
   {
@@ -111,8 +112,9 @@
     "label": "Strut bar / tie bar (2-point bolt-on)",
     "group": "suspension",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.87 (cheat sheet)",
-    "verified": true
+    "ruleRef": "ST cat., 2026 Solo Rules §14.2.G",
+    "verified": true,
+    "note": "2-point bars freely; 3-point substitution rules apply (§14.2.G)."
   },
   {
     "id": "air-filter",
@@ -145,7 +147,7 @@
     "label": "Cold air intake (to throttle body / turbo inlet)",
     "group": "engine-drivetrain",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.93 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.10",
     "verified": true
   },
   {
@@ -153,7 +155,7 @@
     "label": "ECU reflash / tune",
     "group": "engine-drivetrain",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.94 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.10",
     "note": "Reprogrammed PCM/ECU OR changed fuel pressure regulator.",
     "verified": true
   },
@@ -162,7 +164,7 @@
     "label": "Exhaust headers / high-flow cats",
     "group": "engine-drivetrain",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.93 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.10",
     "verified": true
   },
   {
@@ -179,7 +181,7 @@
     "label": "Engine / transmission mounts",
     "group": "engine-drivetrain",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.95 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.10",
     "verified": true
   },
   {
@@ -187,8 +189,9 @@
     "label": "Radiator / fan upgrade",
     "group": "engine-drivetrain",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.95 (cheat sheet)",
-    "verified": true
+    "ruleRef": "ST cat., 2026 Solo Rules §14.10.L",
+    "verified": true,
+    "note": "Core dimensions >= standard, OE mounts, capacity/weight >= standard (§14.10.L)."
   },
   {
     "id": "clutch-flywheel",
@@ -244,15 +247,16 @@
     "label": "Big brake kit / brake lines",
     "group": "brakes",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.88 (cheat sheet)",
-    "verified": true
+    "ruleRef": "ST cat., 2026 Solo Rules §14.6",
+    "verified": true,
+    "note": "Rotors equal/larger & ferrous; calipers bolt to standard locations, piston count >= standard (§14.6.A/E)."
   },
   {
     "id": "brake-ducts",
     "label": "Brake cooling ducts",
     "group": "brakes",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.89 (cheat sheet)",
+    "ruleRef": "ST cat., 2026 Solo Rules §14.6.C",
     "verified": true
   },
   {
@@ -260,16 +264,18 @@
     "label": "Aftermarket front seat(s)",
     "group": "interior-electrical",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.86 (cheat sheet)",
-    "verified": true
+    "ruleRef": "ST cat., 2026 Solo Rules §14.2.B",
+    "verified": true,
+    "note": "Seat + hardware must weigh >= 25 lb, fully upholstered, OE mounting holes (§14.2.B)."
   },
   {
     "id": "steering-wheel",
     "label": "Aftermarket steering wheel",
     "group": "interior-electrical",
     "minCategory": "streetTouring",
-    "ruleRef": "ST cat., Solo Rules p.86 (cheat sheet)",
-    "verified": true
+    "ruleRef": "ST cat., 2026 Solo Rules §14.2.D",
+    "verified": true,
+    "note": "Replacement for airbag wheel must weigh at least as much as standard assembly (§14.2.D)."
   },
   {
     "id": "driver-harness",

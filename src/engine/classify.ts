@@ -1,4 +1,5 @@
 import { matchCatchall } from "./catchalls";
+import { BuildSpec, lsdRuling, stLimits } from "./constraints";
 import {
   AlternativeClassing,
   Car,
@@ -73,11 +74,15 @@ function resolveInCategory(car: Car, category: Category): Resolution | null {
  * category where the car resolves (Appendix A: cars run where they are
  * listed) → NOC.
  */
-export function classify(car: Car, mods: Mod[]): ClassificationResult {
+export function classify(
+  car: Car,
+  mods: Mod[],
+  spec: BuildSpec = {},
+): ClassificationResult {
   const warnings: string[] = [];
 
   // Least-prepared category the mods allow.
-  const modCategory: Category = mods.reduce<Category>(
+  let modCategory: Category = mods.reduce<Category>(
     (acc, mod) =>
       CATEGORY_ORDER[mod.minCategory] > CATEGORY_ORDER[acc] ? mod.minCategory : acc,
     "street",
@@ -102,17 +107,103 @@ export function classify(car: Car, mods: Mod[]): ClassificationResult {
   }
 
   // Resolve final class at the mod-implied category, escalating if needed.
-  let resolution = resolveInCategory(car, modCategory);
-  if (resolution === null) {
-    for (const cat of CATEGORIES.slice(CATEGORY_ORDER[modCategory] + 1)) {
-      const r = resolveInCategory(car, cat);
-      if (r) {
-        resolution = r;
-        r.reasons.unshift(
-          `Not classed in ${CATEGORY_LABELS[modCategory]} — the car runs in the next more-prepared category where it resolves. Verify each modification against ${CATEGORY_LABELS[cat]} allowances.`,
-        );
-        break;
+  const resolveFrom = (start: Category): Resolution | null => {
+    let r = resolveInCategory(car, start);
+    if (r === null) {
+      for (const cat of CATEGORIES.slice(CATEGORY_ORDER[start] + 1)) {
+        r = resolveInCategory(car, cat);
+        if (r) {
+          r.reasons.unshift(
+            `Not classed in ${CATEGORY_LABELS[start]} — the car runs in the next more-prepared category where it resolves. Verify each modification against ${CATEGORY_LABELS[r.category]} allowances.`,
+          );
+          break;
+        }
       }
+    }
+    return r;
+  };
+
+  let resolution = resolveFrom(modCategory);
+
+  // Class-level Street Touring constraints (§14.3 tires, §14.4 wheels,
+  // §14.10.K LSDs): a build exceeding its ST class's limits is not ST-legal
+  // at all — it re-resolves from Street Prepared.
+  if (resolution && resolution.category === "streetTouring") {
+    const klass = resolution.klass;
+    const limits = stLimits(klass, car, spec);
+    const violations: ItemVerdict[] = [];
+
+    const violate = (label: string, ruleRef: string, note: string) => {
+      violations.push({
+        mod: {
+          id: `spec-${violations.length}`,
+          label,
+          group: "tires-wheels",
+          minCategory: "streetPrepared",
+          ruleRef,
+          note,
+          verified: true,
+        },
+        status: "bump",
+        requiredCategory: "streetPrepared",
+        binding: true,
+      });
+    };
+
+    if (limits) {
+      if (spec.tireWidthMm && limits.tireWidthMm !== null) {
+        if (spec.tireWidthMm > limits.tireWidthMm) {
+          violate(
+            `${spec.tireWidthMm}mm tires`,
+            "2026 Solo Rules §14.3",
+            `Exceeds the ${klass} section-width limit — ${limits.detail}.`,
+          );
+          if (limits.assumed)
+            warnings.push(
+              `Drivetrain not set: ${klass} tire limits split by drivetrain (${limits.detail}). The check used the most permissive limit.`,
+            );
+        } else {
+          resolution.reasons.push(
+            `Tire width ${spec.tireWidthMm}mm is within the ${klass} limit (${limits.detail}).${limits.assumed ? " Limit assumed most-permissive — set drivetrain to confirm." : ""}`,
+          );
+        }
+      }
+      if (spec.wheelWidthIn && limits.wheelWidthIn !== null) {
+        if (spec.wheelWidthIn > limits.wheelWidthIn) {
+          violate(
+            `${spec.wheelWidthIn}" wide wheels`,
+            "2026 Solo Rules §14.4",
+            `Exceeds the ${klass} wheel-width limit — ${limits.detail}.`,
+          );
+        } else {
+          resolution.reasons.push(
+            `Wheel width ${spec.wheelWidthIn}" is within the ${klass} limit (${limits.detail}).`,
+          );
+        }
+      }
+    }
+
+    if (mods.some((m) => m.id === "lsd-single")) {
+      const ruling = lsdRuling(klass, spec);
+      if (!ruling.allowed && !ruling.conditional) {
+        violate("Limited-slip differential", "2026 Solo Rules §14.10.K", ruling.detail);
+      } else if (ruling.conditional) {
+        warnings.push(ruling.detail);
+      } else {
+        resolution.reasons.push(ruling.detail);
+      }
+    }
+
+    if (violations.length > 0) {
+      items.push(...violations);
+      warnings.push(
+        `This build exceeds ${klass} class limits — it is not Street Touring-legal and re-resolves from Street Prepared.`,
+      );
+      modCategory = "streetPrepared";
+      for (const item of items) {
+        item.binding = item.requiredCategory === "streetPrepared";
+      }
+      resolution = resolveFrom("streetPrepared");
     }
   }
 

@@ -18,8 +18,8 @@
 
 ### Milestone 1: Accuracy depth (the biggest gap — see Part 3)
 
-- [ ] **Class-level ST constraints.** Encode §14.3/§14.4 per-class tire-width and wheel limits and §14.10.K LSD rules as *enforced data*, not notes. Requires structured tire/wheel inputs (widths, not checkboxes) — the largest engine + UI change remaining.
-- [ ] **Mod catalog verification pass.** 38 of 39 mods still cite the 2019 cheat sheet pages; verify each against 2026 §13/§14/§15/§16 with proper section cites, and split coarse mods (exhaust: cat-back vs header-back vs cat-delete have different category implications).
+- [x] **Class-level ST constraints** *(done 2026-07-04)*: §14.3 tire widths, §14.4 wheel widths (with drivetrain/mid-engine/FI splits), §14.10.K LSD rules enforced from structured inputs; violations re-resolve from Street Prepared with citations.
+- [~] **Mod catalog verification pass.** ST-category mods (18) now cite verified 2026 sections (§14.2–§14.10). Remaining: Street (§13) and SP (§15) mods still cite the 2019 cheat sheet; coarse-mod splits (exhaust variants) pending.
 - [ ] **§3.1 rollover chart as data** so excluded-list cars get a computed answer instead of a hand-wave.
 
 ### Milestone 2: Ship it
