@@ -4,8 +4,11 @@ import { CATEGORIES } from "./types";
 const CategorySchema = z.enum(CATEGORIES);
 
 const AttributesSchema = z.object({
-  displacementCc: z.number().int().positive().lte(9000),
-  forcedInduction: z.boolean(),
+  // `seats` + `bodyStyle` are always-known physical facts (used by Street
+  // Modified placement). The rest are only needed to evaluate displacement/
+  // aspiration catch-alls, so they're optional — a car recorded purely for SM
+  // placement can carry just seats/bodyStyle/drivetrain. matchCatchall() skips
+  // any car missing them, so partial attributes never cause a wrong catch-all.
   seats: z.number().int().gte(1).lte(9),
   bodyStyle: z.enum([
     "sedan",
@@ -17,7 +20,10 @@ const AttributesSchema = z.object({
     "truck",
     "sports",
   ]),
-  sportsCarBased: z.boolean(),
+  drivetrain: z.enum(["fwd", "rwd", "awd"]).optional(),
+  displacementCc: z.number().int().positive().lte(9000).optional(),
+  forcedInduction: z.boolean().optional(),
+  sportsCarBased: z.boolean().optional(),
   cylinders: z.number().int().gte(2).lte(16).optional(),
 });
 

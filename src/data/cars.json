@@ -7,10 +7,20 @@
     "yearEnd": 2005,
     "classes": {
       "street": "ES",
-      "streetTouring": "CST"
+      "streetTouring": "CST",
+      "prepared": "DP"
     },
     "verified": true,
-    "notes": "Street: 'Miata (non-Club Sport 2003) (1990-2005)' = ES; Mazdaspeed Miata (2004-05) also ES. ST: non-turbo '94-'05 = CST; '90-'97 non-Torsen cars listed in EST (no aftermarket LSD in EST per \u00a714.10.K); Mazdaspeed = AST."
+    "notes": "Street: 'Miata (non-Club Sport 2003) (1990-2005)' = ES; Mazdaspeed Miata (2004-05) also ES. ST: non-turbo '94-'05 = CST; '90-'97 non-Torsen cars listed in EST (no aftermarket LSD in EST per \u00a714.10.K); Mazdaspeed = AST. SM: not Appendix A-listed; placed by drivetrain/body (2026 Solo Rules, Street Modified). P: 'MX-5 Miata (1.6L & 1.8L, non-turbo) (1990-2005)' = DP.",
+    "attributes": {
+      "displacementCc": 1839,
+      "forcedInduction": false,
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "sportsCarBased": true,
+      "cylinders": 4,
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "mazda-miata-nc",
@@ -21,10 +31,11 @@
     "classes": {
       "street": "CS",
       "streetTouring": "CST",
-      "streetPrepared": "CSP"
+      "streetPrepared": "CSP",
+      "prepared": "DP"
     },
     "verified": true,
-    "notes": "Street: 'MX-5 Miata (NC chassis; non-MS-R 2007) (2006-15)' = CS; the 2007 MS-R = BS. ST: 'MX-5 Miata (2006-15)' = CST. SP: 'MX-5 (2006-15)' = CSP; DSP 'MX-5 (2006-2015) Limited Prep' also listed."
+    "notes": "Street: 'MX-5 Miata (NC chassis; non-MS-R 2007) (2006-15)' = CS; the 2007 MS-R = BS. ST: 'MX-5 Miata (2006-15)' = CST. SP: 'MX-5 (2006-15)' = CSP; DSP 'MX-5 (2006-2015) Limited Prep' also listed. P: 'MX-5 Miata (2006-15)' = DP."
   },
   {
     "id": "mazda-miata-nd",
@@ -35,10 +46,11 @@
     "classes": {
       "street": "CS",
       "streetTouring": "AST",
-      "streetPrepared": "CSP"
+      "streetPrepared": "CSP",
+      "prepared": "DP"
     },
     "verified": true,
-    "notes": "Street: 'MX-5 Miata (ND1/ND2 chassis; including RF) (2016-25)' = CS. ST: 'MX-5 Miata (2016-26)' = AST. SP: 'MX-5 Miata (ND chassis, all) (2016-25)' = CSP."
+    "notes": "Street: 'MX-5 Miata (ND1/ND2 chassis; including RF) (2016-25)' = CS. ST: 'MX-5 Miata (2016-26)' = AST. SP: 'MX-5 Miata (ND chassis, all) (2016-25)' = CSP. P: 'MX-5 Miata (2016-20)' = DP."
   },
   {
     "id": "subaru-brz-toyota-86-gen1",
@@ -52,7 +64,16 @@
       "streetPrepared": "DSP"
     },
     "verified": true,
-    "notes": "Street: non-TRD cars = DS; FR-S with TRD suspension & 86 with TRD springs/bar/wheels = CS; BRZ tS 2018 = CS, tS 2020 = BS. ST: 'BRZ excl. tS (2013-21)', 'FR-S', '86 (2017-21)' = DST. SP: 'BRZ (2013-16)'/'(2017-20)', 'FR-S (2013-16)' = DSP."
+    "notes": "Street: non-TRD cars = DS; FR-S with TRD suspension & 86 with TRD springs/bar/wheels = CS; BRZ tS 2018 = CS, tS 2020 = BS. ST: 'BRZ excl. tS (2013-21)', 'FR-S', '86 (2017-21)' = DST. SP: 'BRZ (2013-16)'/'(2017-20)', 'FR-S (2013-16)' = DSP. SM: not Appendix A-listed; placed by drivetrain/body (2026 Solo Rules, Street Modified).",
+    "attributes": {
+      "displacementCc": 1998,
+      "forcedInduction": false,
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "sportsCarBased": true,
+      "cylinders": 4,
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "toyota-gr86-subaru-brz-gen2",
@@ -77,10 +98,11 @@
     "classes": {
       "street": "CS",
       "streetTouring": "CST",
-      "streetPrepared": "CSP"
+      "streetPrepared": "CSP",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'S2000 (non-CR)' = CS. ST: CST. The CR is classed separately (AST in Street Touring). SP: 'S2000' = CSP."
+    "notes": "Street: 'S2000 (non-CR)' = CS. ST: CST. The CR is classed separately (AST in Street Touring). SP: 'S2000' = CSP. P: 'S2000 (2000-09)' = FP."
   },
   {
     "id": "honda-civic-si-10th",
@@ -121,7 +143,16 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Golf GTI (2006-21)' = HS; Mk8 (2022-26, incl. 380 Edition) = GS. ST: 'Golf & GTI (1.8T & 2.0T)' = GST."
+    "notes": "Street: 'Golf GTI (2006-21)' = HS; Mk8 (2022-26, incl. 380 Edition) = GS. ST: 'Golf & GTI (1.8T & 2.0T)' = GST. SM: not Appendix A-listed; placed by drivetrain/body (2026 Solo Rules, Street Modified).",
+    "attributes": {
+      "displacementCc": 1984,
+      "forcedInduction": true,
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "sportsCarBased": false,
+      "cylinders": 4,
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "subaru-wrx-va",
@@ -135,7 +166,16 @@
       "streetPrepared": "SSP"
     },
     "verified": true,
-    "notes": "Street: 'WRX (non-STI, excl. TR, tS) (2002-26)' = GS. ST: 'WRX (non-STI) (2002-25)' = GST. WRX STI (2004-18) = DS street / BST. SP: 'Impreza WRX (incl. STI)' listings = SSP."
+    "notes": "Street: 'WRX (non-STI, excl. TR, tS) (2002-26)' = GS. ST: 'WRX (non-STI) (2002-25)' = GST. WRX STI (2004-18) = DS street / BST. SP: 'Impreza WRX (incl. STI)' listings = SSP. SM: not Appendix A-listed; placed by drivetrain/body (2026 Solo Rules, Street Modified).",
+    "attributes": {
+      "displacementCc": 1998,
+      "forcedInduction": true,
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "sportsCarBased": false,
+      "cylinders": 4,
+      "drivetrain": "awd"
+    }
   },
   {
     "id": "ford-mustang-gt-s550",
@@ -202,10 +242,11 @@
     "classes": {
       "street": "FS",
       "streetTouring": "BST",
-      "streetPrepared": "DSP"
+      "streetPrepared": "DSP",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '350Z (non-NISMO) (2003-09)' = FS; NISMO (2004-08) = CS. ST: '350Z (non-NISMO)' = BST. SP: '350Z (all)' = DSP."
+    "notes": "Street: '350Z (non-NISMO) (2003-09)' = FS; NISMO (2004-08) = CS. ST: '350Z (non-NISMO)' = BST. SP: '350Z (all)' = DSP. P: '350Z & 370Z (2003-17)' = FP."
   },
   {
     "id": "bmw-m3-e46",
@@ -291,10 +332,11 @@
     "classes": {
       "street": "CS",
       "streetTouring": "DST",
-      "streetPrepared": "DSP"
+      "streetPrepared": "DSP",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'RX-8' under Mazda in C Street. ST: 'RX-8' in DST. SP: 'RX-8' = DSP."
+    "notes": "Street: 'RX-8' under Mazda in C Street. ST: 'RX-8' in DST. SP: 'RX-8' = DSP. P: 'RX-8 (Renesis; bridge or peripheral porting allowed)' = FP."
   },
   {
     "id": "nissan-370z",
@@ -305,10 +347,11 @@
     "classes": {
       "street": "FS",
       "streetTouring": "BST",
-      "streetPrepared": "DSP"
+      "streetPrepared": "DSP",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '370Z (non-NISMO) (2009-20)' = FS; NISMO = CS. ST: '370Z (non-NISMO)' = BST ('370Z NISMO (2009-20)' also BST). SP: '370Z (all) (2009-18)' = DSP."
+    "notes": "Street: '370Z (non-NISMO) (2009-20)' = FS; NISMO = CS. ST: '370Z (non-NISMO)' = BST ('370Z NISMO (2009-20)' also BST). SP: '370Z (all) (2009-18)' = DSP. P: '350Z & 370Z (2003-17)' = FP."
   },
   {
     "id": "bmw-m3-e36",
@@ -346,10 +389,11 @@
     "yearEnd": 2015,
     "classes": {
       "street": "DS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Lancer Evolution (2003-15)' = DS. ST: 'Lancer Evolution' = BST."
+    "notes": "Street: 'Lancer Evolution (2003-15)' = DS. ST: 'Lancer Evolution' = BST. P: 'Lancer Evolution (2003-06) [Evo VIII/IX only; Evo X is not FP-listed]' = FP."
   },
   {
     "id": "ford-focus-rs",
@@ -468,10 +512,11 @@
     "classes": {
       "street": "DS",
       "streetTouring": "DST",
-      "streetPrepared": "ESP"
+      "streetPrepared": "ESP",
+      "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'Integra Type R' under Acura in D Street. ST: 'Integra (incl. Type R) (1994-2001)' = DST. SP: 'Integra (incl. Type R) (1994-01)' = ESP."
+    "notes": "Street: 'Integra Type R' under Acura in D Street. ST: 'Integra (incl. Type R) (1994-2001)' = DST. SP: 'Integra (incl. Type R) (1994-01)' = ESP. P: 'Integra (1994-2001)' = EP."
   },
   {
     "id": "chevy-cobalt-ss-turbo",
@@ -496,10 +541,11 @@
     "classes": {
       "street": "GS",
       "streetTouring": "GST",
-      "streetPrepared": "ESP"
+      "streetPrepared": "ESP",
+      "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'SRT-4 (Neon chassis)' = GS. ST: 'SRT-4 (2003-05)' = GST. SP: 'SRT-4' = ESP."
+    "notes": "Street: 'SRT-4 (Neon chassis)' = GS. ST: 'SRT-4 (2003-05)' = GST. SP: 'SRT-4' = ESP. P: 'Neon SRT-4 (2003-05)' = EP."
   },
   {
     "id": "mazdaspeed-miata",
@@ -509,10 +555,11 @@
     "yearEnd": 2005,
     "classes": {
       "street": "ES",
-      "streetTouring": "AST"
+      "streetTouring": "AST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Mazdaspeed Miata (2004-05)' = ES. ST: 'Mazdaspeed Miata (2004-05)' = AST."
+    "notes": "Street: 'Mazdaspeed Miata (2004-05)' = ES. ST: 'Mazdaspeed Miata (2004-05)' = AST. P: 'MazdaSpeed MX-5 Miata (2004-05)' = FP."
   },
   {
     "id": "mazda-mazdaspeed3",
@@ -576,10 +623,11 @@
     "yearEnd": 2002,
     "classes": {
       "street": "CS",
-      "streetTouring": "CST"
+      "streetTouring": "CST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Z3 (6-cyl, non-M) (1997-2002)' = CS. ST: 'Z3 (6-cyl)' = CST. 4-cyl = ES/EST."
+    "notes": "Street: 'Z3 (6-cyl, non-M) (1997-2002)' = CS. ST: 'Z3 (6-cyl)' = CST. 4-cyl = ES/EST. P: 'Z3 (6-cyl) (1999-2002)' = FP."
   },
   {
     "id": "bmw-z4-e85-non-m",
@@ -676,10 +724,11 @@
     "yearEnd": 2020,
     "classes": {
       "street": "CS",
-      "streetTouring": "AST"
+      "streetTouring": "AST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '124 Spider (incl. Abarth) (2017-20)' = CS. ST: 'Spider (2016-20)' = AST."
+    "notes": "Street: '124 Spider (incl. Abarth) (2017-20)' = CS. ST: 'Spider (2016-20)' = AST. P: '124 Spider (2017-19)' = FP."
   },
   {
     "id": "mazda-rx7-turbo-fc",
@@ -689,10 +738,11 @@
     "yearEnd": 1991,
     "classes": {
       "street": "CS",
-      "streetPrepared": "CSP"
+      "streetPrepared": "CSP",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'RX-7 Turbo (1987-91)' = CS; FD (1993-95) = AS. No ST listing found for turbo RX-7s. SP: 'RX-7 Turbo (1986-92)' = CSP."
+    "notes": "Street: 'RX-7 Turbo (1987-91)' = CS; FD (1993-95) = AS. No ST listing found for turbo RX-7s. SP: 'RX-7 Turbo (1986-92)' = CSP. P: 'RX-7 (1986-91), 13B' = FP."
   },
   {
     "id": "mercedes-slk32-amg",
@@ -761,10 +811,11 @@
     "yearStart": 2004,
     "yearEnd": 2008,
     "classes": {
-      "street": "CS"
+      "street": "CS",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '350Z NISMO (2004-2008)' = CS. ST: only '350Z (non-NISMO)' is listed (BST); no NISMO ST listing found."
+    "notes": "Street: '350Z NISMO (2004-2008)' = CS. ST: only '350Z (non-NISMO)' is listed (BST); no NISMO ST listing found. P: '350Z & 370Z (2003-17)' = FP."
   },
   {
     "id": "nissan-370z-nismo",
@@ -774,10 +825,11 @@
     "yearEnd": 2020,
     "classes": {
       "street": "CS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '370Z NISMO (2009-20)' = CS. ST: '370Z NISMO (2009-20)' = BST."
+    "notes": "Street: '370Z NISMO (2009-20)' = CS. ST: '370Z NISMO (2009-20)' = BST. P: '350Z & 370Z (2003-17)' = FP."
   },
   {
     "id": "pontiac-solstice-na",
@@ -1429,10 +1481,11 @@
     "yearEnd": 1998,
     "classes": {
       "street": "ES",
-      "streetTouring": "EST"
+      "streetTouring": "EST",
+      "prepared": "DP"
     },
     "verified": true,
-    "notes": "Street: 'Z3 (4-cyl) (1996-98)' = ES. ST: 'Z3 (4-cyl)' = EST."
+    "notes": "Street: 'Z3 (4-cyl) (1996-98)' = ES. ST: 'Z3 (4-cyl)' = EST. P: 'Z3 (4-cyl)' = DP."
   },
   {
     "id": "datsun-240z",
@@ -1442,10 +1495,11 @@
     "yearEnd": 1973,
     "classes": {
       "street": "ES",
-      "streetTouring": "CST"
+      "streetTouring": "CST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '240Z' = ES (years approximate; listing has none). ST: '240Z' = CST."
+    "notes": "Street: '240Z' = ES (years approximate; listing has none). ST: '240Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP."
   },
   {
     "id": "datsun-260z",
@@ -1455,10 +1509,11 @@
     "yearEnd": 1974,
     "classes": {
       "street": "ES",
-      "streetTouring": "CST"
+      "streetTouring": "CST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '260Z' = ES (years approximate). ST: '260Z' = CST."
+    "notes": "Street: '260Z' = ES (years approximate). ST: '260Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP."
   },
   {
     "id": "datsun-280z",
@@ -1468,10 +1523,11 @@
     "yearEnd": 1978,
     "classes": {
       "street": "ES",
-      "streetTouring": "CST"
+      "streetTouring": "CST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '280Z' = ES (years approximate). ST: '280Z' = CST."
+    "notes": "Street: '280Z' = ES (years approximate). ST: '280Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP."
   },
   {
     "id": "datsun-280zx-na",
@@ -1481,10 +1537,11 @@
     "yearEnd": 1983,
     "classes": {
       "street": "ES",
-      "streetTouring": "CST"
+      "streetTouring": "CST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '280ZX (non-turbo)' = ES (years approximate). ST: '280ZX (non-turbo)' = CST."
+    "notes": "Street: '280ZX (non-turbo)' = ES (years approximate). ST: '280ZX (non-turbo)' = CST. P: '280ZX (incl. 2+2) (1979-83)' = FP."
   },
   {
     "id": "fiat-x19",
@@ -1507,10 +1564,11 @@
     "classes": {
       "street": "ES",
       "streetTouring": "CST",
-      "streetPrepared": "CSP"
+      "streetPrepared": "CSP",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'RX-7 (non-turbo)' = ES (years approximate). ST: 'RX-7 GSL/GSL-SE/GXL/GTU (1988)' trims = CST; 'RX-7 (non-turbo, NOC)' = EST. SP: 'RX-7 (non-turbo) (1978-85)'/'(1986-92)' = CSP."
+    "notes": "Street: 'RX-7 (non-turbo)' = ES (years approximate). ST: 'RX-7 GSL/GSL-SE/GXL/GTU (1988)' trims = CST; 'RX-7 (non-turbo, NOC)' = EST. SP: 'RX-7 (non-turbo) (1978-85)'/'(1986-92)' = CSP. P: 'RX-7 (1979-85) / (1986-91)' = FP."
   },
   {
     "id": "pontiac-fiero-v6",
@@ -1520,10 +1578,11 @@
     "yearEnd": 1988,
     "classes": {
       "street": "ES",
-      "streetTouring": "CST"
+      "streetTouring": "CST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Fiero (V6)' = ES (years approximate). ST: 'Fiero (V6)' = CST; 4-cyl = EST."
+    "notes": "Street: 'Fiero (V6)' = ES (years approximate). ST: 'Fiero (V6)' = CST; 4-cyl = EST. P: 'Fiero (V-6 2.8L)' = FP."
   },
   {
     "id": "porsche-924-turbo",
@@ -1766,10 +1825,11 @@
     "classes": {
       "street": "FS",
       "streetTouring": "BST",
-      "streetPrepared": "ESP"
+      "streetPrepared": "ESP",
+      "prepared": "CP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro SS (base car only, incl. GM-installed 1LE) (1998-2002)' = FS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro, Firebird, SS, Firehawk, & WS6 (4th gen) (1993-2002)' = ESP."
+    "notes": "Street: 'Camaro SS (base car only, incl. GM-installed 1LE) (1998-2002)' = FS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro, Firebird, SS, Firehawk, & WS6 (4th gen) (1993-2002)' = ESP. P: 'Camaro (1993-02)' = CP."
   },
   {
     "id": "chevy-ss-sedan",
@@ -1790,10 +1850,11 @@
     "yearStart": 1981,
     "yearEnd": 1983,
     "classes": {
-      "street": "FS"
+      "street": "FS",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '280ZX Turbo' = FS (years approximate; listing has none)."
+    "notes": "Street: '280ZX Turbo' = FS (years approximate; listing has none). P: '280ZX (incl. 2+2) (1979-83)' = FP."
   },
   {
     "id": "dodge-challenger-v8",
@@ -1842,10 +1903,11 @@
     "yearEnd": 2013,
     "classes": {
       "street": "FS",
-      "streetTouring": "SST"
+      "streetTouring": "SST",
+      "prepared": "CP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Boss 302 (non-Laguna Seca) (2012-13)' = FS; Laguna Seca = SS. ST: 'Mustang Boss 302 (2012-13)' = SST."
+    "notes": "Street: 'Mustang Boss 302 (non-Laguna Seca) (2012-13)' = FS; Laguna Seca = SS. ST: 'Mustang Boss 302 (2012-13)' = SST. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP."
   },
   {
     "id": "ford-mustang-mach1-2021",
@@ -2019,10 +2081,11 @@
     "yearEnd": 1996,
     "classes": {
       "street": "FS",
-      "streetTouring": "DST"
+      "streetTouring": "DST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '300ZX (non-turbo) (1990-96)' = FS. ST: '300ZX (non-turbo) (1984-96)' = DST."
+    "notes": "Street: '300ZX (non-turbo) (1990-96)' = FS. ST: '300ZX (non-turbo) (1984-96)' = DST. P: '300ZX (Z32 chassis; non-turbo) (1990-96)' = FP."
   },
   {
     "id": "nissan-300zx-turbo-z31",
@@ -2032,10 +2095,11 @@
     "yearEnd": 1989,
     "classes": {
       "street": "FS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '300ZX Turbo (1984-89)' = FS. ST: '300ZX Turbo (1984-89)' = BST."
+    "notes": "Street: '300ZX Turbo (1984-89)' = FS. ST: '300ZX Turbo (1984-89)' = BST. P: '300ZX (Z31 chassis) (1984-89)' = FP."
   },
   {
     "id": "pontiac-gto",
@@ -2236,10 +2300,11 @@
     "yearEnd": 2010,
     "classes": {
       "street": "GS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "prepared": "CP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang (V6) (2005-10)' = GS. ST: 'Mustang V6 (all)' = BST."
+    "notes": "Street: 'Mustang (V6) (2005-10)' = GS. ST: 'Mustang V6 (all)' = BST. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP."
   },
   {
     "id": "ford-mustang-svo",
@@ -2507,10 +2572,11 @@
     "classes": {
       "street": "HS",
       "streetTouring": "EST",
-      "streetPrepared": "CSP"
+      "streetPrepared": "CSP",
+      "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'CRX' = HS (years approximate; listing has none). ST: 'CRX' = EST. SP: 'Civic & CRX (1988-91)' = CSP; 1984-87 = FSP."
+    "notes": "Street: 'CRX' = HS (years approximate; listing has none). ST: 'CRX' = EST. SP: 'Civic & CRX (1988-91)' = CSP; 1984-87 = FSP. P: 'CRX (1984-87)' = EP."
   },
   {
     "id": "honda-cr-z",
@@ -2534,10 +2600,11 @@
     "classes": {
       "street": "HS",
       "streetTouring": "EST",
-      "streetPrepared": "FSP"
+      "streetPrepared": "FSP",
+      "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'Fit' = HS (years approximate). ST: 'Fit' = EST. SP: 'Fit' = FSP."
+    "notes": "Street: 'Fit' = HS (years approximate). ST: 'Fit' = EST. SP: 'Fit' = FSP. P: 'Fit (2007-18)' = EP."
   },
   {
     "id": "honda-del-sol",
@@ -2547,10 +2614,11 @@
     "yearEnd": 1997,
     "classes": {
       "street": "HS",
-      "streetTouring": "EST"
+      "streetTouring": "EST",
+      "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'del Sol & Civic del Sol (all)' = HS. ST: 'del Sol & Civic del Sol' = EST."
+    "notes": "Street: 'del Sol & Civic del Sol (all)' = HS. ST: 'del Sol & Civic del Sol' = EST. P: 'DelSol (1993-96)' = EP."
   },
   {
     "id": "honda-prelude",
@@ -2585,10 +2653,11 @@
     "yearEnd": 2001,
     "classes": {
       "street": "HS",
-      "streetTouring": "DST"
+      "streetTouring": "DST",
+      "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'Integra (all except Type R) (1986-2001)' = HS. ST: 'Integra (incl. Type R) (1994-2001)' = DST; 'Integra (1986-93)' = EST."
+    "notes": "Street: 'Integra (all except Type R) (1986-2001)' = HS. ST: 'Integra (incl. Type R) (1994-2001)' = DST; 'Integra (1986-93)' = EST. P: 'Integra (1986-89) / (1990-93) / (1994-2001)' = EP."
   },
   {
     "id": "acura-integra-base-de4",
@@ -2612,10 +2681,11 @@
     "classes": {
       "street": "HS",
       "streetTouring": "GST",
-      "streetPrepared": "ESP"
+      "streetPrepared": "ESP",
+      "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'Fiesta ST (2014-19)' = HS. ST: 'Fiesta ST' = GST. SP: 'Fiesta ST (2014-18)' = ESP."
+    "notes": "Street: 'Fiesta ST (2014-19)' = HS. ST: 'Fiesta ST' = GST. SP: 'Fiesta ST (2014-18)' = ESP. P: 'Fiesta ST (2014-19)' = EP."
   },
   {
     "id": "ford-focus-st",
@@ -3345,10 +3415,11 @@
     "yearStart": 2012,
     "yearEnd": 2013,
     "classes": {
-      "street": "AS"
+      "street": "AS",
+      "prepared": "CP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Boss 302 Laguna Seca (2012-13)' = AS; non-LS = FS."
+    "notes": "Street: 'Mustang Boss 302 Laguna Seca (2012-13)' = AS; non-LS = FS. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP."
   },
   {
     "id": "ford-mustang-gt500-2020",
@@ -3370,10 +3441,11 @@
     "yearEnd": 2009,
     "classes": {
       "street": "AS",
-      "streetTouring": "AST"
+      "streetTouring": "AST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'S2000 CR' = AS. ST: 'S2000-CR' = AST."
+    "notes": "Street: 'S2000 CR' = AS. ST: 'S2000-CR' = AST. P: 'S2000 (2000-09)' = FP."
   },
   {
     "id": "jaguar-f-type-r-svr",
@@ -3395,10 +3467,11 @@
     "yearEnd": 2011,
     "classes": {
       "street": "AS",
-      "streetTouring": "SST"
+      "streetTouring": "SST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Elise (non-SC) (2005-11)' = AS. ST: 'Elise (non-SC) (2005-11)' = SST. SC = SS; Sport Elise (2006) not Street-eligible."
+    "notes": "Street: 'Elise (non-SC) (2005-11)' = AS. ST: 'Elise (non-SC) (2005-11)' = SST. SC = SS; Sport Elise (2006) not Street-eligible. P: 'Elise & Exige (normally-aspirated) (1996-2010)' = FP."
   },
   {
     "id": "lotus-evora-s-400-gt",
@@ -3572,10 +3645,11 @@
     "yearStart": 1991,
     "yearEnd": 2005,
     "classes": {
-      "street": "BS"
+      "street": "BS",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'NSX (non-Zanardi Edition)' = BS (years approximate; listing has none)."
+    "notes": "Street: 'NSX (non-Zanardi Edition)' = BS (years approximate; listing has none). P: 'NSX (1990-2005)' = FP."
   },
   {
     "id": "acura-integra-type-s",
@@ -3940,10 +4014,11 @@
     "yearEnd": 2009,
     "classes": {
       "street": "BS",
-      "streetTouring": "AST"
+      "streetTouring": "AST",
+      "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Solstice GXP (Turbo) (2007-09)' = BS; ZOK Club Sport pkg (N/A) also BS. ST: 'Solstice GXP' = AST."
+    "notes": "Street: 'Solstice GXP (Turbo) (2007-09)' = BS; ZOK Club Sport pkg (N/A) also BS. ST: 'Solstice GXP' = AST. P: 'Solstice GXP' = FP."
   },
   {
     "id": "porsche-911-996-carrera",
@@ -4276,7 +4351,8 @@
       "seats": 6,
       "bodyStyle": "wagon",
       "cylinders": 8,
-      "sportsCarBased": false
+      "sportsCarBased": false,
+      "drivetrain": "rwd"
     },
     "verified": true,
     "notes": "Not listed anywhere in Appendix A (verified against the 2026 extraction) \u2014 a true NOC car. Resolves via the Street FS catch-all: 'V8 sedans, pick-ups, and sedan-derived convertibles (NOC)'; per \u00a712 a wagon seating 4+ is a sedan. ST: >5.1L N/A fits the BST catch-all. Regional only. Attributes reflect the 5.7L LT1; the 4.3L L99 V8 also qualifies."

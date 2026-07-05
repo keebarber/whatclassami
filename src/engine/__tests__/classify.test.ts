@@ -339,6 +339,92 @@ describe("class-level ST constraints (§14.3 / §14.4 / §14.10.K)", () => {
   });
 });
 
+describe("Street Modified placement (SSM / SM / SMF)", () => {
+  const withAttrs = (id: string, a: Car["attributes"]): Car => ({
+    ...testCar,
+    id,
+    classes: { street: "XS", streetPrepared: "TSP" },
+    attributes: a,
+  });
+
+  it("places a 2-seat car in SSM via placement (National-eligible, not Regional)", () => {
+    const roadster = withAttrs("test-2seat", {
+      displacementCc: 1998,
+      forcedInduction: false,
+      seats: 2,
+      bodyStyle: "convertible",
+      sportsCarBased: true,
+      drivetrain: "rwd",
+    });
+    const r = classify(roadster, [smMod]);
+    expect(r.finalCategory).toBe("streetModified");
+    expect(r.finalClass).toBe("SSM");
+    expect(r.via).toBe("placement");
+    expect(r.warnings.some((w) => w.includes("Regional"))).toBe(false);
+  });
+
+  it("places a FWD car in SMF and offers SM as an alternative", () => {
+    const fwd = withAttrs("test-fwd", {
+      displacementCc: 1984,
+      forcedInduction: true,
+      seats: 5,
+      bodyStyle: "hatchback",
+      sportsCarBased: false,
+      drivetrain: "fwd",
+    });
+    const r = classify(fwd, [smMod]);
+    expect(r.finalClass).toBe("SMF");
+    expect(r.alternatives.some((alt) => alt.klass === "SM")).toBe(true);
+  });
+
+  it("places RWD and AWD 4-seaters in SM", () => {
+    const rwd = withAttrs("test-rwd", {
+      displacementCc: 1998,
+      forcedInduction: false,
+      seats: 4,
+      bodyStyle: "coupe",
+      sportsCarBased: true,
+      drivetrain: "rwd",
+    });
+    const awd = withAttrs("test-awd", {
+      displacementCc: 1998,
+      forcedInduction: true,
+      seats: 5,
+      bodyStyle: "sedan",
+      sportsCarBased: false,
+      drivetrain: "awd",
+    });
+    expect(classify(rwd, [smMod]).finalClass).toBe("SM");
+    expect(classify(awd, [smMod]).finalClass).toBe("SM");
+  });
+
+  it("routes all Porsche to SSM by make, without needing attributes", () => {
+    const p: Car = { ...testCar, id: "test-porsche", make: "Porsche", model: "911 Carrera", classes: { street: "SS" } };
+    expect(classify(p, [smMod]).finalClass).toBe("SSM");
+  });
+
+  it("returns no class (not a guess) for a Lotus outside the SSM list", () => {
+    const lotus: Car = { ...testCar, id: "test-lotus", make: "Lotus", model: "Elan", classes: { street: "SS" } };
+    const r = classify(lotus, [smMod]);
+    expect(r.finalClass).toBeNull();
+    expect(r.warnings.some((w) => w.includes("Street Modified"))).toBe(true);
+  });
+
+  it("surfaces the SM/SMF ambiguity when drivetrain is unknown", () => {
+    const nodt = withAttrs("test-nodt", {
+      displacementCc: 2000,
+      forcedInduction: false,
+      seats: 4,
+      bodyStyle: "sedan",
+      sportsCarBased: false,
+    });
+    const r = classify(nodt, [smMod]);
+    expect(r.finalClass).toBe("SM");
+    expect(r.warnings.some((w) => w.includes("Drivetrain not set"))).toBe(true);
+    expect(r.alternatives.some((alt) => alt.klass === "SMF")).toBe(true);
+  });
+});
+
 describe("summarize", () => {
   it("describes a stock result", () => {
     expect(summarize(classify(testCar, [streetMod]))).toContain("Street-legal");

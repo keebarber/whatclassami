@@ -50,14 +50,22 @@ export type BodyStyle =
   | "truck"
   | "sports";
 
-/** Physical attributes used to evaluate Appendix A catch-all listings. */
+/**
+ * Physical attributes. `seats` + `bodyStyle` are always-known facts used by
+ * Street Modified placement; the catch-all inputs below are optional so a car
+ * can be recorded for SM placement alone (just seats/bodyStyle/drivetrain).
+ * A car that resolves via a displacement/aspiration catch-all must still carry
+ * the full set — matchCatchall() ignores any car missing them.
+ */
 export interface CarAttributes {
-  displacementCc: number;
-  forcedInduction: boolean;
   seats: number;
   bodyStyle: BodyStyle;
+  /** Needed for Street Modified placement (SMF is FWD-only; SM/SSM otherwise). */
+  drivetrain?: "fwd" | "rwd" | "awd";
+  displacementCc?: number;
+  forcedInduction?: boolean;
   /** Catch-alls exclude "sports-car-based" vehicles. */
-  sportsCarBased: boolean;
+  sportsCarBased?: boolean;
   /** Needed for the FS "V8 sedans" street catch-all. */
   cylinders?: number;
 }
@@ -140,7 +148,7 @@ export interface ClassificationResult {
   /** Class letters in the final category, null if unknown for this car. */
   finalClass: string | null;
   /** How the final class was resolved. */
-  via: "listed" | "catchall" | null;
+  via: "listed" | "catchall" | "placement" | null;
   /** The case for the primary classing. */
   reasons: string[];
   /** Other defensible classings and when to choose them. */

@@ -1,5 +1,6 @@
 import { matchCatchall } from "./catchalls";
 import { BuildSpec, lsdRuling, stLimits } from "./constraints";
+import { resolveStreetModified } from "./streetmod";
 import {
   AlternativeClassing,
   Car,
@@ -15,9 +16,11 @@ import {
 interface Resolution {
   category: Category;
   klass: string;
-  via: "listed" | "catchall";
+  via: "listed" | "catchall" | "placement";
   reasons: string[];
   warnings: string[];
+  /** Defensible alternatives within this resolution (e.g. SMF vs SM). */
+  alternatives?: AlternativeClassing[];
 }
 
 /**
@@ -36,6 +39,21 @@ function resolveInCategory(car: Car, category: Category): Resolution | null {
         `Explicitly listed in Appendix A under ${CATEGORY_LABELS[category]} — unambiguous at tech and National-eligible.`,
       ],
       warnings: [],
+    };
+  }
+
+  // Street Modified is not a per-car listing — it is a drivetrain/body
+  // placement (SSM/SM/SMF). National-eligible, so no catch-all Regional flag.
+  if (category === "streetModified") {
+    const sm = resolveStreetModified(car);
+    if (!sm) return null;
+    return {
+      category,
+      klass: sm.klass,
+      via: "placement",
+      reasons: sm.reasons,
+      warnings: sm.warnings,
+      alternatives: sm.alternatives,
     };
   }
 
@@ -219,6 +237,9 @@ export function classify(
     via = resolution.via;
     reasons = resolution.reasons;
     warnings.push(...resolution.warnings);
+
+    // Resolution-supplied alternatives (e.g. Street Modified SMF vs SM).
+    if (resolution.alternatives) alternatives.push(...resolution.alternatives);
 
     // When a catch-all decided it, present explicit listings elsewhere as
     // alternatives, with the case for choosing them.

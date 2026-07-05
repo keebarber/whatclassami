@@ -80,13 +80,23 @@ straight from §Street Modified:
   Lotus, 2-seat cars not Street-Prepared-eligible, non-US-delivered cars.
 - Forced-induction displacement adders for weight: +1.4L (SSM/SM), +1.0L (SMF).
 
-To compute this the engine needs a **`drivetrain` attribute** (`fwd`/`rwd`/`awd`)
-that the schema does not yet track, plus `attributes` populated on rows (today
-only catch-all cars carry them). This is the smallest, highest-value next step:
-add `drivetrain` to `AttributesSchema`, backfill it, and add an SM placement
-resolver (2-seat → SSM path; FWD → SMF; 4-seat sedan/coupe/pickup → SM) with the
-exclusion list. Deliberately **not** rushed this pass — a wrong Street Modified
-answer is worse than an honest "not yet modeled."
+**Implemented (2026-07-05).** Added a `drivetrain` attribute (`fwd`/`rwd`/`awd`)
+to `AttributesSchema`/`CarAttributes` and a placement resolver (`streetmod.ts`,
+`resolveStreetModified`) wired into `classify` as a `"placement"` resolution
+(National-eligible — no Regional flag). Logic: make-routes exotics to SSM (all
+Porsche, McLaren MP4-12C, the four SSM Lotus; other Lotus → not SM-eligible);
+2-seat → SSM; FWD → SMF (SM offered as an alternative); RWD/AWD 4-seat sedans/
+coupes and pickups → SM. When drivetrain is unknown it returns SM and surfaces
+the SMF ambiguity rather than guessing; when it can't place a car it returns null
+(honest NOC) rather than inventing a class. Covered by unit tests (SSM/SM/SMF +
+the no-data null path) and a real-data integration test.
+
+*Remaining for full SM coverage:* only a handful of rows carry `attributes` today
+(the catch-all cars plus a curated SM demo set — Miata→SSM, GTI→SMF, BRZ/WRX/
+Caprice→SM). Broad SM auto-classing needs `drivetrain` + seats/body backfilled
+across the dataset — a curation task, not an engine one. Until a row has
+attributes, modding it past SP still returns the honest "no Street Modified
+classing" path.
 
 ### 2. Prepared — XP / CP / DP / EP / FP  *(fits the existing model; large)*
 

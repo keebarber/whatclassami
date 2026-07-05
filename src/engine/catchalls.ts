@@ -144,6 +144,15 @@ export interface CatchallMatch {
 export function matchCatchall(car: Car, category: Category): CatchallMatch | null {
   const a = car.attributes;
   if (!a) return null;
+  // Displacement/aspiration catch-alls can't be evaluated without these; a car
+  // carrying only SM-placement facts (seats/bodyStyle/drivetrain) never matches.
+  if (
+    a.displacementCc === undefined ||
+    a.forcedInduction === undefined ||
+    a.sportsCarBased === undefined
+  ) {
+    return null;
+  }
   for (const spec of CATCHALLS) {
     if (spec.category !== category) continue;
     if (spec.aspiration === "na" && a.forcedInduction) continue;
