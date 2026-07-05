@@ -32,10 +32,12 @@
 
 ### Milestone 3: Coverage completion
 
+- [x] **Street / ST / SP class-complete** *(2026-07-05)*: every 2026 class letter is represented and verified. Confirmed the true class list against the rulebook — ASP/BSP are retired (Appendix J history only), so SP is legitimately SSP/CSP/DSP/ESP/FSP. Thickened the two genuinely thin SP classes (ESP 3→21, FSP 1→4) from Appendix A. Full map + remaining-category plan in [CLASS_COVERAGE.md](./CLASS_COVERAGE.md).
+- [ ] **Street Modified (SSM/SM/SMF)** — smallest, highest-value next category. Needs a `drivetrain` attribute + an SM placement resolver (not per-car listings); rules captured in CLASS_COVERAGE.md.
 - [ ] Curation grind: promote high-traffic tier-2 listings into verified rows (loop is automated; human verification is the throughput limit).
-- [ ] Fix known extractor gaps: HS make-tracking slips, missing Syclone/Typhoon, 250 suspect-make listings.
+- [ ] Fix known extractor gaps: HS make-tracking slips, missing Syclone/Typhoon, 250 suspect-make listings; SP/Prepared column drift (don't bulk-promote past Street without a per-row PDF check).
 - [ ] Cross-category linking for uncurated listings (a tier-2 car currently knows only one category, so escalation is blind).
-- [ ] Remaining categories: CAM/XS (§21), EVX, Club Spec, SSC, Prepared/Modified detail.
+- [ ] Remaining categories (per CLASS_COVERAGE.md): Prepared (fits current model, large), CAM/XS (criteria-based, needs eligibility evaluator), Modified (low priority), spec/dev (SSC, Club Spec, EVX).
 
 ### Milestone 4: Growth & longevity
 

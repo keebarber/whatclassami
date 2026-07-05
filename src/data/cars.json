@@ -10,7 +10,7 @@
       "streetTouring": "CST"
     },
     "verified": true,
-    "notes": "Street: 'Miata (non-Club Sport 2003) (1990-2005)' = ES; Mazdaspeed Miata (2004-05) also ES. ST: non-turbo '94-'05 = CST; '90-'97 non-Torsen cars listed in EST (no aftermarket LSD in EST per §14.10.K); Mazdaspeed = AST."
+    "notes": "Street: 'Miata (non-Club Sport 2003) (1990-2005)' = ES; Mazdaspeed Miata (2004-05) also ES. ST: non-turbo '94-'05 = CST; '90-'97 non-Torsen cars listed in EST (no aftermarket LSD in EST per \u00a714.10.K); Mazdaspeed = AST."
   },
   {
     "id": "mazda-miata-nc",
@@ -90,10 +90,11 @@
     "yearEnd": 2020,
     "classes": {
       "street": "GS",
-      "streetTouring": "GST"
+      "streetTouring": "GST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Civic Si (2017-20)' = GS (11th gen 2022-26 also GS). ST: 'Civic Si (2017-26)' = GST; 2002-15 Si = DST."
+    "notes": "Street: 'Civic Si (2017-20)' = GS (11th gen 2022-26 also GS). ST: 'Civic Si (2017-26)' = GST; 2002-15 Si = DST. SP: 'Civic Si (2017-21)' = ESP (10th-gen 2017-20; the 11th-gen 2022-26 is not ESP-listed)."
   },
   {
     "id": "honda-civic-type-r-fk8",
@@ -103,10 +104,11 @@
     "yearEnd": 2021,
     "classes": {
       "street": "DS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Civic Type R (2017-21 excl. Limited Edition)' = DS; 2021 Limited Edition = BS. ST: 'Civic Type R (2017-23)' = BST."
+    "notes": "Street: 'Civic Type R (2017-21 excl. Limited Edition)' = DS; 2021 Limited Edition = BS. ST: 'Civic Type R (2017-23)' = BST. SP: 'Civic Type R (2017-21)' = ESP."
   },
   {
     "id": "vw-gti-mk7",
@@ -143,10 +145,11 @@
     "yearEnd": 2023,
     "classes": {
       "street": "FS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang GT (incl. Performance Package Level 1 & 2) (2010-26)' = FS. ST: 'Mustang GT (excl. Shelby & Boss 302) (2005-23)' = BST."
+    "notes": "Street: 'Mustang GT (incl. Performance Package Level 1 & 2) (2010-26)' = FS. ST: 'Mustang GT (excl. Shelby & Boss 302) (2005-23)' = BST. SP: 'Mustang (non-GT350, non-GT500) (2015-23)' = ESP."
   },
   {
     "id": "chevy-camaro-ss-gen6",
@@ -156,10 +159,11 @@
     "yearEnd": 2024,
     "classes": {
       "street": "FS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro V6 & V8 (1LE, non-ZL1) (2016-24)' = FS. ST: 'Camaro (N/A)' = BST. ZL1 variants class higher."
+    "notes": "Street: 'Camaro V6 & V8 (1LE, non-ZL1) (2016-24)' = FS. ST: 'Camaro (N/A)' = BST. ZL1 variants class higher. SP: 'Camaro (6.2L V8, NA) (2016-24)' = ESP (ZL1 is supercharged, classes higher)."
   },
   {
     "id": "chevy-corvette-c5",
@@ -225,10 +229,11 @@
     "yearEnd": 2026,
     "classes": {
       "street": "GS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Elantra N (non-TCR) (2022-26)' = GS. ST: 'Elantra N (2022-26)' = BST."
+    "notes": "Street: 'Elantra N (non-TCR) (2022-26)' = GS. ST: 'Elantra N (2022-26)' = BST. SP: 'Elantra N (2022-25) (excl. TCR Edition)' = ESP (ESP listing runs 2022-25)."
   },
   {
     "id": "toyota-gr-corolla",
@@ -273,9 +278,9 @@
       "bodyStyle": "wagon",
       "sportsCarBased": false
     },
-    "streetExclusion": "'Subaru Forester' is on the Street category stability exclusion list (§3.1, Appendix A).",
+    "streetExclusion": "'Subaru Forester' is on the Street category stability exclusion list (\u00a73.1, Appendix A).",
     "verified": true,
-    "notes": "Street: excluded (stability list, §3.1). ST: not explicitly listed (only the turbo Forester XT = GST), but the 2.5L N/A qualifies for the EST catch-all (<3.1L N/A, 4-seat min) — Regional only, wagon wording caveat, must meet §3.1 rollover chart. SP: 'Forester (non-turbo)' explicitly listed in FSP — the National-eligible home."
+    "notes": "Street: excluded (stability list, \u00a73.1). ST: not explicitly listed (only the turbo Forester XT = GST), but the 2.5L N/A qualifies for the EST catch-all (<3.1L N/A, 4-seat min) \u2014 Regional only, wagon wording caveat, must meet \u00a73.1 rollover chart. SP: 'Forester (non-turbo)' explicitly listed in FSP \u2014 the National-eligible home."
   },
   {
     "id": "mazda-rx8",
@@ -476,10 +481,11 @@
     "yearEnd": 2010,
     "classes": {
       "street": "GS",
-      "streetTouring": "GST"
+      "streetTouring": "GST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Cobalt SS (2.0L Turbo) (2008-10)' = GS. ST: 'Cobalt (2.0T)' = GST."
+    "notes": "Street: 'Cobalt SS (2.0L Turbo) (2008-10)' = GS. ST: 'Cobalt (2.0T)' = GST. SP: 'Cobalt SS Turbo (2008-10)' = ESP."
   },
   {
     "id": "dodge-srt4",
@@ -489,10 +495,11 @@
     "yearEnd": 2005,
     "classes": {
       "street": "GS",
-      "streetTouring": "GST"
+      "streetTouring": "GST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'SRT-4 (Neon chassis)' = GS. ST: 'SRT-4 (2003-05)' = GST."
+    "notes": "Street: 'SRT-4 (Neon chassis)' = GS. ST: 'SRT-4 (2003-05)' = GST. SP: 'SRT-4' = ESP."
   },
   {
     "id": "mazdaspeed-miata",
@@ -515,10 +522,11 @@
     "yearEnd": 2013,
     "classes": {
       "street": "HS",
-      "streetTouring": "GST"
+      "streetTouring": "GST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: HS (listed under Mazda in H Street). ST: 'Mazdaspeed3' = GST."
+    "notes": "Street: HS (listed under Mazda in H Street). ST: 'Mazdaspeed3' = GST. SP: 'MazdaSpeed3' = ESP."
   },
   {
     "id": "bmw-m-coupe-roadster-s52",
@@ -609,7 +617,7 @@
       "street": "CS"
     },
     "verified": true,
-    "notes": "Street: 'Z4 28i & 30i (2009-16)' = CS. Turbo — not covered by the CST 'Z4 (non-turbo, non-M)' listing; no ST listing found."
+    "notes": "Street: 'Z4 28i & 30i (2009-16)' = CS. Turbo \u2014 not covered by the CST 'Z4 (non-turbo, non-M)' listing; no ST listing found."
   },
   {
     "id": "bmw-z4-e89-35i",
@@ -1112,10 +1120,11 @@
     "yearEnd": 2024,
     "classes": {
       "street": "DS",
-      "streetTouring": "SST"
+      "streetTouring": "SST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro LS & LT (2.0L Turbo; including 1LE) (2016-24)' = DS. ST: 'Camaro LS & LT (2.0L Turbo; including 1LE) (2016-23)' = SST."
+    "notes": "Street: 'Camaro LS & LT (2.0L Turbo; including 1LE) (2016-24)' = DS. ST: 'Camaro LS & LT (2.0L Turbo; including 1LE) (2016-23)' = SST. SP: 'Camaro (2.0L Turbo) (2016-24)' = ESP."
   },
   {
     "id": "chevy-camaro-v6-gen5",
@@ -1125,10 +1134,11 @@
     "yearEnd": 2015,
     "classes": {
       "street": "DS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro (V6) (2010-15)' = DS. ST: 'Camaro (N/A)' = BST."
+    "notes": "Street: 'Camaro (V6) (2010-15)' = DS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro (non-ZL1) (2010-15)' = ESP."
   },
   {
     "id": "ford-mustang-ecoboost",
@@ -1138,10 +1148,11 @@
     "yearEnd": 2026,
     "classes": {
       "street": "DS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang EcoBoost (2015-26)' = DS. ST: 'Mustang EcoBoost (2015-23)' = BST."
+    "notes": "Street: 'Mustang EcoBoost (2015-26)' = DS. ST: 'Mustang EcoBoost (2015-23)' = BST. SP: 'Mustang (non-GT350, non-GT500) (2015-23)' = ESP (the 2024-26 S650 EcoBoost is not yet ESP-listed)."
   },
   {
     "id": "ford-mustang-v6-2011",
@@ -1166,7 +1177,7 @@
       "street": "DS"
     },
     "verified": true,
-    "notes": "Street: 'Ionic 5 (all) (2022-26)' = DS (sic — rulebook spells it 'Ionic'). EV — no ST listing."
+    "notes": "Street: 'Ionic 5 (all) (2022-26)' = DS (sic \u2014 rulebook spells it 'Ionic'). EV \u2014 no ST listing."
   },
   {
     "id": "hyundai-genesis-coupe-2-0t",
@@ -1230,7 +1241,7 @@
       "street": "DS"
     },
     "verified": true,
-    "notes": "Street: 'EV6 (non-GT) (2022-26)' = DS. EV — no ST listing."
+    "notes": "Street: 'EV6 (non-GT) (2022-26)' = DS. EV \u2014 no ST listing."
   },
   {
     "id": "lexus-gs350",
@@ -1356,7 +1367,7 @@
       "street": "DS"
     },
     "verified": true,
-    "notes": "Street: 'Model 3 (RWD) (2018-24)' = DS; AWD/Performance (2018-23) = AS. EV — no ST listing."
+    "notes": "Street: 'Model 3 (RWD) (2018-24)' = DS; AWD/Performance (2018-23) = AS. EV \u2014 no ST listing."
   },
   {
     "id": "vw-golf-r-mk8",
@@ -1740,10 +1751,11 @@
     "yearEnd": 2015,
     "classes": {
       "street": "FS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro SS (incl. 1LE) (2010-15)' = FS. ST: 'Camaro (N/A)' = BST."
+    "notes": "Street: 'Camaro SS (incl. 1LE) (2010-15)' = FS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro (non-ZL1) (2010-15)' = ESP."
   },
   {
     "id": "chevy-camaro-ss-gen4",
@@ -1753,10 +1765,11 @@
     "yearEnd": 2002,
     "classes": {
       "street": "FS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro SS (base car only, incl. GM-installed 1LE) (1998-2002)' = FS. ST: 'Camaro (N/A)' = BST."
+    "notes": "Street: 'Camaro SS (base car only, incl. GM-installed 1LE) (1998-2002)' = FS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro, Firebird, SS, Firehawk, & WS6 (4th gen) (1993-2002)' = ESP."
   },
   {
     "id": "chevy-ss-sedan",
@@ -1793,7 +1806,7 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Challenger (V8, all) (2008-24)' = FS. ST: 'Challenger (V8, N/A) (2008-23)' = BST (N/A only — Hellcats not ST-listed)."
+    "notes": "Street: 'Challenger (V8, all) (2008-24)' = FS. ST: 'Challenger (V8, N/A) (2008-23)' = BST (N/A only \u2014 Hellcats not ST-listed)."
   },
   {
     "id": "dodge-challenger-scatpack-widebody",
@@ -1842,10 +1855,11 @@
     "yearEnd": 2023,
     "classes": {
       "street": "FS",
-      "streetTouring": "BST"
+      "streetTouring": "BST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Mach 1 (all) (2021-23)' = FS. ST: 'Mustang GT (excl. Shelby versions & Boss 302) (2005-23)' = BST."
+    "notes": "Street: 'Mustang Mach 1 (all) (2021-23)' = FS. ST: 'Mustang GT (excl. Shelby versions & Boss 302) (2005-23)' = BST. SP: 'Mach 1 (2021-23)' = ESP."
   },
   {
     "id": "ford-mustang-dark-horse",
@@ -1867,10 +1881,11 @@
     "yearEnd": 2020,
     "classes": {
       "street": "FS",
-      "streetTouring": "SST"
+      "streetTouring": "SST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Shelby GT350 (incl. Handling Package) (2015-20)' = FS. ST: 'Mustang Shelby GT350 (2015-18)' / '(incl. Handling Package) (2019-20)' = SST. GT350R excluded from Street."
+    "notes": "Street: 'Mustang Shelby GT350 (incl. Handling Package) (2015-20)' = FS. ST: 'Mustang Shelby GT350 (2015-18)' / '(incl. Handling Package) (2019-20)' = SST. GT350R excluded from Street. SP: 'Mustang Shelby GT350/GT350R (S550) (2015-2020) Limited Prep' = ESP."
   },
   {
     "id": "gmc-syclone-typhoon",
@@ -2070,7 +2085,7 @@
       "street": "FS"
     },
     "verified": true,
-    "notes": "Street: 'Model S (2012-14)' = FS. Later Model S not listed here — check newer listings/EVX."
+    "notes": "Street: 'Model S (2012-14)' = FS. Later Model S not listed here \u2014 check newer listings/EVX."
   },
   {
     "id": "toyota-supra-mk4-na",
@@ -2096,7 +2111,7 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Supra Turbo (1993½-98)' = BS. ST: 'Supra Turbo (1993½-98)' = SST."
+    "notes": "Street: 'Supra Turbo (1993\u00bd-98)' = BS. ST: 'Supra Turbo (1993\u00bd-98)' = SST."
   },
   {
     "id": "toyota-supra-mk3-turbo",
@@ -2310,7 +2325,7 @@
       "street": "GS"
     },
     "verified": true,
-    "notes": "Street: 'Cooper Hardtop S (2-door and 4-door F65/F66 chassis) (2025)' = GS. HS also lists 'Cooper Hardtop (incl. S, F65/F66) (2025-26)' — overlapping listings; verify current FasTrack. ST: BST Cooper S listing ends 2024."
+    "notes": "Street: 'Cooper Hardtop S (2-door and 4-door F65/F66 chassis) (2025)' = GS. HS also lists 'Cooper Hardtop (incl. S, F65/F66) (2025-26)' \u2014 overlapping listings; verify current FasTrack. ST: BST Cooper S listing ends 2024."
   },
   {
     "id": "mini-cooper-clubman-s-r55",
@@ -2404,7 +2419,7 @@
       "bodyStyle": "wagon",
       "sportsCarBased": false
     },
-    "streetExclusion": "'Subaru Forester' is on the Street category stability exclusion list (§3.1, Appendix A).",
+    "streetExclusion": "'Subaru Forester' is on the Street category stability exclusion list (\u00a73.1, Appendix A).",
     "verified": true,
     "notes": "Street: excluded (stability list). ST: 'Forester XT' explicitly listed in GST (years approximate; listing has none). SP: 'Turbo 4WD (all, NOC)' under Subaru in FSP."
   },
@@ -2468,7 +2483,7 @@
       "streetTouring": "EST"
     },
     "verified": true,
-    "notes": "Street: 'Civic (all, excluding Mugen 2008) (1975-2015)' = HS — includes Si of these years. ST: 'Civic (1984-2000)' / '(non-Si) (2001-05)' / '(non-Si) (2006-15)' = EST; 'Civic Si (2002-15)' = DST."
+    "notes": "Street: 'Civic (all, excluding Mugen 2008) (1975-2015)' = HS \u2014 includes Si of these years. ST: 'Civic (1984-2000)' / '(non-Si) (2001-05)' / '(non-Si) (2006-15)' = EST; 'Civic Si (2002-15)' = DST."
   },
   {
     "id": "honda-civic-current",
@@ -2518,10 +2533,11 @@
     "yearEnd": 2020,
     "classes": {
       "street": "HS",
-      "streetTouring": "EST"
+      "streetTouring": "EST",
+      "streetPrepared": "FSP"
     },
     "verified": true,
-    "notes": "Street: 'Fit' = HS (years approximate). ST: 'Fit' = EST."
+    "notes": "Street: 'Fit' = HS (years approximate). ST: 'Fit' = EST. SP: 'Fit' = FSP."
   },
   {
     "id": "honda-del-sol",
@@ -2649,10 +2665,11 @@
     "yearEnd": 1998,
     "classes": {
       "street": "HS",
-      "streetTouring": "DST"
+      "streetTouring": "DST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: '240SX' = HS (years approximate; listing has none). ST: '240SX' = DST."
+    "notes": "Street: '240SX' = HS (years approximate; listing has none). ST: '240SX' = DST. SP: '240SX' = ESP."
   },
   {
     "id": "mazda3-na",
@@ -2662,10 +2679,11 @@
     "yearEnd": 2026,
     "classes": {
       "street": "HS",
-      "streetTouring": "EST"
+      "streetTouring": "EST",
+      "streetPrepared": "FSP"
     },
     "verified": true,
-    "notes": "Street: 'Mazda3 (non-turbo) (2004-26)' = HS. ST: 'Mazda3 (non-turbo)' = EST."
+    "notes": "Street: 'Mazda3 (non-turbo) (2004-26)' = HS. ST: 'Mazda3 (non-turbo)' = EST. SP: 'Mazda3' = FSP."
   },
   {
     "id": "toyota-corolla-na",
@@ -2688,10 +2706,11 @@
     "yearEnd": 2016,
     "classes": {
       "street": "HS",
-      "streetTouring": "EST"
+      "streetTouring": "EST",
+      "streetPrepared": "FSP"
     },
     "verified": true,
-    "notes": "Street: 'tC (incl. Release Series 5.0 2009) (2005-16)' = HS. ST: 'tC' = EST."
+    "notes": "Street: 'tC (incl. Release Series 5.0 2009) (2005-16)' = HS. ST: 'tC' = EST. SP: 'tC' = FSP."
   },
   {
     "id": "subaru-impreza-25rs",
@@ -2714,10 +2733,11 @@
     "yearEnd": 2007,
     "classes": {
       "street": "HS",
-      "streetTouring": "DST"
+      "streetTouring": "DST",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Cobalt SS (2.0L SC) (2005-07)' = HS. ST: 'Cobalt (2.4L N/A & 2.0L S/C)' = DST."
+    "notes": "Street: 'Cobalt SS (2.0L SC) (2005-07)' = HS. ST: 'Cobalt (2.4L N/A & 2.0L S/C)' = DST. SP: 'Cobalt SS Supercharged (2005-07)' = ESP."
   },
   {
     "id": "saab-92x-aero",
@@ -2958,10 +2978,11 @@
     "yearStart": 2015,
     "yearEnd": 2020,
     "classes": {
-      "street": "SS"
+      "street": "SS",
+      "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Shelby GT350R (2015-20)' = SS."
+    "notes": "Street: 'Mustang Shelby GT350R (2015-20)' = SS. SP: 'Mustang Shelby GT350/GT350R (S550) (2015-2020) Limited Prep' = ESP."
   },
   {
     "id": "hyundai-ioniq5-n",
@@ -3010,7 +3031,7 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Emira (all) (2024-25)' = SS. ST: 'Emira (V6) (2017-26)' = SST (listing years odd — verify)."
+    "notes": "Street: 'Emira (all) (2024-25)' = SS. ST: 'Emira (V6) (2017-26)' = SST (listing years odd \u2014 verify)."
   },
   {
     "id": "lotus-exige-s",
@@ -3846,7 +3867,7 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Civic Type-R (2023-26)' = BS. ST: 'Civic Type R (2017-23)' = BST (2024+ not yet in ST listing — verify)."
+    "notes": "Street: 'Civic Type-R (2023-26)' = BS. ST: 'Civic Type R (2017-23)' = BST (2024+ not yet in ST listing \u2014 verify)."
   },
   {
     "id": "lexus-rc-f",
@@ -4258,7 +4279,7 @@
       "sportsCarBased": false
     },
     "verified": true,
-    "notes": "Not listed anywhere in Appendix A (verified against the 2026 extraction) — a true NOC car. Resolves via the Street FS catch-all: 'V8 sedans, pick-ups, and sedan-derived convertibles (NOC)'; per §12 a wagon seating 4+ is a sedan. ST: >5.1L N/A fits the BST catch-all. Regional only. Attributes reflect the 5.7L LT1; the 4.3L L99 V8 also qualifies."
+    "notes": "Not listed anywhere in Appendix A (verified against the 2026 extraction) \u2014 a true NOC car. Resolves via the Street FS catch-all: 'V8 sedans, pick-ups, and sedan-derived convertibles (NOC)'; per \u00a712 a wagon seating 4+ is a sedan. ST: >5.1L N/A fits the BST catch-all. Regional only. Attributes reflect the 5.7L LT1; the 4.3L L99 V8 also qualifies."
   },
   {
     "id": "morgan-plus8",
