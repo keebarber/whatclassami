@@ -19,7 +19,7 @@
 ### Milestone 1: Accuracy depth (the biggest gap — see Part 3)
 
 - [x] **Class-level ST constraints** *(done 2026-07-04)*: §14.3 tire widths, §14.4 wheel widths (with drivetrain/mid-engine/FI splits), §14.10.K LSD rules enforced from structured inputs; violations re-resolve from Street Prepared with citations.
-- [~] **Mod catalog verification pass.** ST-category mods (18) now cite verified 2026 sections (§14.2–§14.10). Remaining: Street (§13) and SP (§15) mods still cite the 2019 cheat sheet; coarse-mod splits (exhaust variants) pending.
+- [x] **Mod catalog verification pass** *(done 2026-07-04)*: all 39 mods cite verified 2026 sections (§13/§14/§15/§16), including newly-discovered constraints — SP Limited/Full Prep tiers (radio delete, splitters, fender mods, clutch/flywheel are Full Prep only), Street tire specifics (7/32" tread depth, Tire Guide listing), wheel offset ±7mm. Remaining refinement: coarse-mod splits (exhaust variants) and Limited/Full Prep as a first-class engine concept.
 - [ ] **§3.1 rollover chart as data** so excluded-list cars get a computed answer instead of a hand-wave.
 
 ### Milestone 2: Ship it

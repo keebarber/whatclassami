@@ -4,8 +4,8 @@
     "label": "Performance tires (UTQG 200+ treadwear)",
     "group": "tires-wheels",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.76 (cheat sheet)",
-    "note": "Must be 200 treadwear or higher and fit per Street wheel rules.",
+    "ruleRef": "Street cat., 2026 Solo Rules §13.3",
+    "note": "UTQG 200+ treadwear, min 7/32\" molded tread depth, and listed in the Tire Guide (§13.3.A). Must fit allowable wheels without fender modification.",
     "verified": true
   },
   {
@@ -13,8 +13,9 @@
     "label": "Aftermarket wheels (stock width, ±1\" diameter)",
     "group": "tires-wheels",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.78 (cheat sheet)",
-    "verified": true
+    "ruleRef": "Street cat., 2026 Solo Rules §13.4",
+    "verified": true,
+    "note": "Same width as standard, offset within ±7.00mm of stock, diameter ±1\" (§13.4). Spacers count as part of the wheel."
   },
   {
     "id": "wheels-any-diameter-wide",
@@ -39,7 +40,7 @@
     "label": "R-comp / DOT tires below 200TW (e.g. Hoosier A7)",
     "group": "tires-wheels",
     "minCategory": "streetPrepared",
-    "ruleRef": "SP cat., Solo Rules p.104 (cheat sheet)",
+    "ruleRef": "SP cat., 2026 Solo Rules §15.3",
     "verified": true
   },
   {
@@ -47,7 +48,7 @@
     "label": "Wheels — any size, any width",
     "group": "tires-wheels",
     "minCategory": "streetPrepared",
-    "ruleRef": "SP cat., Solo Rules p.104 (cheat sheet)",
+    "ruleRef": "SP cat., 2026 Solo Rules §15.4",
     "verified": true
   },
   {
@@ -55,8 +56,8 @@
     "label": "Aftermarket shocks/struts (stock spring rates & mounting)",
     "group": "suspension",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.78 (cheat sheet); ST: §14.5 (any shocks, same count, no in-motion adjustment)",
-    "note": "Street shock allowances are more restricted than ST/SP (e.g. remote-reservoir limits) — verify details.",
+    "ruleRef": "Street cat., 2026 Solo Rules §13.5; ST §14.5",
+    "note": "Street shock rules are more restrictive than ST — verify §13.5 details (count, adjustability limits).",
     "verified": true
   },
   {
@@ -64,7 +65,7 @@
     "label": "Aftermarket anti-roll bar — ONE end only (front OR rear)",
     "group": "suspension",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.80 (cheat sheet)",
+    "ruleRef": "Street cat., 2026 Solo Rules §13.7",
     "verified": true
   },
   {
@@ -72,7 +73,7 @@
     "label": "Alignment within factory adjustment range",
     "group": "suspension",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.81 (cheat sheet)",
+    "ruleRef": "Street cat., 2026 Solo Rules §13.8",
     "verified": true
   },
   {
@@ -121,7 +122,7 @@
     "label": "Drop-in air filter element",
     "group": "engine-drivetrain",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.82 (cheat sheet)",
+    "ruleRef": "Street cat., 2026 Solo Rules §13.10",
     "note": "Filter element only — no 'cold air' intake kits in Street.",
     "verified": true
   },
@@ -130,7 +131,7 @@
     "label": "Cat-back or axle-back exhaust",
     "group": "engine-drivetrain",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.82 (cheat sheet)",
+    "ruleRef": "Street cat., 2026 Solo Rules §13.10",
     "verified": true
   },
   {
@@ -138,8 +139,8 @@
     "label": "Battery replacement (with hold-down)",
     "group": "interior-electrical",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.81 (cheat sheet)",
-    "note": "Relocation behind seats is a Street Touring allowance (p.92).",
+    "ruleRef": "Street cat., 2026 Solo Rules §13.9",
+    "note": "Replacement + supplemental hold-down hardware (§13.9.E). Relocation behind seats is an ST allowance (§14.9).",
     "verified": true
   },
   {
@@ -198,23 +199,25 @@
     "label": "Clutch / lightweight flywheel",
     "group": "engine-drivetrain",
     "minCategory": "streetPrepared",
-    "ruleRef": "SP cat., Solo Rules p.113 (cheat sheet)",
-    "verified": true
+    "ruleRef": "SP cat., 2026 Solo Rules §15.10.O",
+    "verified": true,
+    "note": "FULL PREP only — any metal clutch/flywheel (§15.10.O)."
   },
   {
     "id": "standalone-ecu-fuel",
     "label": "Standalone ECU / fuel system / ignition replacement",
     "group": "engine-drivetrain",
     "minCategory": "streetPrepared",
-    "ruleRef": "SP cat., Solo Rules p.110 (cheat sheet)",
-    "verified": true
+    "ruleRef": "SP cat., 2026 Solo Rules §15.10",
+    "verified": true,
+    "note": "Fuel injection systems and carburetors unrestricted (§15.10)."
   },
   {
     "id": "emissions-delete",
     "label": "Emissions equipment removed (cat delete, etc.)",
     "group": "engine-drivetrain",
     "minCategory": "streetPrepared",
-    "ruleRef": "SP cat., Solo Rules p.111 (cheat sheet)",
+    "ruleRef": "SP cat., 2026 Solo Rules §15.10.F",
     "verified": true
   },
   {
@@ -222,7 +225,7 @@
     "label": "Engine or drivetrain swap",
     "group": "engine-drivetrain",
     "minCategory": "streetModified",
-    "ruleRef": "SM cat., Solo Rules p.118 (cheat sheet)",
+    "ruleRef": "SM cat., 2026 Solo Rules §16.1",
     "verified": true
   },
   {
@@ -230,16 +233,16 @@
     "label": "Added turbo/supercharger (not factory)",
     "group": "engine-drivetrain",
     "minCategory": "streetModified",
-    "ruleRef": "SM cat. engine allowances, Solo Rules §16",
-    "note": "Treated as an engine modification beyond SP scope; verify exact SM/SSM placement.",
-    "verified": false
+    "ruleRef": "SM cat., 2026 Solo Rules §16.1",
+    "note": "Engine/drivetrain systems broadly unrestricted in SM with listed limitations — verify §16.1 details for your combination.",
+    "verified": true
   },
   {
     "id": "brake-pads",
     "label": "Brake pads / shoes",
     "group": "brakes",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.80 (cheat sheet)",
+    "ruleRef": "Street cat., 2026 Solo Rules §13.6",
     "verified": true
   },
   {
@@ -282,47 +285,53 @@
     "label": "Driver seat belt / harness",
     "group": "interior-electrical",
     "minCategory": "street",
-    "ruleRef": "Street cat., Solo Rules p.76 (cheat sheet)",
-    "verified": true
+    "ruleRef": "Street cat., 2026 Solo Rules §13.2.G",
+    "verified": true,
+    "note": "Restraints per §3.3.1; seats may not be cut; 2-point harness bar allowed (§13.2.G)."
   },
   {
     "id": "rear-seat-delete",
     "label": "Rear seats removed",
     "group": "interior-electrical",
     "minCategory": "streetModified",
-    "ruleRef": "SM cat., Solo Rules p.120 (cheat sheet)",
-    "verified": true
+    "ruleRef": "SM cat., 2026 Solo Rules §16.1",
+    "verified": true,
+    "note": "Front seatbacks must remain covered when rear seats are removed (§16.1)."
   },
   {
     "id": "radio-delete",
     "label": "Radio/stereo removed",
     "group": "interior-electrical",
     "minCategory": "streetPrepared",
-    "ruleRef": "SP cat., Solo Rules p.103 (cheat sheet)",
-    "verified": true
+    "ruleRef": "SP cat., 2026 Solo Rules §15.2.N",
+    "verified": true,
+    "note": "FULL PREP only — Limited Prep SP cars keep the radio (§15.2.N)."
   },
   {
     "id": "small-splitter-spoiler",
     "label": "Small spoiler / splitter",
     "group": "body-aero",
     "minCategory": "streetPrepared",
-    "ruleRef": "SP cat., Solo Rules p.102 (cheat sheet)",
-    "verified": true
+    "ruleRef": "SP cat., 2026 Solo Rules §15.2.I",
+    "verified": true,
+    "note": "FULL PREP only; front spoiler/splitter below bumper, no side skirts (§15.2.I)."
   },
   {
     "id": "wing",
     "label": "Aero wing",
     "group": "body-aero",
     "minCategory": "streetModified",
-    "ruleRef": "SM cat., Solo Rules p.120 (cheat sheet)",
-    "verified": true
+    "ruleRef": "SM cat., 2026 Solo Rules §16.1.K",
+    "verified": true,
+    "note": "Rear deck/hatch behind rear axle centerline, max 8 sq ft total, 2 elements (§16.1.K)."
   },
   {
     "id": "fender-mods",
     "label": "Fenders modified/replaced for tire clearance",
     "group": "body-aero",
     "minCategory": "streetPrepared",
-    "ruleRef": "SP cat., Solo Rules p.100 (cheat sheet)",
-    "verified": true
+    "ruleRef": "SP cat., 2026 Solo Rules §15.2.A",
+    "verified": true,
+    "note": "FULL PREP only — fenders/bumpers modified for tire clearance; complete replacement/flares prohibited (§15.2.A)."
   }
 ]
