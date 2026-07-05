@@ -78,6 +78,8 @@ export interface Car {
   streetExclusion?: string;
   /** True once checked against the current rulebook's Appendix A. */
   verified: boolean;
+  /** True for cars built at runtime from a raw Appendix A listing (tier-2 search). */
+  uncurated?: boolean;
   notes?: string;
 }
 

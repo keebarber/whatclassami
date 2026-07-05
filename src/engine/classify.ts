@@ -154,7 +154,11 @@ export function classify(car: Car, mods: Mod[]): ClassificationResult {
     );
   }
 
-  if (!car.verified) {
+  if (car.uncurated) {
+    warnings.push(
+      "This result comes from a raw Appendix A listing that hasn't been hand-curated yet — the class shown is as extracted from the rulebook, but cross-category listings (ST/SP) may exist that we haven't linked. Verify against Appendix A.",
+    );
+  } else if (!car.verified) {
     warnings.push(
       "This car's class data is seeded but not yet verified against the 2026 rulebook.",
     );

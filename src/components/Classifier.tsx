@@ -2,13 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import carsJson from "@/data/cars.json";
+import listingsJson from "@/data/listings.json";
 import modsJson from "@/data/mods.json";
 import {
   Car,
+  CarClassMap,
   Mod,
   ModGroup,
   MOD_GROUP_LABELS,
   CarsFileSchema,
+  Listing,
+  ListingsFileSchema,
   ModsFileSchema,
   classify,
 } from "@/engine";
@@ -18,6 +22,44 @@ import { AssistBox } from "./AssistBox";
 
 const CARS: Car[] = CarsFileSchema.parse(carsJson);
 const MODS: Mod[] = ModsFileSchema.parse(modsJson);
+// Tier-2: every raw Appendix A listing not already covered by a curated row.
+const LISTINGS: Listing[] = ListingsFileSchema.parse(listingsJson).filter(
+  (l) => !l.curatedId,
+);
+
+/** All query tokens must appear somewhere in the haystack. */
+function tokenMatch(haystack: string, query: string): boolean {
+  const h = haystack.toLowerCase();
+  return query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean)
+    .every((t) => h.includes(t));
+}
+
+function carFromListing(l: Listing): Car {
+  return {
+    id: l.id,
+    make: l.make,
+    model: l.model,
+    yearStart: l.yearStart ?? 1940,
+    yearEnd: l.yearEnd ?? 2026,
+    classes: { [l.category]: l.class } as CarClassMap,
+    verified: false,
+    uncurated: true,
+    notes: `Raw Appendix A listing (${l.class}) — not yet hand-curated.`,
+  };
+}
+
+function resolveCar(id: string | null): Car | null {
+  if (!id) return null;
+  const curated = CARS.find((c) => c.id === id);
+  if (curated) return curated;
+  const listing = LISTINGS.find((l) => l.id === id);
+  return listing ? carFromListing(listing) : null;
+}
+
+const MAX_RESULTS = 40;
 
 /**
  * Demo build: Keenan's 2001 Forester L — coilovers, strut brace, CAI,
@@ -60,7 +102,7 @@ export function Classifier() {
     const encoded = new URLSearchParams(window.location.search).get("b");
     const build = encoded ? decodeBuild(encoded) : null;
     if (build) {
-      if (build.carId && CARS.some((c) => c.id === build.carId)) setCarId(build.carId);
+      if (build.carId && resolveCar(build.carId)) setCarId(build.carId);
       setModIds(build.modIds.filter((id) => MODS.some((m) => m.id === id)));
     } else if (!encoded) {
       setCarId(DEMO_BUILD.carId);
@@ -81,15 +123,21 @@ export function Classifier() {
     window.history.replaceState(null, "", url.toString());
   }, [carId, modIds, hydrated]);
 
-  const car = useMemo(() => CARS.find((c) => c.id === carId) ?? null, [carId]);
+  const car = useMemo(() => resolveCar(carId), [carId]);
 
   const filteredCars = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = query.trim();
     if (!q) return CARS;
     return CARS.filter((c) =>
-      `${c.make} ${c.model} ${c.trim ?? ""} ${c.yearStart} ${c.yearEnd}`
-        .toLowerCase()
-        .includes(q),
+      tokenMatch(`${c.make} ${c.model} ${c.trim ?? ""} ${c.yearStart} ${c.yearEnd}`, q),
+    );
+  }, [query]);
+
+  const filteredListings = useMemo(() => {
+    const q = query.trim();
+    if (!q) return [];
+    return LISTINGS.filter((l) =>
+      tokenMatch(`${l.make} ${l.model} ${l.class}`, q),
     );
   }, [query]);
 
@@ -138,7 +186,7 @@ export function Classifier() {
             aria-label="Search cars"
           />
           <ul className="mt-2 max-h-[420px] space-y-1 overflow-y-auto pr-1">
-            {filteredCars.map((c) => {
+            {filteredCars.slice(0, MAX_RESULTS).map((c) => {
               const active = c.id === carId;
               return (
                 <li key={c.id}>
@@ -156,19 +204,56 @@ export function Classifier() {
                     <span className="ml-2 text-xs text-chalk-dim">
                       {c.yearStart}–{c.yearEnd}
                     </span>
-                    {c.classes.street && (
+                    {(c.classes.street ?? Object.values(c.classes)[0]) && (
                       <span className="float-right rounded bg-asphalt-700 px-1.5 py-0.5 text-xs font-bold text-cone-400">
-                        {c.classes.street}
+                        {c.classes.street ?? Object.values(c.classes)[0]}
                       </span>
                     )}
                   </button>
                 </li>
               );
             })}
-            {filteredCars.length === 0 && (
+            {filteredCars.length > MAX_RESULTS && (
+              <li className="px-3 py-1 text-xs text-chalk-dim">
+                +{filteredCars.length - MAX_RESULTS} more — keep typing to narrow.
+              </li>
+            )}
+            {filteredListings.length > 0 && (
+              <li className="mt-2 px-1 text-[11px] font-bold uppercase tracking-widest text-chalk-dim">
+                Appendix A listings — not yet curated
+              </li>
+            )}
+            {filteredListings.slice(0, MAX_RESULTS).map((l) => {
+              const active = l.id === carId;
+              return (
+                <li key={l.id}>
+                  <button
+                    onClick={() => setCarId(active ? null : l.id)}
+                    className={`w-full rounded-lg border border-dashed px-3 py-2.5 text-left text-sm transition ${
+                      active
+                        ? "border-cone-500 bg-asphalt-800"
+                        : "border-asphalt-600 bg-asphalt-900/60 hover:border-asphalt-500"
+                    }`}
+                  >
+                    <span className="font-semibold">
+                      {l.make} {l.model}
+                    </span>
+                    <span className="float-right rounded bg-asphalt-700 px-1.5 py-0.5 text-xs font-bold text-chalk-dim">
+                      {l.class}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+            {filteredListings.length > MAX_RESULTS && (
+              <li className="px-3 py-1 text-xs text-chalk-dim">
+                +{filteredListings.length - MAX_RESULTS} more listings — keep typing.
+              </li>
+            )}
+            {filteredCars.length === 0 && filteredListings.length === 0 && (
               <li className="rounded-lg border border-dashed border-asphalt-600 p-3 text-sm text-chalk-dim">
-                Not in our dataset yet. It may be NOC — check Appendix A of the Solo Rules, or
-                try the describe box above.
+                Nothing in the dataset or the Appendix A listings. It may be NOC — check the
+                Solo Rules, or try the describe box above.
               </li>
             )}
           </ul>

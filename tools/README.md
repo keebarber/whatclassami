@@ -16,7 +16,17 @@ python3 tools/parse_appendix.py /tmp/rulebook.txt > tools/output/candidates.json
 
 # 3. Cross-check curated data against the extraction
 python3 tools/review_candidates.py
+
+# 4. Rebuild the tier-2 search index (src/data/listings.json)
+python3 tools/build_listings.py
 ```
+
+`build_listings.py` makes every Appendix A entry searchable before curation:
+year parsing, make-whitelist sanity flags, and curated-dupe linking (listings
+that strongly match a cars.json row in the same class get `curatedId` and are
+suppressed from search). Uncurated listings render with dashed borders and an
+explicit engine warning. Promote listings to cars.json as they're verified —
+rerunning the script then auto-links them.
 
 `review_candidates.py` reports, for every class assignment in `cars.json`:
 `OK` (listing found in the assigned class), `ELSEWHERE` (best match in a

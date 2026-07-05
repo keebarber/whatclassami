@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { CarsFileSchema, ModsFileSchema } from "../schema";
+import { CarsFileSchema, ListingsFileSchema, ModsFileSchema } from "../schema";
 import carsJson from "../../data/cars.json";
+import listingsJson from "../../data/listings.json";
 import modsJson from "../../data/mods.json";
 
 /**
@@ -23,6 +24,34 @@ describe("cars.json", () => {
       `[data:check] cars: ${cars.length} total, ${cars.length - unverified.length} verified, ${unverified.length} pending rulebook verification`,
     );
     expect(cars.length).toBeGreaterThan(0);
+  });
+});
+
+describe("listings.json (tier-2 search index)", () => {
+  it("matches the Listing schema", () => {
+    const parsed = ListingsFileSchema.safeParse(listingsJson);
+    if (!parsed.success) console.error(parsed.error.format());
+    expect(parsed.success).toBe(true);
+  });
+
+  it("has unique ids and valid curated references", () => {
+    const listings = ListingsFileSchema.parse(listingsJson);
+    const cars = CarsFileSchema.parse(carsJson);
+    const carIds = new Set(cars.map((c) => c.id));
+    const seen = new Set<string>();
+    for (const l of listings) {
+      expect(seen.has(l.id), `duplicate listing id ${l.id}`).toBe(false);
+      seen.add(l.id);
+      if (l.curatedId) {
+        expect(carIds.has(l.curatedId), `${l.id} references missing car ${l.curatedId}`).toBe(
+          true,
+        );
+      }
+    }
+    expect(listings.length).toBeGreaterThan(1500);
+    console.info(
+      `[data:check] listings: ${listings.length} total, ${listings.filter((l) => l.curatedId).length} linked to curated rows`,
+    );
   });
 });
 
