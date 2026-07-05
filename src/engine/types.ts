@@ -58,6 +58,8 @@ export interface CarAttributes {
   bodyStyle: BodyStyle;
   /** Catch-alls exclude "sports-car-based" vehicles. */
   sportsCarBased: boolean;
+  /** Needed for the FS "V8 sedans" street catch-all. */
+  cylinders?: number;
 }
 
 export interface Car {

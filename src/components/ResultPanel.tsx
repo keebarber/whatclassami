@@ -2,6 +2,22 @@
 
 import { useState } from "react";
 import { CATEGORY_LABELS, ClassificationResult } from "@/engine";
+import { ruleLink, RULEBOOK_PDF_URL } from "@/lib/rulebook";
+
+function RuleRef({ refText }: { refText: string }) {
+  const link = ruleLink(refText);
+  return (
+    <a
+      href={link.href}
+      target="_blank"
+      rel="noopener"
+      className="underline decoration-asphalt-500 underline-offset-2 hover:text-cone-400"
+      title={`Open the official rules — ${link.label}`}
+    >
+      {refText}
+    </a>
+  );
+}
 
 function ClassChip({ label, tone }: { label: string; tone: "base" | "final" | "unknown" }) {
   const styles =
@@ -30,7 +46,12 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
 
   const bumped = result.finalCategory !== "street";
   const base =
-    result.baseClass ?? (result.car.streetExclusion ? "Excluded" : "NOC");
+    result.baseClass ??
+    (result.finalCategory === "street" && result.finalClass
+      ? result.finalClass // stock car classed via a Street catch-all
+      : result.car.streetExclusion
+        ? "Excluded"
+        : "NOC");
   const final =
     result.finalClass ?? (bumped ? `${CATEGORY_LABELS[result.finalCategory]} — class TBD` : base);
   // Escalated = the car landed in a category no mod strictly requires
@@ -46,6 +67,30 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
 
   return (
     <div className="rounded-xl border border-asphalt-700 bg-asphalt-900 p-5 lg:sticky lg:top-4">
+      <div className="mb-3 border-b border-asphalt-700 pb-2">
+        <p className="text-sm font-bold">
+          {result.car.make} {result.car.model}
+          <span className="ml-2 font-normal text-chalk-dim">
+            {result.car.yearStart}–{result.car.yearEnd}
+          </span>
+        </p>
+        {result.car.notes && (
+          <details className="mt-1">
+            <summary className="cursor-pointer text-xs text-chalk-dim hover:text-chalk">
+              Rulebook listing details
+            </summary>
+            <p className="mt-1 text-xs leading-relaxed text-chalk-dim">{result.car.notes}</p>
+            <a
+              href={`${RULEBOOK_PDF_URL}#page=190`}
+              target="_blank"
+              rel="noopener"
+              className="mt-1 inline-block text-xs text-cone-400 underline"
+            >
+              Open Appendix A in the official rules (PDF) →
+            </a>
+          </details>
+        )}
+      </div>
       <div className="flex flex-wrap items-center gap-3">
         <ClassChip label={base} tone={bumped ? "base" : "final"} />
         {bumped && (
@@ -133,7 +178,9 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
                   {binding && " •"}
                 </span>
               </div>
-              <p className="mt-0.5 text-xs text-chalk-dim">{mod.ruleRef}</p>
+              <p className="mt-0.5 text-xs text-chalk-dim">
+                <RuleRef refText={mod.ruleRef} />
+              </p>
             </li>
           ))}
         </ul>

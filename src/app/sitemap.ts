@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/classify`, lastModified: now, priority: 0.9 },
     { url: `${SITE_URL}/cars`, lastModified: now, priority: 0.8 },
     { url: `${SITE_URL}/faq`, lastModified: now, priority: 0.7 },
+    { url: `${SITE_URL}/glossary`, lastModified: now, priority: 0.6 },
     { url: `${SITE_URL}/contact`, lastModified: now, priority: 0.3 },
     ...cars.map((c) => ({
       url: `${SITE_URL}/car/${c.id}`,

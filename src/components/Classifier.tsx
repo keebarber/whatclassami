@@ -8,6 +8,8 @@ import {
   BuildSpec,
   Car,
   CarClassMap,
+  Category,
+  CATEGORY_LABELS,
   Drivetrain,
   Mod,
   ModGroup,
@@ -100,7 +102,19 @@ export function Classifier() {
   const [modIds, setModIds] = useState<string[]>([]);
   const [spec, setSpec] = useState<BuildSpec>({});
   const [query, setQuery] = useState("");
+  const [grouping, setGrouping] = useState<"area" | "category">("area");
   const [hydrated, setHydrated] = useState(false);
+
+  /** Selecting a car starts it unmodified; clicking again deselects. */
+  function selectCar(id: string) {
+    if (id === carId) {
+      setCarId(null);
+      return;
+    }
+    setCarId(id);
+    setModIds([]);
+    setSpec({});
+  }
 
   // Restore build from ?b= on first load; otherwise show the demo build
   useEffect(() => {
@@ -201,7 +215,7 @@ export function Classifier() {
               return (
                 <li key={c.id}>
                   <button
-                    onClick={() => setCarId(active ? null : c.id)}
+                    onClick={() => selectCar(c.id)}
                     className={`w-full rounded-lg border px-3 py-2.5 text-left text-sm transition ${
                       active
                         ? "border-cone-500 bg-asphalt-800"
@@ -238,7 +252,7 @@ export function Classifier() {
               return (
                 <li key={l.id}>
                   <button
-                    onClick={() => setCarId(active ? null : l.id)}
+                    onClick={() => selectCar(l.id)}
                     className={`w-full rounded-lg border border-dashed px-3 py-2.5 text-left text-sm transition ${
                       active
                         ? "border-cone-500 bg-asphalt-800"
@@ -351,14 +365,55 @@ export function Classifier() {
             </div>
           </div>
 
+          <div className="mb-2 flex gap-1 text-xs">
+            <span className="py-1 text-chalk-dim">Group by:</span>
+            {(["area", "category"] as const).map((g) => (
+              <button
+                key={g}
+                onClick={() => setGrouping(g)}
+                className={`rounded px-2 py-1 font-bold transition ${
+                  grouping === g
+                    ? "bg-cone-500 text-asphalt-950"
+                    : "bg-asphalt-800 text-chalk-dim hover:text-chalk"
+                }`}
+              >
+                {g === "area" ? "Car area" : "Rules category"}
+              </button>
+            ))}
+          </div>
+
           <div className="max-h-[480px] space-y-4 overflow-y-auto pr-1">
-            {GROUP_ORDER.map((group) => (
-              <div key={group}>
+            {(grouping === "area"
+              ? GROUP_ORDER.map((group) => ({
+                  key: group as string,
+                  title: MOD_GROUP_LABELS[group],
+                  subtitle: null as string | null,
+                  mods: MODS.filter((m) => m.group === group),
+                }))
+              : (
+                  ["street", "streetTouring", "streetPrepared", "streetModified"] as Category[]
+                ).map((cat) => ({
+                  key: cat as string,
+                  title: `${CATEGORY_LABELS[cat]} allowances`,
+                  subtitle: car
+                    ? cat === "street" && car.streetExclusion
+                      ? "this car: excluded (§3.1)"
+                      : car.classes[cat]
+                        ? `this car: ${car.classes[cat]}`
+                        : "this car: not listed — catch-all or NOC"
+                    : null,
+                  mods: MODS.filter((m) => m.minCategory === cat),
+                }))
+            ).map(({ key, title, subtitle, mods: groupMods }) => (
+              <div key={key}>
                 <h3 className="mb-1.5 text-xs font-bold text-chalk-dim">
-                  {MOD_GROUP_LABELS[group]}
+                  {title}
+                  {subtitle && (
+                    <span className="ml-2 font-normal text-cone-400">{subtitle}</span>
+                  )}
                 </h3>
                 <ul className="space-y-1">
-                  {MODS.filter((m) => m.group === group).map((m) => {
+                  {groupMods.map((m) => {
                     const checked = modIds.includes(m.id);
                     return (
                       <li key={m.id}>

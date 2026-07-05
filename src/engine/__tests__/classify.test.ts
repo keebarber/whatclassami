@@ -175,7 +175,8 @@ describe("classify", () => {
     expect(r.via).toBe("catchall");
     expect(r.reasons.some((w) => w.includes("2457cc"))).toBe(true);
     expect(r.warnings.some((w) => w.includes("Regional only"))).toBe(true);
-    expect(r.warnings.some((w) => w.includes("never mentions wagons"))).toBe(true);
+    // §12's functional sedan definition admits wagons — cited as a reason.
+    expect(r.reasons.some((w) => w.includes("§12 defines a sedan"))).toBe(true);
     expect(r.warnings.some((w) => w.includes("§3.1 rollover"))).toBe(true);
     // FSP surfaces as a reasoned alternative, not just a warning.
     expect(r.alternatives).toHaveLength(1);
@@ -206,6 +207,49 @@ describe("classify", () => {
       attributes: { ...base.attributes!, displacementCc: 2900 },
     };
     expect(classify(bigTurbo, [stMod]).finalClass).toBe("BST"); // 2.5–3.1L FI
+  });
+
+  it("classes a NOC V8 wagon via the FS street catch-all (work-up order)", () => {
+    // 1994 Caprice Classic wagon-alike: nowhere in Appendix A.
+    const caprice: Car = {
+      ...testCar,
+      id: "test-caprice",
+      classes: {},
+      attributes: {
+        displacementCc: 5733,
+        forcedInduction: false,
+        seats: 6,
+        bodyStyle: "wagon",
+        cylinders: 8,
+        sportsCarBased: false,
+      },
+    };
+    const stock = classify(caprice, []);
+    expect(stock.finalCategory).toBe("street");
+    expect(stock.finalClass).toBe("FS"); // FS V8-sedans beats the AS any-car catch-all
+    expect(stock.via).toBe("catchall");
+    expect(stock.reasons.some((w) => w.includes("§12 defines a sedan"))).toBe(true);
+
+    const modded = classify(caprice, [stMod]); // ST-level mod → >5.1L NA → BST
+    expect(modded.finalClass).toBe("BST");
+  });
+
+  it("classes a NOC RWD pickup via the HS street catch-all", () => {
+    const truck: Car = {
+      ...testCar,
+      id: "test-truck",
+      classes: {},
+      attributes: {
+        displacementCc: 4300,
+        forcedInduction: false,
+        seats: 3,
+        bodyStyle: "truck",
+        cylinders: 6,
+        sportsCarBased: false,
+      },
+    };
+    const r = classify(truck, []);
+    expect(r.finalClass).toBe("HS"); // HS pickups checked before FS/AS (work-up order)
   });
 
   it("catch-alls exclude sports-car-based vehicles", () => {

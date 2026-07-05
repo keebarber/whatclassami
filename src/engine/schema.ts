@@ -18,6 +18,7 @@ const AttributesSchema = z.object({
     "sports",
   ]),
   sportsCarBased: z.boolean(),
+  cylinders: z.number().int().gte(2).lte(16).optional(),
 });
 
 export const CarSchema = z
@@ -37,10 +38,16 @@ export const CarSchema = z
   .refine((c) => c.yearEnd >= c.yearStart, {
     message: "yearEnd must be >= yearStart",
   })
-  .refine((c) => c.classes.street !== undefined || c.streetExclusion !== undefined, {
-    message:
-      "every car needs a Street class, or a streetExclusion explaining why it has none",
-  });
+  .refine(
+    (c) =>
+      c.classes.street !== undefined ||
+      c.streetExclusion !== undefined ||
+      c.attributes !== undefined,
+    {
+      message:
+        "every car needs a Street class, a streetExclusion, or attributes for catch-all resolution",
+    },
+  );
 
 export const ModSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/, "kebab-case ids only"),

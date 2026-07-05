@@ -36,7 +36,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "My car is a wagon or SUV — can it run Street Touring?",
-    a: "The ST catch-alls literally say 'Sedans & Coupes,' but nothing in the category rules excludes wagons, and SCCA's own championship history includes them. The likely explanation is rarity rather than intent. Some vehicles (including all Foresters) are excluded from the Street category for §3.1 stability reasons, yet appear in ST or SP listings. Where wording is ambiguous, our results say so and cite both readings — confirm with your Region or the SEB.",
+    a: "Usually yes, and the rulebook itself settles it: §12 defines a sedan as 'a car capable of transporting four (4) or more average-size adults in normal seating positions' — a functional definition that wagons and SUVs meeting the seat count satisfy — and §12 definitions apply 'regardless of any other definitions or interpretations.' So the 'Sedans & Coupes' catch-alls cover 4-seat wagons. Separately, some vehicles (including all Foresters) are on the §3.1 Street-category stability exclusion list; §3.1 eligibility follows the rollover chart, so ride height matters. Our results cite §12 whenever this reading is doing the work.",
   },
   {
     q: "Is this an official SCCA tool?",

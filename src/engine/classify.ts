@@ -53,9 +53,9 @@ function resolveInCategory(car: Car, category: Category): Resolution | null {
   const warnings = [
     `Catch-all/NOC classings are Regional only — not eligible for National Tours or the Solo National Championships (Appendix A introduction).`,
   ];
-  if (match.conditionalBody) {
-    warnings.push(
-      `Ambiguity: the catch-all wording says "Sedans & Coupes" and never mentions ${a.bodyStyle}s. Nothing in the category rules excludes them, SCCA's own ST championship history includes wagons, and the likely explanation is rarity rather than intent — but the literal wording leaves room for a Region to disagree. Confirm locally or ask the SEB (letters.scca.com).`,
+  if (match.sedanByDefinition) {
+    reasons.push(
+      `Body style: the catch-all says "sedans," and §12 defines a sedan functionally — "a car capable of transporting four (4) or more average-size adults in normal seating positions" — with §12 definitions applying "regardless of any other definitions or interpretations." A ${a.bodyStyle} seating ${a.seats} qualifies.`,
     );
   }
   warnings.push(

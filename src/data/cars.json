@@ -4243,6 +4243,24 @@
     "notes": "Street: 'Jensen-Healey' = CS."
   },
   {
+    "id": "chevy-caprice-91-96",
+    "make": "Chevrolet",
+    "model": "Caprice / Caprice Classic (incl. wagon)",
+    "yearStart": 1991,
+    "yearEnd": 1996,
+    "classes": {},
+    "attributes": {
+      "displacementCc": 5733,
+      "forcedInduction": false,
+      "seats": 6,
+      "bodyStyle": "wagon",
+      "cylinders": 8,
+      "sportsCarBased": false
+    },
+    "verified": true,
+    "notes": "Not listed anywhere in Appendix A (verified against the 2026 extraction) — a true NOC car. Resolves via the Street FS catch-all: 'V8 sedans, pick-ups, and sedan-derived convertibles (NOC)'; per §12 a wagon seating 4+ is a sedan. ST: >5.1L N/A fits the BST catch-all. Regional only. Attributes reflect the 5.7L LT1; the 4.3L L99 V8 also qualifies."
+  },
+  {
     "id": "morgan-plus8",
     "make": "Morgan",
     "model": "Plus 8",

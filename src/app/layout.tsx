@@ -100,6 +100,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 FAQ
               </Link>{" "}
               ·{" "}
+              <Link href="/glossary" className="text-cone-400 underline">
+                Terms & definitions
+              </Link>{" "}
+              ·{" "}
               <Link href="/contact" className="text-cone-400 underline">
                 Contact / report an error
               </Link>{" "}

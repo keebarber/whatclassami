@@ -42,7 +42,8 @@
 - [ ] Static per-car SEO pages (`/car/2019-mazda-mx-5`) from verified rows — the long-tail wedge neither competitor has.
 - [ ] Rules-year versioning (`data/2026/`, `data/2027/`) + year switcher + build diffing.
 - [ ] FasTrack monthly change monitoring once live.
-- [ ] Delighters: "path back to Street" suggestions, PAX context, event-day PWA mode, saved garages.
+- [ ] Delighters: "path back to Street" suggestions, PAX context, event-day PWA mode, saved garages, top/popular cars by class report (Keenan idea, 2026-07).
+- [ ] Monetization (lean-first): Tire Rack/parts affiliate links on results (high intent, zero page weight) + Ko-fi/GitHub Sponsors; single static EthicalAds/Carbon card only once traffic justifies it; never ad networks that add scripts/trackers.
 
 ## Part 3 — The biggest pieces still missing (ranked)
 
