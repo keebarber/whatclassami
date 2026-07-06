@@ -10,6 +10,7 @@ import {
   crossEligibility,
   resolveStreetModified,
 } from "@/engine";
+import { reportIssueUrl } from "@/lib/report";
 import { encodeBuild } from "@/lib/share";
 import { SITE_URL } from "@/lib/site";
 
@@ -274,7 +275,20 @@ export default async function CarPage({
       <p className="mt-10 border-t border-asphalt-700 pt-4 text-xs leading-relaxed text-chalk-dim">
         Unofficial guidance verified against the 2026 SCCA® Solo® Rules — always confirm
         against the current rulebook before competing. Classing data cites the exact Appendix
-        A wording it relies on.
+        A wording it relies on. Spot an error?{" "}
+        <a
+          href={reportIssueUrl({
+            car,
+            classing: classSummary(car),
+            pageUrl: `${SITE_URL}/car/${car.id}`,
+          })}
+          target="_blank"
+          rel="noopener"
+          className="text-cone-400 underline hover:text-cone-300"
+        >
+          Report it on GitHub
+        </a>
+        .
       </p>
     </div>
   );

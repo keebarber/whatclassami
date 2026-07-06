@@ -25,7 +25,7 @@
 ### Milestone 2: Ship it
 
 - [x] Domain purchased: **whatclassami.com** (2026-07-04); site branded to match. Remaining: Vercel deploy + DNS.
-- [ ] Wire "report an error" to a prefilled GitHub issue (needs: public repo decision).
+- [x] **Wire "report an error" to a prefilled GitHub issue** *(2026-07-05)*: `reportIssueUrl` (`src/lib/report.ts`) builds a prefilled new-issue link (car row, classing shown, share/canonical URL, `classing-correction` label); surfaced on the result panel and every `/car/[slug]` page. Still needs the repo made **public** for the community to file (and, optionally, the `classing-correction` label created).
 - [x] Assist guardrails *(done 2026-07-04)*: per-IP rate limits (6/5min, 40/day), per-instance daily cap (300), response dedupe cache, Anthropic prompt caching on the catalog block, 400-token output cap, 500-char input cap, no-retry + 12s timeout. Remaining: set `ANTHROPIC_API_KEY` in Vercel, set a spend limit in the Anthropic Console, and smoke-test in a preview deployment.
 - [ ] Analytics (privacy-light) + error reporting.
 - [ ] Portfolio card + link on SafetyLlama.dev.
@@ -52,7 +52,7 @@
 
 ## Part 3 — The biggest pieces still missing (ranked)
 
-**1. Class-level modification legality.** The engine reasons at *category* granularity: coilovers = "Street Touring level." But real ST legality is per-class — tire width limits differ across SST/AST/BST/CST/DST/EST/GST, LSDs are banned in EST, wheel rules vary. Today a user with 285s on an EST car gets a green "ST-legal tires" verdict that a tech inspector would reject. This is the gap between "helpful guide" and "trustworthy tool," and it drives the tire/wheel structured-input work. Everything else on this list is smaller.
+**1. Class-level modification legality — largely CLOSED (2026-07-05).** Per-class ST legality is now modeled and enforced: §14.3 tire section-width and §14.4 wheel-width limits per class (with AWD/2WD, RWD-mid-engine, and RWD-forced-induction splits) and §14.10.K LSD rules, all re-verified against the rulebook and now pinned by an exhaustive `constraints.test.ts`. A build exceeding its class's tire/wheel/LSD limits re-resolves out of Street Touring. The BST tire split now reads forced-induction straight from the car's attributes (from the SM backfill), so RWD-turbo BST cars auto-narrow to 295mm without user input. Remaining smaller items: derive `midEngine` from car data (currently a build input), and the §3.1 rollover chart as data (Milestone 1) for excluded-list cars.
 
 **2. Mod catalog provenance.** The car data got a rigorous 2026 verification pass; the mod catalog hasn't. It's sourced from SCCA's official (but 2019-dated) cheat sheet — good bones, unverified details.
 

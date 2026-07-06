@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CATEGORY_LABELS, ClassificationResult } from "@/engine";
+import { CATEGORY_LABELS, ClassificationResult, summarize } from "@/engine";
+import { reportIssueUrl } from "@/lib/report";
 import { ruleLink, RULEBOOK_PDF_URL } from "@/lib/rulebook";
 
 function RuleRef({ refText }: { refText: string }) {
@@ -231,7 +232,20 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
 
       <p className="mt-4 border-t border-asphalt-700 pt-3 text-[11px] leading-relaxed text-chalk-dim">
         Unofficial guidance — verify against the current SCCA Solo Rules before tech. Found an
-        error? Report it with your share link.
+        error?{" "}
+        <a
+          href={reportIssueUrl({
+            car: result.car,
+            classing: summarize(result),
+            pageUrl: typeof window === "undefined" ? undefined : window.location.href,
+          })}
+          target="_blank"
+          rel="noopener"
+          className="text-cone-400 underline hover:text-cone-300"
+        >
+          Report it on GitHub
+        </a>{" "}
+        (prefilled with this car and your share link).
       </p>
     </div>
   );

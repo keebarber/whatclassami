@@ -7,6 +7,14 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://whatclassam
 
 export const SITE_NAME = "WhatClassAmI";
 
+/**
+ * Public repo — powers the "report an error" prefilled-issue link. The link
+ * only works for the community once the repo is public (Milestone 2). Override
+ * with NEXT_PUBLIC_REPO_URL if the repo moves.
+ */
+export const REPO_URL =
+  process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/keebarber/whatclassami";
+
 export const SITE_TAGLINE = "Autocross Classing Guide";
 
 export const CONTACT_EMAIL =
