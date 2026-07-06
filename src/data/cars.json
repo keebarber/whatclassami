@@ -397,7 +397,8 @@
       "forcedInduction": false,
       "seats": 5,
       "bodyStyle": "wagon",
-      "sportsCarBased": false
+      "sportsCarBased": false,
+      "drivetrain": "awd"
     },
     "streetExclusion": "'Subaru Forester' is on the Street category stability exclusion list (\u00a73.1, Appendix A).",
     "verified": true,
@@ -1303,7 +1304,6 @@
     "attributes": {
       "seats": 5,
       "bodyStyle": "coupe",
-      "drivetrain": "awd",
       "forcedInduction": true
     }
   },
@@ -3417,7 +3417,8 @@
       "forcedInduction": true,
       "seats": 5,
       "bodyStyle": "wagon",
-      "sportsCarBased": false
+      "sportsCarBased": false,
+      "drivetrain": "awd"
     },
     "streetExclusion": "'Subaru Forester' is on the Street category stability exclusion list (\u00a73.1, Appendix A).",
     "verified": true,

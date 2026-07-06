@@ -44,7 +44,7 @@
 
 ### Milestone 4: Growth & longevity
 
-- [ ] Static per-car SEO pages (`/car/2019-mazda-mx-5`) from verified rows — the long-tail wedge neither competitor has.
+- [x] **Static per-car SEO pages** *(2026-07-05)*: `/car/[slug]` statically generates all 335 verified rows (in sitemap). Enriched with the full prep ladder (Street→ST→SP→Street Modified→Prepared), CAM/XS/XP/SSC/EVX cross-eligibility, FAQ + BreadcrumbList JSON-LD, and "other {class} cars" internal links (~38 siblings/page). The long-tail wedge neither competitor has. *(Build/deploy on Mac or Vercel — the sandbox can't run `next build`.)*
 - [ ] Rules-year versioning (`data/2026/`, `data/2027/`) + year switcher + build diffing.
 - [ ] FasTrack monthly change monitoring once live.
 - [ ] Delighters: "path back to Street" suggestions, PAX context, event-day PWA mode, saved garages, top/popular cars by class report (Keenan idea, 2026-07).
