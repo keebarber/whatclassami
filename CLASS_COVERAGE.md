@@ -91,11 +91,13 @@ the SMF ambiguity rather than guessing; when it can't place a car it returns nul
 (honest NOC) rather than inventing a class. Covered by unit tests (SSM/SM/SMF +
 the no-data null path) and a real-data integration test.
 
-*Backfill status (2026-07-05):* `drivetrain`/seats/body added across the
-enthusiast-common car families. **221 of 335 rows now auto-place** in Street
-Modified when modded to SM level (SSM 97, SM 86, SMF 38); the remaining ~114 are
-vintage/econobox rows without attributes and still return the honest "no Street
-Modified classing" path until curated. A real-data integration test
+*Backfill status (2026-07-05):* `drivetrain`/seats/body added across the whole
+performance-car set. **320 of 335 rows now auto-place** in Street Modified when
+modded to SM level (SSM 112, SM 158, SMF 50). The 15 unplaced are pre-1990 foreign
+2-seaters (Triumph, Sunbeam, TVR, Jaguar E-Type, etc.) and non-SSM Lotus, whose
+SSM eligibility is genuinely restricted under the rules ("2-seat cars not eligible
+for Street Prepared" / "Triumph & MGB excluded from SM") — left as an honest "no
+Street Modified classing" rather than mis-placed. A real-data integration test
 (`streetmod.test.ts`) pins placements across all three classes plus make-routing.
 
 ### 2. Prepared — XP / CP / DP / EP / FP  *(implemented for common cars)*
@@ -106,33 +108,49 @@ maps through the existing "listed" engine path (`prepared` is a valid category i
 A citations to the enthusiast-common cars that are explicitly listed — CP
 (American muscle: gen-4 Camaro, S197 Mustangs), DP (Miata all gens, Z3 4-cyl), EP
 (Civic/Integra, Fit, CRX, del Sol, Fiesta ST, Neon SRT-4), FP (S2000, RX-7/RX-8,
-Datsun Z / 300ZX / 350Z / 370Z, NSX, Solstice GXP, Fiat 124, Elise). Counts:
-CP 4 · DP 4 · EP 7 · FP 24. Remaining: XP (open/exotic) and the bulk of vintage
-Prepared listings — lower priority (dedicated build cars). XP also has an explicit
-catch-all ("almost any production car … listed at the end is eligible for XP")
-that could be modeled later.
+Datsun Z / 300ZX / 350Z / 370Z, NSX, Solstice GXP, Fiat 124, Elise) plus a bulk
+vintage pass (X1/9, Datsun roadster, Alfa 2000, Jaguar E-Type, Ferrari 308, Morgan
+Plus 8, E9x 3-series, DSM Eclipse, Buick Grand National). Counts: CP 5 · DP 7 ·
+EP 7 · FP 29 (48 total). **XP done (2026-07-05):** XP is the open Prepared
+class ("any car listed in CP/DP/EP/FP is eligible for XP"), so rather than
+overwrite a row's single `prepared` slot it's surfaced as an "also eligible"
+alternative for every Prepared-listed car (`camxs.ts` `xpEligibility`). Remaining:
+the bulk of vintage Prepared listings — lower priority (dedicated build cars).
 
-### 3. CAM / XS — CAM-T / CAM-C / CAM-S / XS-A / XS-B  *(criteria, not listings)*
+### 3. CAM / XS — implemented (2026-07-05)
 
 CAM (Classic American Muscle) and XS (Xtreme Street) are **eligibility-criteria**
-classes: CAM by nationality/era/body type (American, specific vintages, coupe/
-sedan/sports splits) with its own prep allowances; XS by tire (200TW+) and prep
-tier. Neither is a name-lookup. Modeling means an eligibility evaluator plus a
-short curated example set, not an Appendix A promotion. Popular, but a distinct
-build.
+classes, not Appendix A name-lookups, and sit *parallel* to the Street→…→Modified
+ladder rather than on it. Modeled in `camxs.ts` (`crossEligibility`) and surfaced
+as an "Also eligible for" panel on the result: **CAM** — North American
+front-engine RWD non-EV cars → CAM-S (2-seat), CAM-T (4+-seat, body ≤2000), or
+CAM-C (newer); 44 cars eligible (CAM-C 25 · CAM-S 16 · CAM-T 3). **XS** — the
+200-treadwear category for non-CAM, non-§3.1-excluded cars (XA vs XB is
+weight-determined, so surfaced as one entry); 138 eligible. EV/hybrid and
+mid-engine cars are excluded from CAM. Covered by `camxs.test.ts`.
 
-### 4. Modified — AM / BM / CM / DM / EM / FM  *(low priority)*
+### 4. Modified — AM / BM / CM / DM / EM / FM  *(out of scope — documented)*
 
-Formula cars, sports racers, and space-frame/kit builds classed by displacement
-formula. Almost none are street-registerable autocross cars, so this is the
-lowest-value category for this app's audience. Model last, or leave to the tier-2
-index.
+Verified against §Modified: these are **purpose-built cars** — Formula cars,
+Sports Racers, Spec Racer Ford, space-frame/kit builds, and karts (KM), classed by
+a displacement/weight formula. There are **no per-car Appendix A production
+listings**; a production street car doesn't run Modified without being rebuilt into
+a sports racer. So there's nothing to add for a street-car classifier — the engine
+already NOCs correctly (with a "no Modified classing" note) if a build's ladder
+somehow reaches Modified. Intentionally no data.
 
-### 5. Spec / developmental — SSC, Club Spec, EVX
+### 5. Spec / developmental — SSC, EVX (done); Club Spec (documented)
 
-Solo Spec Coupe (single-model spec — Toyota 86, its own `SSC_Specifications.pdf`),
-Club Spec, and Electric Vehicle Experimental (EVX). Each is a self-contained spec;
-handle as flat informational entries rather than through the classing engine.
+Surfaced via the same "Also eligible for" cross-eligibility (`camxs.ts`):
+- **SSC (Solo Spec Coupe)** *(done)* — the single-model spec chassis: gen-1 Toyota
+  86 / Subaru BRZ / Scion FR-S (§20). Flagged on `subaru-brz-toyota-86-gen1`.
+- **EVX (Electric Vehicle Experimental)** *(done)* — 2026 EV exhibition class
+  (Appendix B). Flagged on pure-electric rows (Tesla, Ioniq, EV6, i4, Mach-E,
+  Taycan; hybrids excluded).
+- **Club Spec** *(documented)* — a Mazda MX-5-based developmental spec with a
+  fixed parts list ("see scca.com/clubspec"). The exact current spec car is
+  ambiguous from the rulebook (part numbers reference NC-chassis MX-5), so it's
+  documented rather than flagged on a guessed row.
 
 ## Data-provenance caveat (why the PDF, not the extraction)
 

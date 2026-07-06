@@ -153,6 +153,29 @@ export function ResultPanel({ result }: { result: ClassificationResult | null })
         </div>
       )}
 
+      {result.alsoEligible.length > 0 && (
+        <div className="mt-3 rounded-lg border border-asphalt-600 bg-asphalt-800 p-3">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-chalk-dim">
+            Also eligible for
+          </h3>
+          {result.alsoEligible.map((x) => (
+            <div key={x.klass} className="mt-2">
+              <span className="rounded bg-asphalt-700 px-2 py-0.5 text-sm font-extrabold text-chalk">
+                {x.klass}
+              </span>
+              <span className="ml-2 text-xs text-chalk-dim">{x.label}</span>
+              <ul className="mt-1.5 space-y-1">
+                {x.reasons.map((r) => (
+                  <li key={r} className="text-xs leading-relaxed text-chalk-dim">
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+
       {result.items.length > 0 && (
         <ul className="mt-4 space-y-1.5">
           {result.items.map(({ mod, status, requiredCategory, binding }) => (

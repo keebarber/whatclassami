@@ -1,3 +1,4 @@
+import { crossEligibility } from "./camxs";
 import { matchCatchall } from "./catchalls";
 import { BuildSpec, lsdRuling, stLimits } from "./constraints";
 import { resolveStreetModified } from "./streetmod";
@@ -290,6 +291,7 @@ export function classify(
     via,
     reasons,
     alternatives,
+    alsoEligible: crossEligibility(car),
     items,
     warnings,
   };

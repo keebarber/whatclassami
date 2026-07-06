@@ -140,6 +140,16 @@ export interface AlternativeClassing {
   reasons: string[];
 }
 
+/**
+ * Cross-eligibility in a parallel category (Classic American Muscle, Xtreme
+ * Street) that sits outside the Street→…→Modified prep ladder.
+ */
+export interface CrossClassing {
+  klass: string;
+  label: string;
+  reasons: string[];
+}
+
 export interface ClassificationResult {
   car: Car;
   /** Class if the car were bone stock (Street category). */
@@ -153,6 +163,8 @@ export interface ClassificationResult {
   reasons: string[];
   /** Other defensible classings and when to choose them. */
   alternatives: AlternativeClassing[];
+  /** Parallel-category eligibility (CAM, Xtreme Street) — informational. */
+  alsoEligible: CrossClassing[];
   items: ItemVerdict[];
   warnings: string[];
 }

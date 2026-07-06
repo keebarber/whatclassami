@@ -33,12 +33,14 @@
 ### Milestone 3: Coverage completion
 
 - [x] **Street / ST / SP class-complete** *(2026-07-05)*: every 2026 class letter is represented and verified. Confirmed the true class list against the rulebook — ASP/BSP are retired (Appendix J history only), so SP is legitimately SSP/CSP/DSP/ESP/FSP. Thickened the two genuinely thin SP classes (ESP 3→21, FSP 1→4) from Appendix A. Full map + remaining-category plan in [CLASS_COVERAGE.md](./CLASS_COVERAGE.md).
-- [x] **Street Modified (SSM/SM/SMF)** *(2026-07-05)*: `drivetrain` attribute + placement resolver (`streetmod.ts`) wired into `classify` as a National-eligible `"placement"` resolution (2-seat/exotics → SSM, FWD → SMF, RWD/AWD sedans/coupes+pickups → SM; honest NOC otherwise). Backfilled drivetrain/seats/body across the popular car set — **221/335 rows now auto-place** in SM (SSM 97 · SM 86 · SMF 38); ~114 vintage/econobox rows remain for later curation.
-- [x] **Prepared (CP/DP/EP/FP)** *(2026-07-05)*: added verified `prepared` classes with quoted Appendix A citations to the enthusiast-common cars explicitly listed (CP 4 · DP 4 · EP 7 · FP 24). Uses the existing "listed" path. Remaining: XP (open/exotic) + bulk vintage listings.
+- [x] **Street Modified (SSM/SM/SMF)** *(2026-07-05)*: `drivetrain` attribute + placement resolver (`streetmod.ts`) wired into `classify` as a National-eligible `"placement"` resolution (2-seat/exotics → SSM, FWD → SMF, RWD/AWD sedans/coupes+pickups → SM; honest NOC otherwise). Backfilled drivetrain/seats/body across the whole performance set — **320/335 rows now auto-place** in SM (SSM 112 · SM 158 · SMF 50); the 15 unplaced are SM-restricted vintage foreign 2-seaters.
+- [x] **Prepared (CP/DP/EP/FP + XP)** *(2026-07-05)*: added verified `prepared` classes with quoted Appendix A citations to the enthusiast-common cars explicitly listed (CP 4 · DP 4 · EP 7 · FP 24). XP (open Prepared) surfaced as an "also eligible" alternative for every Prepared-listed car. Remaining: bulk vintage Prepared listings.
+- [x] **CAM / XS / XP / SSC / EVX** *(2026-07-05)*: cross-eligibility evaluator (`camxs.ts`) surfaced as an "Also eligible for" panel — CAM (North American front-engine RWD → CAM-S/T/C; 44 cars), XS (200TW; 138 cars), XP (open Prepared, every Prepared-listed car), SSC (gen-1 86/BRZ), EVX (pure EVs). Bulk vintage Prepared pass → 48 rows (CP 5 · DP 7 · EP 7 · FP 29).
+- [x] **Modified — documented out of scope** *(2026-07-05)*: verified purpose-built only (Formula/Sports Racer/kit/kart, formula-classed); no production Appendix A listings, so no data — the engine already NOCs correctly if a build reaches Modified.
 - [ ] Curation grind: promote high-traffic tier-2 listings into verified rows (loop is automated; human verification is the throughput limit).
 - [ ] Fix known extractor gaps: HS make-tracking slips, missing Syclone/Typhoon, 250 suspect-make listings; SP/Prepared column drift (don't bulk-promote past Street without a per-row PDF check).
 - [ ] Cross-category linking for uncurated listings (a tier-2 car currently knows only one category, so escalation is blind).
-- [ ] Remaining categories (per CLASS_COVERAGE.md): Prepared (fits current model, large), CAM/XS (criteria-based, needs eligibility evaluator), Modified (low priority), spec/dev (SSC, Club Spec, EVX).
+- [ ] Loose ends (per CLASS_COVERAGE.md): Club Spec (needs the current spec car from scca.com/clubspec); the bulk tier-2 curation grind; the 15 SM-restricted vintage 2-seaters. Every 2026 competition category is now mapped or documented.
 
 ### Milestone 4: Growth & longevity
 
