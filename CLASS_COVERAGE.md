@@ -91,20 +91,26 @@ the SMF ambiguity rather than guessing; when it can't place a car it returns nul
 (honest NOC) rather than inventing a class. Covered by unit tests (SSM/SM/SMF +
 the no-data null path) and a real-data integration test.
 
-*Remaining for full SM coverage:* only a handful of rows carry `attributes` today
-(the catch-all cars plus a curated SM demo set — Miata→SSM, GTI→SMF, BRZ/WRX/
-Caprice→SM). Broad SM auto-classing needs `drivetrain` + seats/body backfilled
-across the dataset — a curation task, not an engine one. Until a row has
-attributes, modding it past SP still returns the honest "no Street Modified
-classing" path.
+*Backfill status (2026-07-05):* `drivetrain`/seats/body added across the
+enthusiast-common car families. **221 of 335 rows now auto-place** in Street
+Modified when modded to SM level (SSM 97, SM 86, SMF 38); the remaining ~114 are
+vintage/econobox rows without attributes and still return the honest "no Street
+Modified classing" path until curated. A real-data integration test
+(`streetmod.test.ts`) pins placements across all three classes plus make-routing.
 
-### 2. Prepared — XP / CP / DP / EP / FP  *(fits the existing model; large)*
+### 2. Prepared — XP / CP / DP / EP / FP  *(implemented for common cars)*
 
 Prepared **is** per-car Appendix A listed, exactly like Street Prepared, so it
-maps with the same verified-row workflow (`prepared` is already a valid category
-in `types.ts`). It's large and skews toward dedicated build cars rather than
-daily drivers, so priority is below Street Modified. XP also has an explicit
-catch-all ("almost any production car … listed at the end is eligible for XP").
+maps through the existing "listed" engine path (`prepared` is a valid category in
+`types.ts`). **Done (2026-07-05):** added CP/DP/EP/FP classes with quoted Appendix
+A citations to the enthusiast-common cars that are explicitly listed — CP
+(American muscle: gen-4 Camaro, S197 Mustangs), DP (Miata all gens, Z3 4-cyl), EP
+(Civic/Integra, Fit, CRX, del Sol, Fiesta ST, Neon SRT-4), FP (S2000, RX-7/RX-8,
+Datsun Z / 300ZX / 350Z / 370Z, NSX, Solstice GXP, Fiat 124, Elise). Counts:
+CP 4 · DP 4 · EP 7 · FP 24. Remaining: XP (open/exotic) and the bulk of vintage
+Prepared listings — lower priority (dedicated build cars). XP also has an explicit
+catch-all ("almost any production car … listed at the end is eligible for XP")
+that could be modeled later.
 
 ### 3. CAM / XS — CAM-T / CAM-C / CAM-S / XS-A / XS-B  *(criteria, not listings)*
 

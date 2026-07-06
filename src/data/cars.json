@@ -35,7 +35,12 @@
       "prepared": "DP"
     },
     "verified": true,
-    "notes": "Street: 'MX-5 Miata (NC chassis; non-MS-R 2007) (2006-15)' = CS; the 2007 MS-R = BS. ST: 'MX-5 Miata (2006-15)' = CST. SP: 'MX-5 (2006-15)' = CSP; DSP 'MX-5 (2006-2015) Limited Prep' also listed. P: 'MX-5 Miata (2006-15)' = DP."
+    "notes": "Street: 'MX-5 Miata (NC chassis; non-MS-R 2007) (2006-15)' = CS; the 2007 MS-R = BS. ST: 'MX-5 Miata (2006-15)' = CST. SP: 'MX-5 (2006-15)' = CSP; DSP 'MX-5 (2006-2015) Limited Prep' also listed. P: 'MX-5 Miata (2006-15)' = DP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "mazda-miata-nd",
@@ -50,7 +55,12 @@
       "prepared": "DP"
     },
     "verified": true,
-    "notes": "Street: 'MX-5 Miata (ND1/ND2 chassis; including RF) (2016-25)' = CS. ST: 'MX-5 Miata (2016-26)' = AST. SP: 'MX-5 Miata (ND chassis, all) (2016-25)' = CSP. P: 'MX-5 Miata (2016-20)' = DP."
+    "notes": "Street: 'MX-5 Miata (ND1/ND2 chassis; including RF) (2016-25)' = CS. ST: 'MX-5 Miata (2016-26)' = AST. SP: 'MX-5 Miata (ND chassis, all) (2016-25)' = CSP. P: 'MX-5 Miata (2016-20)' = DP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "subaru-brz-toyota-86-gen1",
@@ -87,7 +97,12 @@
       "streetPrepared": "CSP"
     },
     "verified": true,
-    "notes": "Street: 'GR86 (without TRD equipment, excl. 10th Anniv.)' & 'BRZ (2022-26) including tS' = DS; GR86 10th Anniversary (2023) = BS. ST: 'GR86 (2022-26)', 'BRZ (2022-26)' = CST. SP: 'BRZ (2022-26)' = CSP; DSP 'BRZ (2022-25) *Limited Prep*' also listed."
+    "notes": "Street: 'GR86 (without TRD equipment, excl. 10th Anniv.)' & 'BRZ (2022-26) including tS' = DS; GR86 10th Anniversary (2023) = BS. ST: 'GR86 (2022-26)', 'BRZ (2022-26)' = CST. SP: 'BRZ (2022-26)' = CSP; DSP 'BRZ (2022-25) *Limited Prep*' also listed.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "honda-s2000",
@@ -102,7 +117,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'S2000 (non-CR)' = CS. ST: CST. The CR is classed separately (AST in Street Touring). SP: 'S2000' = CSP. P: 'S2000 (2000-09)' = FP."
+    "notes": "Street: 'S2000 (non-CR)' = CS. ST: CST. The CR is classed separately (AST in Street Touring). SP: 'S2000' = CSP. P: 'S2000 (2000-09)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "honda-civic-si-10th",
@@ -116,7 +136,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Civic Si (2017-20)' = GS (11th gen 2022-26 also GS). ST: 'Civic Si (2017-26)' = GST; 2002-15 Si = DST. SP: 'Civic Si (2017-21)' = ESP (10th-gen 2017-20; the 11th-gen 2022-26 is not ESP-listed)."
+    "notes": "Street: 'Civic Si (2017-20)' = GS (11th gen 2022-26 also GS). ST: 'Civic Si (2017-26)' = GST; 2002-15 Si = DST. SP: 'Civic Si (2017-21)' = ESP (10th-gen 2017-20; the 11th-gen 2022-26 is not ESP-listed).",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "honda-civic-type-r-fk8",
@@ -130,7 +156,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Civic Type R (2017-21 excl. Limited Edition)' = DS; 2021 Limited Edition = BS. ST: 'Civic Type R (2017-23)' = BST. SP: 'Civic Type R (2017-21)' = ESP."
+    "notes": "Street: 'Civic Type R (2017-21 excl. Limited Edition)' = DS; 2021 Limited Edition = BS. ST: 'Civic Type R (2017-23)' = BST. SP: 'Civic Type R (2017-21)' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "vw-gti-mk7",
@@ -189,7 +221,12 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang GT (incl. Performance Package Level 1 & 2) (2010-26)' = FS. ST: 'Mustang GT (excl. Shelby & Boss 302) (2005-23)' = BST. SP: 'Mustang (non-GT350, non-GT500) (2015-23)' = ESP."
+    "notes": "Street: 'Mustang GT (incl. Performance Package Level 1 & 2) (2010-26)' = FS. ST: 'Mustang GT (excl. Shelby & Boss 302) (2005-23)' = BST. SP: 'Mustang (non-GT350, non-GT500) (2015-23)' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-camaro-ss-gen6",
@@ -203,7 +240,12 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro V6 & V8 (1LE, non-ZL1) (2016-24)' = FS. ST: 'Camaro (N/A)' = BST. ZL1 variants class higher. SP: 'Camaro (6.2L V8, NA) (2016-24)' = ESP (ZL1 is supercharged, classes higher)."
+    "notes": "Street: 'Camaro V6 & V8 (1LE, non-ZL1) (2016-24)' = FS. ST: 'Camaro (N/A)' = BST. ZL1 variants class higher. SP: 'Camaro (6.2L V8, NA) (2016-24)' = ESP (ZL1 is supercharged, classes higher).",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-corvette-c5",
@@ -217,7 +259,12 @@
       "streetPrepared": "SSP"
     },
     "verified": true,
-    "notes": "Street: 'Corvette (C5, non-Z06) (1997-2004)' = BS. ST: BST. SP: 'Corvette (C5 chassis) (1997-2004)' = SSP."
+    "notes": "Street: 'Corvette (C5, non-Z06) (1997-2004)' = BS. ST: BST. SP: 'Corvette (C5 chassis) (1997-2004)' = SSP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-corvette-c5-z06",
@@ -231,7 +278,12 @@
       "streetPrepared": "SSP"
     },
     "verified": true,
-    "notes": "Street: 'Corvette Z06 (C5) (2001-04)' = AS. ST: SST. SP: 'Corvette (C5 chassis) (1997-2004)' = SSP."
+    "notes": "Street: 'Corvette Z06 (C5) (2001-04)' = AS. ST: SST. SP: 'Corvette (C5 chassis) (1997-2004)' = SSP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "nissan-350z",
@@ -246,7 +298,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '350Z (non-NISMO) (2003-09)' = FS; NISMO (2004-08) = CS. ST: '350Z (non-NISMO)' = BST. SP: '350Z (all)' = DSP. P: '350Z & 370Z (2003-17)' = FP."
+    "notes": "Street: '350Z (non-NISMO) (2003-09)' = FS; NISMO (2004-08) = CS. ST: '350Z (non-NISMO)' = BST. SP: '350Z (all)' = DSP. P: '350Z & 370Z (2003-17)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "bmw-m3-e46",
@@ -260,7 +317,12 @@
       "streetPrepared": "DSP"
     },
     "verified": true,
-    "notes": "Street: 'M3 (E46 & E90/E92/E93 chassis) (2000-13)' = FS. ST: 'M3 (E46) (2000-05)' = BST (Appendix A lists 2000-05). SP: 'M3 (E46 chassis)' = DSP."
+    "notes": "Street: 'M3 (E46 & E90/E92/E93 chassis) (2000-13)' = FS. ST: 'M3 (E46) (2000-05)' = BST (Appendix A lists 2000-05). SP: 'M3 (E46 chassis)' = DSP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "hyundai-elantra-n",
@@ -274,7 +336,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Elantra N (non-TCR) (2022-26)' = GS. ST: 'Elantra N (2022-26)' = BST. SP: 'Elantra N (2022-25) (excl. TCR Edition)' = ESP (ESP listing runs 2022-25)."
+    "notes": "Street: 'Elantra N (non-TCR) (2022-26)' = GS. ST: 'Elantra N (2022-26)' = BST. SP: 'Elantra N (2022-25) (excl. TCR Edition)' = ESP (ESP listing runs 2022-25).",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "toyota-gr-corolla",
@@ -287,7 +355,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'GR Corolla (excl. MORIZO, excl. Performance Shocks & Springs pkg) (2023-26)' = BS; MORIZO & Perf-pkg cars = AS. ST: 'GR Corolla (2023-2024)' = BST."
+    "notes": "Street: 'GR Corolla (excl. MORIZO, excl. Performance Shocks & Springs pkg) (2023-26)' = BS; MORIZO & Perf-pkg cars = AS. ST: 'GR Corolla (2023-2024)' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mini-cooper-s-r53",
@@ -300,7 +374,13 @@
       "streetTouring": "DST"
     },
     "verified": true,
-    "notes": "Street: 'Cooper Hardtop & Convertible (S, JCW) (2002-13)' = GS. ST: 'Cooper S & JCW (incl. dealer-installed 2005-06) (2001-06)' = DST; 2007-24 Cooper S = BST."
+    "notes": "Street: 'Cooper Hardtop & Convertible (S, JCW) (2002-13)' = GS. ST: 'Cooper S & JCW (incl. dealer-installed 2005-06) (2001-06)' = DST; 2007-24 Cooper S = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "subaru-forester-sf",
@@ -336,7 +416,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'RX-8' under Mazda in C Street. ST: 'RX-8' in DST. SP: 'RX-8' = DSP. P: 'RX-8 (Renesis; bridge or peripheral porting allowed)' = FP."
+    "notes": "Street: 'RX-8' under Mazda in C Street. ST: 'RX-8' in DST. SP: 'RX-8' = DSP. P: 'RX-8 (Renesis; bridge or peripheral porting allowed)' = FP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "nissan-370z",
@@ -351,7 +436,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '370Z (non-NISMO) (2009-20)' = FS; NISMO = CS. ST: '370Z (non-NISMO)' = BST ('370Z NISMO (2009-20)' also BST). SP: '370Z (all) (2009-18)' = DSP. P: '350Z & 370Z (2003-17)' = FP."
+    "notes": "Street: '370Z (non-NISMO) (2009-20)' = FS; NISMO = CS. ST: '370Z (non-NISMO)' = BST ('370Z NISMO (2009-20)' also BST). SP: '370Z (all) (2009-18)' = DSP. P: '350Z & 370Z (2003-17)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "bmw-m3-e36",
@@ -365,7 +455,12 @@
       "streetPrepared": "DSP"
     },
     "verified": true,
-    "notes": "Street: 'M3 (E36 chassis) (1995-99)' = DS. ST: 'M3 (E36, non-LTW) (1995-99)' = CST; the LTW is not covered. SP: 'M3 (E36 chassis, all)' = DSP."
+    "notes": "Street: 'M3 (E36 chassis) (1995-99)' = DS. ST: 'M3 (E36, non-LTW) (1995-99)' = CST; the LTW is not covered. SP: 'M3 (E36 chassis, all)' = DSP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "bmw-m3-e9x",
@@ -379,7 +474,12 @@
       "streetPrepared": "SSP"
     },
     "verified": true,
-    "notes": "Street: 'M3 (E46 & E90/E92/E93 chassis) (2000-13)' = FS. ST: 'M3 (2008-13)' = BST. SP: 'M3 (E90, E92, E93) (2007-13)' = SSP."
+    "notes": "Street: 'M3 (E46 & E90/E92/E93 chassis) (2000-13)' = FS. ST: 'M3 (2008-13)' = BST. SP: 'M3 (E90, E92, E93) (2007-13)' = SSP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "mitsubishi-lancer-evo",
@@ -393,7 +493,13 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Lancer Evolution (2003-15)' = DS. ST: 'Lancer Evolution' = BST. P: 'Lancer Evolution (2003-06) [Evo VIII/IX only; Evo X is not FP-listed]' = FP."
+    "notes": "Street: 'Lancer Evolution (2003-15)' = DS. ST: 'Lancer Evolution' = BST. P: 'Lancer Evolution (2003-06) [Evo VIII/IX only; Evo X is not FP-listed]' = FP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "ford-focus-rs",
@@ -407,7 +513,13 @@
       "streetPrepared": "DSP"
     },
     "verified": true,
-    "notes": "Street: 'Focus RS (2016-17)' = DS; 'Focus RS (2018)' = BS. ST: 'Focus RS (2016-18)' = BST. SP: 'Focus RS (2016-18)' = DSP."
+    "notes": "Street: 'Focus RS (2016-17)' = DS; 'Focus RS (2018)' = BS. ST: 'Focus RS (2016-18)' = BST. SP: 'Focus RS (2016-18)' = DSP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "honda-civic-si-11th",
@@ -420,7 +532,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Civic Si (2022-26)' = GS. ST: 'Civic Si (2017-26)' = GST."
+    "notes": "Street: 'Civic Si (2022-26)' = GS. ST: 'Civic Si (2017-26)' = GST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "hyundai-veloster-n",
@@ -433,7 +551,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Veloster N (including Performance Package) (2019-22)' = GS. ST: 'Veloster N (2019-22)' = BST."
+    "notes": "Street: 'Veloster N (including Performance Package) (2019-22)' = GS. ST: 'Veloster N (2019-22)' = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "hyundai-kona-n",
@@ -459,7 +583,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Supra (6 cyl, non MkV Final Edition) (2020-26)' = BS. ST: 'Supra, 6cyl (2020-26)' = SST. 4-cyl: CS street / SST."
+    "notes": "Street: 'Supra (6 cyl, non MkV Final Edition) (2020-26)' = BS. ST: 'Supra, 6cyl (2020-26)' = SST. 4-cyl: CS street / SST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "subaru-wrx-sti",
@@ -473,7 +603,13 @@
       "streetPrepared": "SSP"
     },
     "verified": true,
-    "notes": "Street: 'WRX STI (including Special Edition) (2004-18)' = DS; 'STI (excl. S209) (2019-21)' also DS; Type RA (2018) = BS. ST: 'Impreza WRX STI' = BST. SP: 'Impreza WRX (incl. STI) (2002-14)' + later listing (excl. Type RA & 2019 STI) = SSP."
+    "notes": "Street: 'WRX STI (including Special Edition) (2004-18)' = DS; 'STI (excl. S209) (2019-21)' also DS; Type RA (2018) = BS. ST: 'Impreza WRX STI' = BST. SP: 'Impreza WRX (incl. STI) (2002-14)' + later listing (excl. Type RA & 2019 STI) = SSP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "porsche-boxster-986",
@@ -501,7 +637,13 @@
       "streetPrepared": "SSP"
     },
     "verified": true,
-    "notes": "Street: 'Golf R (2015-19)' = DS. ST: 'Golf R (Mk7) (2015-19)' = BST; Mk8 (2022-24) also BST. SP: 'Golf R (2015-18)' = SSP."
+    "notes": "Street: 'Golf R (2015-19)' = DS. ST: 'Golf R (Mk7) (2015-19)' = BST; Mk8 (2022-24) also BST. SP: 'Golf R (2015-18)' = SSP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "acura-integra-type-r-dc2",
@@ -516,7 +658,12 @@
       "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'Integra Type R' under Acura in D Street. ST: 'Integra (incl. Type R) (1994-2001)' = DST. SP: 'Integra (incl. Type R) (1994-01)' = ESP. P: 'Integra (1994-2001)' = EP."
+    "notes": "Street: 'Integra Type R' under Acura in D Street. ST: 'Integra (incl. Type R) (1994-2001)' = DST. SP: 'Integra (incl. Type R) (1994-01)' = ESP. P: 'Integra (1994-2001)' = EP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "chevy-cobalt-ss-turbo",
@@ -530,7 +677,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Cobalt SS (2.0L Turbo) (2008-10)' = GS. ST: 'Cobalt (2.0T)' = GST. SP: 'Cobalt SS Turbo (2008-10)' = ESP."
+    "notes": "Street: 'Cobalt SS (2.0L Turbo) (2008-10)' = GS. ST: 'Cobalt (2.0T)' = GST. SP: 'Cobalt SS Turbo (2008-10)' = ESP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "coupe",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "dodge-srt4",
@@ -545,7 +698,13 @@
       "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'SRT-4 (Neon chassis)' = GS. ST: 'SRT-4 (2003-05)' = GST. SP: 'SRT-4' = ESP. P: 'Neon SRT-4 (2003-05)' = EP."
+    "notes": "Street: 'SRT-4 (Neon chassis)' = GS. ST: 'SRT-4 (2003-05)' = GST. SP: 'SRT-4' = ESP. P: 'Neon SRT-4 (2003-05)' = EP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mazdaspeed-miata",
@@ -559,7 +718,13 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Mazdaspeed Miata (2004-05)' = ES. ST: 'Mazdaspeed Miata (2004-05)' = AST. P: 'MazdaSpeed MX-5 Miata (2004-05)' = FP."
+    "notes": "Street: 'Mazdaspeed Miata (2004-05)' = ES. ST: 'Mazdaspeed Miata (2004-05)' = AST. P: 'MazdaSpeed MX-5 Miata (2004-05)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mazda-mazdaspeed3",
@@ -573,7 +738,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: HS (listed under Mazda in H Street). ST: 'Mazdaspeed3' = GST. SP: 'MazdaSpeed3' = ESP."
+    "notes": "Street: HS (listed under Mazda in H Street). ST: 'Mazdaspeed3' = GST. SP: 'MazdaSpeed3' = ESP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m-coupe-roadster-s52",
@@ -613,7 +784,12 @@
       "streetPrepared": "DSP"
     },
     "verified": true,
-    "notes": "Street: 'M3 (E30) (1988-91)' = CS. ST: '3 Series (E30 chassis, incl. M3)' = DST. SP: 'M3 (E30 chassis)' = DSP."
+    "notes": "Street: 'M3 (E30) (1988-91)' = CS. ST: '3 Series (E30 chassis, incl. M3)' = DST. SP: 'M3 (E30 chassis)' = DSP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "bmw-z3-6cyl",
@@ -627,7 +803,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Z3 (6-cyl, non-M) (1997-2002)' = CS. ST: 'Z3 (6-cyl)' = CST. 4-cyl = ES/EST. P: 'Z3 (6-cyl) (1999-2002)' = FP."
+    "notes": "Street: 'Z3 (6-cyl, non-M) (1997-2002)' = CS. ST: 'Z3 (6-cyl)' = CST. 4-cyl = ES/EST. P: 'Z3 (6-cyl) (1999-2002)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "bmw-z4-e85-non-m",
@@ -640,7 +821,12 @@
       "streetTouring": "CST"
     },
     "verified": true,
-    "notes": "Street: 'Z4 Coupe & Roadster (non-M) (2003-08)' = CS. ST: 'Z4 (non-turbo, non-M)' = CST."
+    "notes": "Street: 'Z4 Coupe & Roadster (non-M) (2003-08)' = CS. ST: 'Z4 (non-turbo, non-M)' = CST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "bmw-z4-m",
@@ -653,7 +839,12 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Z4 M Coupe/Roadster (2006-08)' = CS. ST: 'Z4 M Coupe/Roadster (2006-2008)' = SST."
+    "notes": "Street: 'Z4 M Coupe/Roadster (2006-08)' = CS. ST: 'Z4 M Coupe/Roadster (2006-2008)' = SST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "bmw-z4-e89-28i-30i",
@@ -665,7 +856,12 @@
       "street": "CS"
     },
     "verified": true,
-    "notes": "Street: 'Z4 28i & 30i (2009-16)' = CS. Turbo \u2014 not covered by the CST 'Z4 (non-turbo, non-M)' listing; no ST listing found."
+    "notes": "Street: 'Z4 28i & 30i (2009-16)' = CS. Turbo \u2014 not covered by the CST 'Z4 (non-turbo, non-M)' listing; no ST listing found.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "bmw-z4-e89-35i",
@@ -677,7 +873,13 @@
       "street": "CS"
     },
     "verified": true,
-    "notes": "Street: 'Z4 35i & 35is (2009-16)' = CS. No ST listing found."
+    "notes": "Street: 'Z4 35i & 35is (2009-16)' = CS. No ST listing found.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-z4-g29-4cyl",
@@ -689,7 +891,13 @@
       "street": "CS"
     },
     "verified": true,
-    "notes": "Street: 'Z4 4 cyl (2020-26)' = CS; 6-cyl = BS ('Z4 6 cyl (2020-26)'). No ST listing found."
+    "notes": "Street: 'Z4 4 cyl (2020-26)' = CS; 6-cyl = BS ('Z4 6 cyl (2020-26)'). No ST listing found.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "chevy-corvette-c2-c3",
@@ -701,7 +909,12 @@
       "street": "CS"
     },
     "verified": true,
-    "notes": "Street: 'Corvette (1963-82)' = CS. No ST listing found (1953-62 = ES)."
+    "notes": "Street: 'Corvette (1963-82)' = CS. No ST listing found (1953-62 = ES).",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-corvette-c4",
@@ -714,7 +927,12 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Corvette (C4, all) (1984-96)' = CS. ST: 'Corvette (C4, excl. LT4 engine & ZR1) (1984-96)' = BST."
+    "notes": "Street: 'Corvette (C4, all) (1984-96)' = CS. ST: 'Corvette (C4, excl. LT4 engine & ZR1) (1984-96)' = BST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "fiat-124-spider-nd",
@@ -728,7 +946,13 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '124 Spider (incl. Abarth) (2017-20)' = CS. ST: 'Spider (2016-20)' = AST. P: '124 Spider (2017-19)' = FP."
+    "notes": "Street: '124 Spider (incl. Abarth) (2017-20)' = CS. ST: 'Spider (2016-20)' = AST. P: '124 Spider (2017-19)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mazda-rx7-turbo-fc",
@@ -742,7 +966,13 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'RX-7 Turbo (1987-91)' = CS; FD (1993-95) = AS. No ST listing found for turbo RX-7s. SP: 'RX-7 Turbo (1986-92)' = CSP. P: 'RX-7 (1986-91), 13B' = FP."
+    "notes": "Street: 'RX-7 Turbo (1987-91)' = CS; FD (1993-95) = AS. No ST listing found for turbo RX-7s. SP: 'RX-7 Turbo (1986-92)' = CSP. P: 'RX-7 (1986-91), 13B' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mercedes-slk32-amg",
@@ -802,7 +1032,13 @@
       "street": "CS"
     },
     "verified": true,
-    "notes": "Street: '300ZX Turbo (1990-96)' = CS. The BST '300ZX Turbo (1984-89)' listing is the Z31 only; no Z32 turbo ST listing found. Non-turbo Z32 = FS/DST."
+    "notes": "Street: '300ZX Turbo (1990-96)' = CS. The BST '300ZX Turbo (1984-89)' listing is the Z31 only; no Z32 turbo ST listing found. Non-turbo Z32 = FS/DST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "nissan-350z-nismo",
@@ -815,7 +1051,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '350Z NISMO (2004-2008)' = CS. ST: only '350Z (non-NISMO)' is listed (BST); no NISMO ST listing found. P: '350Z & 370Z (2003-17)' = FP."
+    "notes": "Street: '350Z NISMO (2004-2008)' = CS. ST: only '350Z (non-NISMO)' is listed (BST); no NISMO ST listing found. P: '350Z & 370Z (2003-17)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "nissan-370z-nismo",
@@ -829,7 +1070,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '370Z NISMO (2009-20)' = CS. ST: '370Z NISMO (2009-20)' = BST. P: '350Z & 370Z (2003-17)' = FP."
+    "notes": "Street: '370Z NISMO (2009-20)' = CS. ST: '370Z NISMO (2009-20)' = BST. P: '350Z & 370Z (2003-17)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "pontiac-solstice-na",
@@ -842,7 +1088,12 @@
       "streetTouring": "CST"
     },
     "verified": true,
-    "notes": "Street: 'Solstice (non-turbo; non-ZOK) (2007-10)' = CS; ZOK Club Sport pkg = BS. ST: 'Solstice (non-turbo)' = CST."
+    "notes": "Street: 'Solstice (non-turbo; non-ZOK) (2007-10)' = CS; ZOK Club Sport pkg = BS. ST: 'Solstice (non-turbo)' = CST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "porsche-914",
@@ -919,7 +1170,12 @@
       "streetTouring": "CST"
     },
     "verified": true,
-    "notes": "Street: 'Sky (non-turbo) (2007-10)' = CS; Redline (Turbo) = BS. ST: 'Sky (non-turbo)' = CST."
+    "notes": "Street: 'Sky (non-turbo) (2007-10)' = CS; Redline (Turbo) = BS. ST: 'Sky (non-turbo)' = CST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "toyota-mr2-turbo-sw20",
@@ -932,7 +1188,13 @@
       "streetPrepared": "CSP"
     },
     "verified": true,
-    "notes": "Street: 'MR2 Turbo' = CS (years approximate; listing has none). No ST listing found for the turbo. SP: 'MR2 (all incl. Turbo) (1991-95)' = CSP."
+    "notes": "Street: 'MR2 Turbo' = CS (years approximate; listing has none). No ST listing found for the turbo. SP: 'MR2 (all incl. Turbo) (1991-95)' = CSP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "toyota-supra-mkv-4cyl",
@@ -945,7 +1207,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Supra (4 cyl) (2020-24)' = CS. ST: 'Supra, 4cyl (2021-26)' = SST."
+    "notes": "Street: 'Supra (4 cyl) (2020-24)' = CS. ST: 'Supra, 4cyl (2021-26)' = SST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "alfa-giulia",
@@ -1176,7 +1444,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro LS & LT (2.0L Turbo; including 1LE) (2016-24)' = DS. ST: 'Camaro LS & LT (2.0L Turbo; including 1LE) (2016-23)' = SST. SP: 'Camaro (2.0L Turbo) (2016-24)' = ESP."
+    "notes": "Street: 'Camaro LS & LT (2.0L Turbo; including 1LE) (2016-24)' = DS. ST: 'Camaro LS & LT (2.0L Turbo; including 1LE) (2016-23)' = SST. SP: 'Camaro (2.0L Turbo) (2016-24)' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "chevy-camaro-v6-gen5",
@@ -1190,7 +1464,12 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro (V6) (2010-15)' = DS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro (non-ZL1) (2010-15)' = ESP."
+    "notes": "Street: 'Camaro (V6) (2010-15)' = DS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro (non-ZL1) (2010-15)' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-mustang-ecoboost",
@@ -1204,7 +1483,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang EcoBoost (2015-26)' = DS. ST: 'Mustang EcoBoost (2015-23)' = BST. SP: 'Mustang (non-GT350, non-GT500) (2015-23)' = ESP (the 2024-26 S650 EcoBoost is not yet ESP-listed)."
+    "notes": "Street: 'Mustang EcoBoost (2015-26)' = DS. ST: 'Mustang EcoBoost (2015-23)' = BST. SP: 'Mustang (non-GT350, non-GT500) (2015-23)' = ESP (the 2024-26 S650 EcoBoost is not yet ESP-listed).",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "ford-mustang-v6-2011",
@@ -1217,7 +1502,12 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Mustang V6 (2011-17)' = DS; '(V6) (2005-10)' = GS. ST: 'Mustang V6 (all)' = BST."
+    "notes": "Street: 'Mustang V6 (2011-17)' = DS; '(V6) (2005-10)' = GS. ST: 'Mustang V6 (all)' = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "hyundai-ioniq-5",
@@ -1242,7 +1532,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Genesis Coupe (4-cyl Turbo) (2013-16)' = DS; 2010-12 4-cyl not listed here. ST: 'Genesis (2.0T 4-cyl) (2013-16)' = BST."
+    "notes": "Street: 'Genesis Coupe (4-cyl Turbo) (2013-16)' = DS; 2010-12 4-cyl not listed here. ST: 'Genesis (2.0T 4-cyl) (2013-16)' = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "hyundai-genesis-coupe-v6",
@@ -1255,7 +1551,12 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Genesis Coupe (V6) (2010-12)' = DS; V6 (2013-15) = FS. ST: 'Genesis (V6)' = BST."
+    "notes": "Street: 'Genesis Coupe (V6) (2010-12)' = DS; V6 (2013-15) = FS. ST: 'Genesis (V6)' = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "infiniti-g35-coupe",
@@ -1343,7 +1644,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Mazdaspeed6' = DS (years approximate; listing has none). ST: 'Mazdaspeed6' = GST."
+    "notes": "Street: 'Mazdaspeed6' = DS (years approximate; listing has none). ST: 'Mazdaspeed6' = GST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mini-clubman-jcw-all4",
@@ -1355,7 +1662,13 @@
       "street": "DS"
     },
     "verified": true,
-    "notes": "Street: 'Clubman John Cooper Works All4 (2020-24)' = DS; 'Clubman All4 (incl. JCW) (2014-19)' = GS."
+    "notes": "Street: 'Clubman John Cooper Works All4 (2020-24)' = DS; 'Clubman All4 (incl. JCW) (2014-19)' = GS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "wagon",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mini-cooper-jcw-f56",
@@ -1368,7 +1681,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Cooper Hardtop JCW (2015-24)' = DS. ST: 'Cooper S & Cooper S JCW (2007-24)' = BST."
+    "notes": "Street: 'Cooper Hardtop JCW (2015-24)' = DS. ST: 'Cooper S & Cooper S JCW (2007-24)' = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mitsubishi-eclipse-turbo-awd",
@@ -1394,7 +1713,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'WRX TR (2024)' and 'WRX tS (2025-26)' = DS (excluded from the GS WRX listing). ST: 'WRX (non-STI) (2002-25)' = GST."
+    "notes": "Street: 'WRX TR (2024)' and 'WRX tS (2025-26)' = DS (excluded from the GS WRX listing). ST: 'WRX (non-STI) (2002-25)' = GST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "subaru-sti-vab",
@@ -1407,7 +1732,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'STI (excl. S209) (2019-21)' = DS. ST: 'Impreza WRX STI' = BST."
+    "notes": "Street: 'STI (excl. S209) (2019-21)' = DS. ST: 'Impreza WRX STI' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "tesla-model-3-rwd",
@@ -1419,7 +1750,12 @@
       "street": "DS"
     },
     "verified": true,
-    "notes": "Street: 'Model 3 (RWD) (2018-24)' = DS; AWD/Performance (2018-23) = AS. EV \u2014 no ST listing."
+    "notes": "Street: 'Model 3 (RWD) (2018-24)' = DS; AWD/Performance (2018-23) = AS. EV \u2014 no ST listing.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "vw-golf-r-mk8",
@@ -1432,7 +1768,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Golf R (2022-26)' = DS. ST: 'Golf R (MK8) (2022-24)' = BST."
+    "notes": "Street: 'Golf R (2022-26)' = DS. ST: 'Golf R (MK8) (2022-24)' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "vw-golf-r-mk6",
@@ -1446,7 +1788,13 @@
       "streetPrepared": "DSP"
     },
     "verified": true,
-    "notes": "Street: 'Golf R (2012-13)' = DS. ST: 'Golf R (2012-14)' = GST. SP: 'Golf R (2012-13)' = DSP."
+    "notes": "Street: 'Golf R (2012-13)' = DS. ST: 'Golf R (2012-14)' = GST. SP: 'Golf R (2012-13)' = DSP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "vw-r32",
@@ -1485,7 +1833,12 @@
       "prepared": "DP"
     },
     "verified": true,
-    "notes": "Street: 'Z3 (4-cyl) (1996-98)' = ES. ST: 'Z3 (4-cyl)' = EST. P: 'Z3 (4-cyl)' = DP."
+    "notes": "Street: 'Z3 (4-cyl) (1996-98)' = ES. ST: 'Z3 (4-cyl)' = EST. P: 'Z3 (4-cyl)' = DP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "datsun-240z",
@@ -1499,7 +1852,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '240Z' = ES (years approximate; listing has none). ST: '240Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP."
+    "notes": "Street: '240Z' = ES (years approximate; listing has none). ST: '240Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "datsun-260z",
@@ -1513,7 +1871,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '260Z' = ES (years approximate). ST: '260Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP."
+    "notes": "Street: '260Z' = ES (years approximate). ST: '260Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "datsun-280z",
@@ -1527,7 +1890,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '280Z' = ES (years approximate). ST: '280Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP."
+    "notes": "Street: '280Z' = ES (years approximate). ST: '280Z' = CST. P: '240Z, 260Z, & 280Z (incl. 2+2) (1970-78)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "datsun-280zx-na",
@@ -1541,7 +1909,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '280ZX (non-turbo)' = ES (years approximate). ST: '280ZX (non-turbo)' = CST. P: '280ZX (incl. 2+2) (1979-83)' = FP."
+    "notes": "Street: '280ZX (non-turbo)' = ES (years approximate). ST: '280ZX (non-turbo)' = CST. P: '280ZX (incl. 2+2) (1979-83)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "fiat-x19",
@@ -1568,7 +1941,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'RX-7 (non-turbo)' = ES (years approximate). ST: 'RX-7 GSL/GSL-SE/GXL/GTU (1988)' trims = CST; 'RX-7 (non-turbo, NOC)' = EST. SP: 'RX-7 (non-turbo) (1978-85)'/'(1986-92)' = CSP. P: 'RX-7 (1979-85) / (1986-91)' = FP."
+    "notes": "Street: 'RX-7 (non-turbo)' = ES (years approximate). ST: 'RX-7 GSL/GSL-SE/GXL/GTU (1988)' trims = CST; 'RX-7 (non-turbo, NOC)' = EST. SP: 'RX-7 (non-turbo) (1978-85)'/'(1986-92)' = CSP. P: 'RX-7 (1979-85) / (1986-91)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "pontiac-fiero-v6",
@@ -1582,7 +1960,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Fiero (V6)' = ES (years approximate). ST: 'Fiero (V6)' = CST; 4-cyl = EST. P: 'Fiero (V-6 2.8L)' = FP."
+    "notes": "Street: 'Fiero (V6)' = ES (years approximate). ST: 'Fiero (V6)' = CST; 4-cyl = EST. P: 'Fiero (V-6 2.8L)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "porsche-924-turbo",
@@ -1633,7 +2016,12 @@
       "streetTouring": "EST"
     },
     "verified": true,
-    "notes": "Street: 'MR2 (non-turbo) (1985-95)' = ES. ST: 'MR2 (non-supercharged) (1985-89)' and 'MR2 (non-turbo) (1991-95)' = EST."
+    "notes": "Street: 'MR2 (non-turbo) (1985-95)' = ES. ST: 'MR2 (non-supercharged) (1985-89)' and 'MR2 (non-turbo) (1991-95)' = EST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "toyota-mr2-supercharged",
@@ -1646,7 +2034,13 @@
       "streetTouring": "CST"
     },
     "verified": true,
-    "notes": "Street: 'MR2 Supercharged' = ES. ST: 'MR2 Supercharged (1988-89)' = CST."
+    "notes": "Street: 'MR2 Supercharged' = ES. ST: 'MR2 Supercharged (1988-89)' = CST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "toyota-mr2-spyder",
@@ -1660,7 +2054,12 @@
       "streetPrepared": "CSP"
     },
     "verified": true,
-    "notes": "Street: 'MR2 Spyder (2000-05)' = ES. ST: 'MR2 Spyder' = CST. SP: 'MR2 Spyder (2000-05)' = CSP."
+    "notes": "Street: 'MR2 Spyder (2000-05)' = ES. ST: 'MR2 Spyder' = CST. SP: 'MR2 Spyder (2000-05)' = CSP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "audi-a7",
@@ -1737,7 +2136,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'M235i (F22) (2014-16)' = FS. ST: 'M235i (2014-16)' = BST."
+    "notes": "Street: 'M235i (F22) (2014-16)' = FS. ST: 'M235i (2014-16)' = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m240i",
@@ -1750,7 +2155,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'M240i (incl. xDrive) (2017-26)' = FS. ST: 'M240i (inc. xDrive) (2017-23)' = SST (ST listing years narrower)."
+    "notes": "Street: 'M240i (incl. xDrive) (2017-26)' = FS. ST: 'M240i (inc. xDrive) (2017-23)' = SST (ST listing years narrower).",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m5-e34-e39-e60",
@@ -1814,7 +2225,12 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro SS (incl. 1LE) (2010-15)' = FS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro (non-ZL1) (2010-15)' = ESP."
+    "notes": "Street: 'Camaro SS (incl. 1LE) (2010-15)' = FS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro (non-ZL1) (2010-15)' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-camaro-ss-gen4",
@@ -1829,7 +2245,12 @@
       "prepared": "CP"
     },
     "verified": true,
-    "notes": "Street: 'Camaro SS (base car only, incl. GM-installed 1LE) (1998-2002)' = FS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro, Firebird, SS, Firehawk, & WS6 (4th gen) (1993-2002)' = ESP. P: 'Camaro (1993-02)' = CP."
+    "notes": "Street: 'Camaro SS (base car only, incl. GM-installed 1LE) (1998-2002)' = FS. ST: 'Camaro (N/A)' = BST. SP: 'Camaro, Firebird, SS, Firehawk, & WS6 (4th gen) (1993-2002)' = ESP. P: 'Camaro (1993-02)' = CP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-ss-sedan",
@@ -1854,7 +2275,13 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '280ZX Turbo' = FS (years approximate; listing has none). P: '280ZX (incl. 2+2) (1979-83)' = FP."
+    "notes": "Street: '280ZX Turbo' = FS (years approximate; listing has none). P: '280ZX (incl. 2+2) (1979-83)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "dodge-challenger-v8",
@@ -1867,7 +2294,12 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Challenger (V8, all) (2008-24)' = FS. ST: 'Challenger (V8, N/A) (2008-23)' = BST (N/A only \u2014 Hellcats not ST-listed)."
+    "notes": "Street: 'Challenger (V8, all) (2008-24)' = FS. ST: 'Challenger (V8, N/A) (2008-23)' = BST (N/A only \u2014 Hellcats not ST-listed).",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "dodge-challenger-scatpack-widebody",
@@ -1880,7 +2312,12 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Challenger R/T Scat Pack Widebody (2019-24)' = FS. ST: 'Challenger (V8, N/A) (2008-23)' = BST."
+    "notes": "Street: 'Challenger R/T Scat Pack Widebody (2019-24)' = FS. ST: 'Challenger (V8, N/A) (2008-23)' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "dodge-charger-v8",
@@ -1893,7 +2330,12 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Charger (V8, all) (2006-24)' = FS. ST: 'Charger (V8, N/A) (2006-23)' = BST."
+    "notes": "Street: 'Charger (V8, all) (2006-24)' = FS. ST: 'Charger (V8, N/A) (2006-23)' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-mustang-boss302",
@@ -1907,7 +2349,12 @@
       "prepared": "CP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Boss 302 (non-Laguna Seca) (2012-13)' = FS; Laguna Seca = SS. ST: 'Mustang Boss 302 (2012-13)' = SST. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP."
+    "notes": "Street: 'Mustang Boss 302 (non-Laguna Seca) (2012-13)' = FS; Laguna Seca = SS. ST: 'Mustang Boss 302 (2012-13)' = SST. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-mustang-mach1-2021",
@@ -1921,7 +2368,12 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Mach 1 (all) (2021-23)' = FS. ST: 'Mustang GT (excl. Shelby versions & Boss 302) (2005-23)' = BST. SP: 'Mach 1 (2021-23)' = ESP."
+    "notes": "Street: 'Mustang Mach 1 (all) (2021-23)' = FS. ST: 'Mustang GT (excl. Shelby versions & Boss 302) (2005-23)' = BST. SP: 'Mach 1 (2021-23)' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-mustang-dark-horse",
@@ -1933,7 +2385,12 @@
       "street": "FS"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Dark Horse (2024-26)' = FS. No ST listing found (BST Mustang GT listing ends 2023)."
+    "notes": "Street: 'Mustang Dark Horse (2024-26)' = FS. No ST listing found (BST Mustang GT listing ends 2023).",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-mustang-gt350",
@@ -1947,7 +2404,12 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Shelby GT350 (incl. Handling Package) (2015-20)' = FS. ST: 'Mustang Shelby GT350 (2015-18)' / '(incl. Handling Package) (2019-20)' = SST. GT350R excluded from Street. SP: 'Mustang Shelby GT350/GT350R (S550) (2015-2020) Limited Prep' = ESP."
+    "notes": "Street: 'Mustang Shelby GT350 (incl. Handling Package) (2015-20)' = FS. ST: 'Mustang Shelby GT350 (2015-18)' / '(incl. Handling Package) (2019-20)' = SST. GT350R excluded from Street. SP: 'Mustang Shelby GT350/GT350R (S550) (2015-2020) Limited Prep' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "gmc-syclone-typhoon",
@@ -1971,7 +2433,13 @@
       "street": "FS"
     },
     "verified": true,
-    "notes": "Street: 'Genesis G70 (V6 Turbo) (2019-22)' = FS. 4-cyl Turbo G70 = HS."
+    "notes": "Street: 'Genesis G70 (V6 Turbo) (2019-22)' = FS. 4-cyl Turbo G70 = HS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "infiniti-g37",
@@ -1997,7 +2465,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Stinger (V6 Turbo) (2018-22)' = FS. ST: 'Stinger (V6 Turbo) (2018-2023)' = BST."
+    "notes": "Street: 'Stinger (V6 Turbo) (2018-22)' = FS. ST: 'Stinger (V6 Turbo) (2018-2023)' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "lexus-gs-f",
@@ -2085,7 +2559,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '300ZX (non-turbo) (1990-96)' = FS. ST: '300ZX (non-turbo) (1984-96)' = DST. P: '300ZX (Z32 chassis; non-turbo) (1990-96)' = FP."
+    "notes": "Street: '300ZX (non-turbo) (1990-96)' = FS. ST: '300ZX (non-turbo) (1984-96)' = DST. P: '300ZX (Z32 chassis; non-turbo) (1990-96)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "nissan-300zx-turbo-z31",
@@ -2099,7 +2578,13 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: '300ZX Turbo (1984-89)' = FS. ST: '300ZX Turbo (1984-89)' = BST. P: '300ZX (Z31 chassis) (1984-89)' = FP."
+    "notes": "Street: '300ZX Turbo (1984-89)' = FS. ST: '300ZX Turbo (1984-89)' = BST. P: '300ZX (Z31 chassis) (1984-89)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "pontiac-gto",
@@ -2149,7 +2634,12 @@
       "street": "FS"
     },
     "verified": true,
-    "notes": "Street: 'Model S (2012-14)' = FS. Later Model S not listed here \u2014 check newer listings/EVX."
+    "notes": "Street: 'Model S (2012-14)' = FS. Later Model S not listed here \u2014 check newer listings/EVX.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "toyota-supra-mk4-na",
@@ -2162,7 +2652,12 @@
       "streetTouring": "DST"
     },
     "verified": true,
-    "notes": "Street: 'Supra (non-turbo) (1993-98)' = FS. ST: 'Supra (non-turbo) (1993-98)' = DST."
+    "notes": "Street: 'Supra (non-turbo) (1993-98)' = FS. ST: 'Supra (non-turbo) (1993-98)' = DST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "toyota-supra-mk4-turbo",
@@ -2175,7 +2670,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Supra Turbo (1993\u00bd-98)' = BS. ST: 'Supra Turbo (1993\u00bd-98)' = SST."
+    "notes": "Street: 'Supra Turbo (1993\u00bd-98)' = BS. ST: 'Supra Turbo (1993\u00bd-98)' = SST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "toyota-supra-mk3-turbo",
@@ -2187,7 +2688,13 @@
       "street": "FS"
     },
     "verified": true,
-    "notes": "Street: 'Supra Turbo (1987-92)' = FS. No ST listing found for the Mk3 turbo."
+    "notes": "Street: 'Supra Turbo (1987-92)' = FS. No ST listing found for the Mk3 turbo.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "acura-integra-a-spec",
@@ -2200,7 +2707,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Integra (A-Spec) (2023-26)' = GS; Base = HS; Type S = BS. ST: 'Integra (Non Type S) (2022-26)' = GST."
+    "notes": "Street: 'Integra (A-Spec) (2023-26)' = GS; Base = HS; Type S = BS. ST: 'Integra (Non Type S) (2022-26)' = GST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "audi-a3-fwd",
@@ -2264,7 +2777,12 @@
       "streetTouring": "DST"
     },
     "verified": true,
-    "notes": "Street: 'Challenger (V6) (2008-22)' = GS. ST: 'Challenger (V6) (2008-23)' = DST."
+    "notes": "Street: 'Challenger (V6) (2008-22)' = GS. ST: 'Challenger (V6) (2008-23)' = DST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "dodge-charger-v6-lx",
@@ -2277,7 +2795,12 @@
       "streetTouring": "DST"
     },
     "verified": true,
-    "notes": "Street: 'Charger (V6) (2006-19)' = GS. ST: 'Charger (V6) (2006-23)' = DST."
+    "notes": "Street: 'Charger (V6) (2006-19)' = GS. ST: 'Charger (V6) (2006-23)' = DST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-fusion-sport",
@@ -2304,7 +2827,12 @@
       "prepared": "CP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang (V6) (2005-10)' = GS. ST: 'Mustang V6 (all)' = BST. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP."
+    "notes": "Street: 'Mustang (V6) (2005-10)' = GS. ST: 'Mustang V6 (all)' = BST. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-mustang-svo",
@@ -2316,7 +2844,13 @@
       "street": "GS"
     },
     "verified": true,
-    "notes": "Street: 'Mustang SVO' = GS (years approximate; listing has none)."
+    "notes": "Street: 'Mustang SVO' = GS (years approximate; listing has none).",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "honda-civic-si-mugen",
@@ -2329,7 +2863,12 @@
       "streetTouring": "DST"
     },
     "verified": true,
-    "notes": "Street: 'Civic Si Mugen (2008)' = GS (excluded from the HS 'Civic (all)' listing). ST: 'Civic Si (2002-15)' = DST."
+    "notes": "Street: 'Civic Si Mugen (2008)' = GS (excluded from the HS 'Civic (all)' listing). ST: 'Civic Si (2002-15)' = DST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "kia-stinger-4cyl",
@@ -2341,7 +2880,13 @@
       "street": "GS"
     },
     "verified": true,
-    "notes": "Street: 'Stinger (4-cyl Turbo) (2018-23)' = GS. No ST listing found (V6 = BST)."
+    "notes": "Street: 'Stinger (4-cyl Turbo) (2018-23)' = GS. No ST listing found (V6 = BST).",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "kia-k5-gt",
@@ -2378,7 +2923,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Mazda3 Turbo (2021-26)' = GS. ST: 'Mazda3 Turbo (2021-2026)' = GST."
+    "notes": "Street: 'Mazda3 Turbo (2021-26)' = GS. ST: 'Mazda3 Turbo (2021-2026)' = GST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mini-cooper-s-f65",
@@ -2390,7 +2941,13 @@
       "street": "GS"
     },
     "verified": true,
-    "notes": "Street: 'Cooper Hardtop S (2-door and 4-door F65/F66 chassis) (2025)' = GS. HS also lists 'Cooper Hardtop (incl. S, F65/F66) (2025-26)' \u2014 overlapping listings; verify current FasTrack. ST: BST Cooper S listing ends 2024."
+    "notes": "Street: 'Cooper Hardtop S (2-door and 4-door F65/F66 chassis) (2025)' = GS. HS also lists 'Cooper Hardtop (incl. S, F65/F66) (2025-26)' \u2014 overlapping listings; verify current FasTrack. ST: BST Cooper S listing ends 2024.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mini-cooper-clubman-s-r55",
@@ -2403,7 +2960,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Cooper Clubman (S, JCW) (2008-14)' = GS. ST: 'Cooper S & Cooper S JCW (2007-24)' = BST."
+    "notes": "Street: 'Cooper Clubman (S, JCW) (2008-14)' = GS. ST: 'Cooper S & Cooper S JCW (2007-24)' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "wagon",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mini-cooper-coupe-roadster-s",
@@ -2416,7 +2979,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Cooper Coupe & Roadster (S, JCW) (2012-15)' = GS. ST: 'Cooper S & Cooper S JCW (2007-24)' = BST."
+    "notes": "Street: 'Cooper Coupe & Roadster (S, JCW) (2012-15)' = GS. ST: 'Cooper S & Cooper S JCW (2007-24)' = BST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mini-countryman-jcw-all4",
@@ -2428,7 +2997,13 @@
       "street": "GS"
     },
     "verified": true,
-    "notes": "Street: 'Countryman JCW All4 (2018-23)' = GS."
+    "notes": "Street: 'Countryman JCW All4 (2018-23)' = GS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "suv",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mini-clubman-all4",
@@ -2440,7 +3015,13 @@
       "street": "GS"
     },
     "verified": true,
-    "notes": "Street: 'Clubman All4 (incl. JCW) (2014-19)' = GS; 2020-24 JCW All4 = DS."
+    "notes": "Street: 'Clubman All4 (incl. JCW) (2014-19)' = GS; 2020-24 JCW All4 = DS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "wagon",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "mitsubishi-lancer-ralliart",
@@ -2453,7 +3034,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Lancer Ralliart (2009-15)' = GS. ST: 'Lancer Ralliart (2008-10)' = GST (ST listing years narrower)."
+    "notes": "Street: 'Lancer Ralliart (2009-15)' = GS. ST: 'Lancer Ralliart (2008-10)' = GST (ST listing years narrower).",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "saturn-ion-redline",
@@ -2498,7 +3085,13 @@
       "street": "GS"
     },
     "verified": true,
-    "notes": "Street: 'Celica All-Trac Turbo' = GS (years approximate; listing has none)."
+    "notes": "Street: 'Celica All-Trac Turbo' = GS (years approximate; listing has none).",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "vw-gti-mk8",
@@ -2511,7 +3104,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Golf GTI (incl. 380 Edition) (2022-26)' = GS. ST: 'Golf & GTI (1.8T & 2.0T)' = GST."
+    "notes": "Street: 'Golf GTI (incl. 380 Edition) (2022-26)' = GS. ST: 'Golf & GTI (1.8T & 2.0T)' = GST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "volvo-s60r-v70r",
@@ -2548,7 +3147,12 @@
       "streetTouring": "EST"
     },
     "verified": true,
-    "notes": "Street: 'Civic (all, excluding Mugen 2008) (1975-2015)' = HS \u2014 includes Si of these years. ST: 'Civic (1984-2000)' / '(non-Si) (2001-05)' / '(non-Si) (2006-15)' = EST; 'Civic Si (2002-15)' = DST."
+    "notes": "Street: 'Civic (all, excluding Mugen 2008) (1975-2015)' = HS \u2014 includes Si of these years. ST: 'Civic (1984-2000)' / '(non-Si) (2001-05)' / '(non-Si) (2006-15)' = EST; 'Civic Si (2002-15)' = DST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "sedan",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "honda-civic-current",
@@ -2561,7 +3165,12 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Civic (non-Si, non-type R) (2016-26)' = HS. ST: 'Civic Sport (1.5 Turbo, 2017-22)' / '(2.0, 2017-26)' = GST; non-turbo trims = EST catch-all territory."
+    "notes": "Street: 'Civic (non-Si, non-type R) (2016-26)' = HS. ST: 'Civic Sport (1.5 Turbo, 2017-22)' / '(2.0, 2017-26)' = GST; non-turbo trims = EST catch-all territory.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "honda-crx",
@@ -2576,7 +3185,12 @@
       "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'CRX' = HS (years approximate; listing has none). ST: 'CRX' = EST. SP: 'Civic & CRX (1988-91)' = CSP; 1984-87 = FSP. P: 'CRX (1984-87)' = EP."
+    "notes": "Street: 'CRX' = HS (years approximate; listing has none). ST: 'CRX' = EST. SP: 'Civic & CRX (1988-91)' = CSP; 1984-87 = FSP. P: 'CRX (1984-87)' = EP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "honda-cr-z",
@@ -2604,7 +3218,12 @@
       "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'Fit' = HS (years approximate). ST: 'Fit' = EST. SP: 'Fit' = FSP. P: 'Fit (2007-18)' = EP."
+    "notes": "Street: 'Fit' = HS (years approximate). ST: 'Fit' = EST. SP: 'Fit' = FSP. P: 'Fit (2007-18)' = EP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "honda-del-sol",
@@ -2618,7 +3237,12 @@
       "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'del Sol & Civic del Sol (all)' = HS. ST: 'del Sol & Civic del Sol' = EST. P: 'DelSol (1993-96)' = EP."
+    "notes": "Street: 'del Sol & Civic del Sol (all)' = HS. ST: 'del Sol & Civic del Sol' = EST. P: 'DelSol (1993-96)' = EP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "honda-prelude",
@@ -2643,7 +3267,12 @@
       "streetTouring": "DST"
     },
     "verified": true,
-    "notes": "Street: 'RSX (all, including Type S)' = HS. ST: 'RSX' = DST."
+    "notes": "Street: 'RSX (all, including Type S)' = HS. ST: 'RSX' = DST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "acura-integra-86-01",
@@ -2657,7 +3286,12 @@
       "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'Integra (all except Type R) (1986-2001)' = HS. ST: 'Integra (incl. Type R) (1994-2001)' = DST; 'Integra (1986-93)' = EST. P: 'Integra (1986-89) / (1990-93) / (1994-2001)' = EP."
+    "notes": "Street: 'Integra (all except Type R) (1986-2001)' = HS. ST: 'Integra (incl. Type R) (1994-2001)' = DST; 'Integra (1986-93)' = EST. P: 'Integra (1986-89) / (1990-93) / (1994-2001)' = EP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "acura-integra-base-de4",
@@ -2670,7 +3304,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Integra (Base) (2023-26)' = HS; A-Spec = GS. ST: 'Integra (Non Type S) (2022-26)' = GST."
+    "notes": "Street: 'Integra (Base) (2023-26)' = HS; A-Spec = GS. ST: 'Integra (Non Type S) (2022-26)' = GST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "ford-fiesta-st",
@@ -2685,7 +3325,13 @@
       "prepared": "EP"
     },
     "verified": true,
-    "notes": "Street: 'Fiesta ST (2014-19)' = HS. ST: 'Fiesta ST' = GST. SP: 'Fiesta ST (2014-18)' = ESP. P: 'Fiesta ST (2014-19)' = EP."
+    "notes": "Street: 'Fiesta ST (2014-19)' = HS. ST: 'Fiesta ST' = GST. SP: 'Fiesta ST (2014-18)' = ESP. P: 'Fiesta ST (2014-19)' = EP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "ford-focus-st",
@@ -2699,7 +3345,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Focus ST (2013-18)' = HS. ST: 'Focus ST' = GST. SP: 'Focus ST (2013-18)' = ESP."
+    "notes": "Street: 'Focus ST (2013-18)' = HS. ST: 'Focus ST' = GST. SP: 'Focus ST (2013-18)' = ESP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "vw-jetta-gli",
@@ -2725,7 +3377,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Cooper Hardtop (incl. S, non-JCW) (2014-24)' = HS. ST: 'Cooper S & Cooper S JCW (2007-24)' = BST; 'Cooper (non-S) (2014-24)' = BST."
+    "notes": "Street: 'Cooper Hardtop (incl. S, non-JCW) (2014-24)' = HS. ST: 'Cooper S & Cooper S JCW (2007-24)' = BST; 'Cooper (non-S) (2014-24)' = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "nissan-240sx",
@@ -2739,7 +3397,12 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: '240SX' = HS (years approximate; listing has none). ST: '240SX' = DST. SP: '240SX' = ESP."
+    "notes": "Street: '240SX' = HS (years approximate; listing has none). ST: '240SX' = DST. SP: '240SX' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "mazda3-na",
@@ -2753,7 +3416,12 @@
       "streetPrepared": "FSP"
     },
     "verified": true,
-    "notes": "Street: 'Mazda3 (non-turbo) (2004-26)' = HS. ST: 'Mazda3 (non-turbo)' = EST. SP: 'Mazda3' = FSP."
+    "notes": "Street: 'Mazda3 (non-turbo) (2004-26)' = HS. ST: 'Mazda3 (non-turbo)' = EST. SP: 'Mazda3' = FSP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "toyota-corolla-na",
@@ -2793,7 +3461,12 @@
       "streetTouring": "DST"
     },
     "verified": true,
-    "notes": "Street: 'Impreza 2.5 (non-turbo)' = HS. ST: 'Impreza 2.5 RS (1998-2001)' = DST."
+    "notes": "Street: 'Impreza 2.5 (non-turbo)' = HS. ST: 'Impreza 2.5 RS (1998-2001)' = DST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "coupe",
+      "drivetrain": "awd"
+    }
   },
   {
     "id": "chevy-cobalt-ss-sc",
@@ -2807,7 +3480,13 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Cobalt SS (2.0L SC) (2005-07)' = HS. ST: 'Cobalt (2.4L N/A & 2.0L S/C)' = DST. SP: 'Cobalt SS Supercharged (2005-07)' = ESP."
+    "notes": "Street: 'Cobalt SS (2.0L SC) (2005-07)' = HS. ST: 'Cobalt (2.4L N/A & 2.0L S/C)' = DST. SP: 'Cobalt SS Supercharged (2005-07)' = ESP.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "coupe",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "saab-92x-aero",
@@ -2833,7 +3512,13 @@
       "streetTouring": "GST"
     },
     "verified": true,
-    "notes": "Street: 'Veloster (incl. Turbo & Rally Edition, non-N) (2012-21)' = HS. ST: 'Veloster Turbo (2013-16)' / '(2019-20)' = GST; non-turbo = EST."
+    "notes": "Street: 'Veloster (incl. Turbo & Rally Edition, non-N) (2012-21)' = HS. ST: 'Veloster Turbo (2013-16)' / '(2019-20)' = GST; non-turbo = EST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "toyota-celica-gt-gts",
@@ -2846,7 +3531,12 @@
       "streetTouring": "EST"
     },
     "verified": true,
-    "notes": "Street: 'Celica (GT, GTS) (2000-05)' = HS. ST: 'Celica (non-turbo) (1986-2005)' = EST."
+    "notes": "Street: 'Celica (GT, GTS) (2000-05)' = HS. ST: 'Celica (non-turbo) (1986-2005)' = EST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd"
+    }
   },
   {
     "id": "vw-corrado",
@@ -2871,7 +3561,13 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'NSX (2017-21)' = SS; Type S (2022) not eligible for Street."
+    "notes": "Street: 'NSX (2017-21)' = SS; Type S (2022) not eligible for Street.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "audi-r8",
@@ -2907,7 +3603,13 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'M3 (with MP Sports Suspension) (G80) (2023-2026)' / 'M4 (with MP Sports Suspension) (G82) (excl. CSL, CS) (2023-2026)' = SS. Without MP suspension = AS."
+    "notes": "Street: 'M3 (with MP Sports Suspension) (G80) (2023-2026)' / 'M4 (with MP Sports Suspension) (G82) (excl. CSL, CS) (2023-2026)' = SS. Without MP suspension = AS.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m5-cs",
@@ -2931,7 +3633,13 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'Camaro ZL1 1LE (2018-24)' = SS. The SST ZL1 listing is non-1LE only."
+    "notes": "Street: 'Camaro ZL1 1LE (2018-24)' = SS. The SST ZL1 listing is non-1LE only.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "chevy-corvette-c8",
@@ -2943,7 +3651,12 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'Corvette Stingray (C8) (2020-26)' = SS. SP: 'Corvette (C8 chassis, Stingray)' = SSP."
+    "notes": "Street: 'Corvette Stingray (C8) (2020-26)' = SS. SP: 'Corvette (C8 chassis, Stingray)' = SSP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-corvette-c8-eray",
@@ -2955,7 +3668,12 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'Corvette E-Ray (2024-26)' = SS."
+    "notes": "Street: 'Corvette E-Ray (2024-26)' = SS.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "awd"
+    }
   },
   {
     "id": "chevy-corvette-c7-z06",
@@ -2967,7 +3685,13 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'Corvette Z06 (including Z07 package) (C7) (2015-19)' = SS."
+    "notes": "Street: 'Corvette Z06 (including Z07 package) (C7) (2015-19)' = SS.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "chevy-corvette-c8-z06",
@@ -2979,7 +3703,12 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'C8 Z06 (including Z07 package) (2023-26)' = SS."
+    "notes": "Street: 'C8 Z06 (including Z07 package) (2023-26)' = SS.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-corvette-zr1-c6",
@@ -2991,7 +3720,13 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'Corvette ZR1 (2009-13)' = SS."
+    "notes": "Street: 'Corvette ZR1 (2009-13)' = SS.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "dodge-viper-acr-ta",
@@ -3003,7 +3738,12 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'Viper (ACR and TA all)' = SS (years approximate; listing has none)."
+    "notes": "Street: 'Viper (ACR and TA all)' = SS (years approximate; listing has none).",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ferrari-355",
@@ -3052,7 +3792,12 @@
       "streetPrepared": "ESP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Shelby GT350R (2015-20)' = SS. SP: 'Mustang Shelby GT350/GT350R (S550) (2015-2020) Limited Prep' = ESP."
+    "notes": "Street: 'Mustang Shelby GT350R (2015-20)' = SS. SP: 'Mustang Shelby GT350/GT350R (S550) (2015-2020) Limited Prep' = ESP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "hyundai-ioniq5-n",
@@ -3221,7 +3966,12 @@
       "street": "SS"
     },
     "verified": true,
-    "notes": "Street: 'Model S, all-wheel drive incl Plaid (2014-26)' = SS; 2012-14 = FS."
+    "notes": "Street: 'Model S, all-wheel drive incl Plaid (2014-26)' = SS; 2012-14 = FS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd"
+    }
   },
   {
     "id": "aston-v8-vantage-2018",
@@ -3271,7 +4021,13 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'M2 CS (2020-2021)' = AS; M2 Performance Edition (ZL9) also AS."
+    "notes": "Street: 'M2 CS (2020-2021)' = AS; M2 Performance Edition (ZL9) also AS.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m3-m4-cs-f8x",
@@ -3283,7 +4039,13 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'M3 CS & M4 CS (2018-20)' = AS. The SST F8x listing is non-CS only."
+    "notes": "Street: 'M3 CS & M4 CS (2018-20)' = AS. The SST F8x listing is non-CS only.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m3-g80",
@@ -3295,7 +4057,13 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'M3 (excl. MP Sports Suspension) (G80) (excl. CS) (2020-26)' = AS; with MP suspension = SS."
+    "notes": "Street: 'M3 (excl. MP Sports Suspension) (G80) (excl. CS) (2020-26)' = AS; with MP suspension = SS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m4-g82",
@@ -3307,7 +4075,13 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'M4 (excl. MP Sports Suspension) (G82) (excl. CSL) (2020-26)' = AS; with MP suspension = SS."
+    "notes": "Street: 'M4 (excl. MP Sports Suspension) (G82) (excl. CSL) (2020-26)' = AS; with MP suspension = SS.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-i4",
@@ -3344,7 +4118,12 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Camaro Z28 (2014-15)' = AS. ST: 'Camaro Z28 (2014-15)' = SST."
+    "notes": "Street: 'Camaro Z28 (2014-15)' = AS. ST: 'Camaro Z28 (2014-15)' = SST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-camaro-zl1-gen6",
@@ -3357,7 +4136,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Camaro ZL1 (non-1LE) (2017-20)' = AS. ST: 'Camaro ZL1 (non-1LE) (2012-15, 2017-23)' = SST. SP: 'Camaro ZL1 (2017-24)' = SSP."
+    "notes": "Street: 'Camaro ZL1 (non-1LE) (2017-20)' = AS. ST: 'Camaro ZL1 (non-1LE) (2012-15, 2017-23)' = SST. SP: 'Camaro ZL1 (2017-24)' = SSP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "chevy-corvette-c6-z06-gs",
@@ -3370,7 +4155,12 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Corvette (C6 Z06 & Grand Sport) (2005-13)' = AS. ST: 'Corvette (C6, C6Zo6 non-ZR1) (2005-13)' = SST."
+    "notes": "Street: 'Corvette (C6 Z06 & Grand Sport) (2005-13)' = AS. ST: 'Corvette (C6, C6Zo6 non-ZR1) (2005-13)' = SST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-corvette-c7-gs",
@@ -3382,7 +4172,12 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'Corvette Grand Sport (2017-19)' = AS. SP: 'Corvette (C7 chassis, all)' = SSP."
+    "notes": "Street: 'Corvette Grand Sport (2017-19)' = AS. SP: 'Corvette (C7 chassis, all)' = SSP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "dodge-viper-gen5",
@@ -3394,7 +4189,12 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'Viper (2013-17)' = AS; ACR/TA = SS."
+    "notes": "Street: 'Viper (2013-17)' = AS; ACR/TA = SS.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "dodge-viper-classic",
@@ -3406,7 +4206,12 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'Viper (non-ACR) (1992-10)' = AS; 'Viper GTS (1996-2005)', 'Viper R/T (1992-2003)', 'Viper SRT-10 (2003-07)' all AS."
+    "notes": "Street: 'Viper (non-ACR) (1992-10)' = AS; 'Viper GTS (1996-2005)', 'Viper R/T (1992-2003)', 'Viper SRT-10 (2003-07)' all AS.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-mustang-boss302-ls",
@@ -3419,7 +4224,12 @@
       "prepared": "CP"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Boss 302 Laguna Seca (2012-13)' = AS; non-LS = FS. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP."
+    "notes": "Street: 'Mustang Boss 302 Laguna Seca (2012-13)' = AS; non-LS = FS. P: 'Mustang (S197 chassis, non-supercharged) (2005-14)' = CP.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-mustang-gt500-2020",
@@ -3431,7 +4241,13 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'Mustang GT500 (excluding GT500KR) (2020-22)' = AS. SP: GT500 (2020-22) = DSP *Limited Prep*."
+    "notes": "Street: 'Mustang GT500 (excluding GT500KR) (2020-22)' = AS. SP: GT500 (2020-22) = DSP *Limited Prep*.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "honda-s2000-cr",
@@ -3445,7 +4261,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'S2000 CR' = AS. ST: 'S2000-CR' = AST. P: 'S2000 (2000-09)' = FP."
+    "notes": "Street: 'S2000 CR' = AS. ST: 'S2000-CR' = AST. P: 'S2000 (2000-09)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "jaguar-f-type-r-svr",
@@ -3457,7 +4278,13 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'F-type R & SVR (2018-24)' = AS; other F-Types = BS."
+    "notes": "Street: 'F-type R & SVR (2018-24)' = AS; other F-Types = BS.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "lotus-elise",
@@ -3510,7 +4337,13 @@
       "streetPrepared": "SSP"
     },
     "verified": true,
-    "notes": "Street: 'RX-7 (1993-95)' = AS. No ST listing. SP: 'RX-7 (1993-95)' = SSP."
+    "notes": "Street: 'RX-7 (1993-95)' = AS. No ST listing. SP: 'RX-7 (1993-95)' = SSP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "nissan-gtr",
@@ -3612,7 +4445,12 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'Model 3 (AWD/Performance 18-23)' = AS; RWD = DS; 2024+ Highland = SS."
+    "notes": "Street: 'Model 3 (AWD/Performance 18-23)' = AS; RWD = DS; 2024+ Highland = SS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd"
+    }
   },
   {
     "id": "tesla-model-y-perf",
@@ -3624,7 +4462,12 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'Model Y (AWD/Performance 20-24)' = AS."
+    "notes": "Street: 'Model Y (AWD/Performance 20-24)' = AS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "suv",
+      "drivetrain": "awd"
+    }
   },
   {
     "id": "toyota-gr-corolla-morizo",
@@ -3636,7 +4479,13 @@
       "street": "AS"
     },
     "verified": true,
-    "notes": "Street: 'GR Corolla (MORIZO Edition (2023-24)' and 'GR Corolla (with Performance Shocks and Springs Package) (2024-26)' = AS; standard GR Corolla = BS."
+    "notes": "Street: 'GR Corolla (MORIZO Edition (2023-24)' and 'GR Corolla (with Performance Shocks and Springs Package) (2024-26)' = AS; standard GR Corolla = BS.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "acura-nsx-na1",
@@ -3649,7 +4498,12 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'NSX (non-Zanardi Edition)' = BS (years approximate; listing has none). P: 'NSX (1990-2005)' = FP."
+    "notes": "Street: 'NSX (non-Zanardi Edition)' = BS (years approximate; listing has none). P: 'NSX (1990-2005)' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "acura-integra-type-s",
@@ -3662,7 +4516,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Integra Type S (2024-26)' = BS. ST: 'Integra Type-S (2024-26)' = BST."
+    "notes": "Street: 'Integra Type S (2024-26)' = BS. ST: 'Integra Type-S (2024-26)' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "alfa-giulia-quadrifoglio",
@@ -3765,7 +4625,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'M2 (except Performance Edition ZL9) (2016-19)' = BS; ZL9 = AS. ST: 'M2 (except ZL9) (2016-19)' = SST."
+    "notes": "Street: 'M2 (except Performance Edition ZL9) (2016-19)' = BS; ZL9 = AS. ST: 'M2 (except ZL9) (2016-19)' = SST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m2-competition",
@@ -3778,7 +4644,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'M2 Competition (2019-21)' = BS; M2 CS = AS. ST: 'M2 Competition (2019-21)' = SST."
+    "notes": "Street: 'M2 Competition (2019-21)' = BS; M2 CS = AS. ST: 'M2 Competition (2019-21)' = SST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m2-g87",
@@ -3790,7 +4662,13 @@
       "street": "BS"
     },
     "verified": true,
-    "notes": "Street: 'M2 (excl. MP Sports Suspension) (2023-26)' = BS; with MP suspension = AS."
+    "notes": "Street: 'M2 (excl. MP Sports Suspension) (2023-26)' = BS; with MP suspension = AS.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m3-m4-f8x",
@@ -3803,7 +4681,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'M3 & M4 (F80/F82 chassis; non-CS) (2015-20)' = BS. ST: 'M3 & M4 (F80/F82; non-CS, non-GTS) (2015-20)' = SST. CS versions = AS."
+    "notes": "Street: 'M3 & M4 (F80/F82 chassis; non-CS) (2015-20)' = BS. ST: 'M3 & M4 (F80/F82; non-CS, non-GTS) (2015-20)' = SST. CS versions = AS.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "bmw-m5-f90",
@@ -3827,7 +4711,13 @@
       "street": "BS"
     },
     "verified": true,
-    "notes": "Street: 'Z4 6 cyl (2020-26)' = BS; 4-cyl = CS."
+    "notes": "Street: 'Z4 6 cyl (2020-26)' = BS; 4-cyl = CS.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "cadillac-ct4v",
@@ -3852,7 +4742,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Camaro ZL1 (non-1LE) (2012-15)' = BS. ST: 'Camaro ZL1 (non-1LE) (2012-15, 2017-23)' = SST."
+    "notes": "Street: 'Camaro ZL1 (non-1LE) (2012-15)' = BS. ST: 'Camaro ZL1 (non-1LE) (2012-15, 2017-23)' = SST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "chevy-corvette-c7",
@@ -3865,7 +4761,12 @@
       "streetPrepared": "SSP"
     },
     "verified": true,
-    "notes": "Street: 'Corvette Stingray (C7) (2014-19)' = BS. SP: 'Corvette (C7 chassis, all)' = SSP."
+    "notes": "Street: 'Corvette Stingray (C7) (2014-19)' = BS. SP: 'Corvette (C7 chassis, all)' = SSP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "chevy-corvette-c6-base",
@@ -3878,7 +4779,12 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Corvette (C6, base and Z51) (2005-13)' = BS. ST: 'Corvette (C6, C6Zo6 non-ZR1) (2005-13)' = SST."
+    "notes": "Street: 'Corvette (C6, base and Z51) (2005-13)' = BS. ST: 'Corvette (C6, C6Zo6 non-ZR1) (2005-13)' = SST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "ford-focus-rs-2018",
@@ -3891,7 +4797,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Focus RS (2018)' = BS; 2016-17 = DS. ST: 'Focus RS (2016-18)' = BST."
+    "notes": "Street: 'Focus RS (2018)' = BS; 2016-17 = DS. ST: 'Focus RS (2016-18)' = BST.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "hatchback",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "ford-mustang-gt500-07-15",
@@ -3903,7 +4815,13 @@
       "street": "BS"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Shelby GT500 (2007-15)' = BS. SP: GT500 (S197) (2011-14) = DSP *Limited Prep*."
+    "notes": "Street: 'Mustang Shelby GT500 (2007-15)' = BS. SP: GT500 (S197) (2011-14) = DSP *Limited Prep*.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "ford-mach-e",
@@ -3915,7 +4833,12 @@
       "street": "BS"
     },
     "verified": true,
-    "notes": "Street: 'Mustang Mach-E (exclc. Rally) (2021-26)' = BS (sic)."
+    "notes": "Street: 'Mustang Mach-E (exclc. Rally) (2021-26)' = BS (sic).",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "suv",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "honda-civic-type-r-le",
@@ -3928,7 +4851,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Civic Type-R Limited Edition (2021)' = BS; standard FK8 = DS. ST: 'Civic Type R (2017-23)' = BST."
+    "notes": "Street: 'Civic Type-R Limited Edition (2021)' = BS; standard FK8 = DS. ST: 'Civic Type R (2017-23)' = BST.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "honda-civic-type-r-fl5",
@@ -3941,7 +4870,13 @@
       "streetTouring": "BST"
     },
     "verified": true,
-    "notes": "Street: 'Civic Type-R (2023-26)' = BS. ST: 'Civic Type R (2017-23)' = BST (2024+ not yet in ST listing \u2014 verify)."
+    "notes": "Street: 'Civic Type-R (2023-26)' = BS. ST: 'Civic Type R (2017-23)' = BST (2024+ not yet in ST listing \u2014 verify).",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "lexus-rc-f",
@@ -3991,7 +4926,13 @@
       "street": "BS"
     },
     "verified": true,
-    "notes": "Street: 'John Cooper Works GP (2021)' = BS; the 2013 JCW GP is not Street-eligible."
+    "notes": "Street: 'John Cooper Works GP (2021)' = BS; the 2013 JCW GP is not Street-eligible.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "nissan-z-rz34",
@@ -4004,7 +4945,13 @@
       "streetTouring": "SST"
     },
     "verified": true,
-    "notes": "Street: 'Z (incl. NISMO) (2023-26)' = BS. ST: 'Z (incl. Nismo) (2023-2026)' = SST."
+    "notes": "Street: 'Z (incl. NISMO) (2023-26)' = BS. ST: 'Z (incl. Nismo) (2023-2026)' = SST.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "pontiac-solstice-gxp",
@@ -4018,7 +4965,13 @@
       "prepared": "FP"
     },
     "verified": true,
-    "notes": "Street: 'Solstice GXP (Turbo) (2007-09)' = BS; ZOK Club Sport pkg (N/A) also BS. ST: 'Solstice GXP' = AST. P: 'Solstice GXP' = FP."
+    "notes": "Street: 'Solstice GXP (Turbo) (2007-09)' = BS; ZOK Club Sport pkg (N/A) also BS. ST: 'Solstice GXP' = AST. P: 'Solstice GXP' = FP.",
+    "attributes": {
+      "seats": 2,
+      "bodyStyle": "convertible",
+      "drivetrain": "rwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "porsche-911-996-carrera",
@@ -4107,7 +5060,13 @@
       "street": "BS"
     },
     "verified": true,
-    "notes": "Street: 'STI Type RA (2018)' = BS; standard STI = DS."
+    "notes": "Street: 'STI Type RA (2018)' = BS; standard STI = DS.",
+    "attributes": {
+      "seats": 5,
+      "bodyStyle": "sedan",
+      "drivetrain": "awd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "subaru-brz-ts-2020",
@@ -4119,7 +5078,12 @@
       "street": "BS"
     },
     "verified": true,
-    "notes": "Street: 'BRZ tS (2020)' = BS; tS (2018) = CS; other gen1 BRZ = DS."
+    "notes": "Street: 'BRZ tS (2020)' = BS; tS (2018) = CS; other gen1 BRZ = DS.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "toyota-gr86-10th",
@@ -4131,7 +5095,12 @@
       "street": "BS"
     },
     "verified": true,
-    "notes": "Street: 'GR86 (10th Anniversary Edition) (2023)' = BS; standard GR86 = DS."
+    "notes": "Street: 'GR86 (10th Anniversary Edition) (2023)' = BS; standard GR86 = DS.",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "coupe",
+      "drivetrain": "rwd"
+    }
   },
   {
     "id": "lotus-elan-classic",
@@ -4276,7 +5245,13 @@
       "street": "ES"
     },
     "verified": true,
-    "notes": "Street: 'Charger Turbo' / 'GLH Turbo' / Shelby 'Charger GLH-S (1987)' = ES (years approximate)."
+    "notes": "Street: 'Charger Turbo' / 'GLH Turbo' / Shelby 'Charger GLH-S (1987)' = ES (years approximate).",
+    "attributes": {
+      "seats": 4,
+      "bodyStyle": "hatchback",
+      "drivetrain": "fwd",
+      "forcedInduction": true
+    }
   },
   {
     "id": "morgan-44-plus4",
